@@ -41,7 +41,7 @@ improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
 urlimg: "https://sinalewis.github.io/feeling-responsive/images/"
 
 # Logo size is 600x80 pixels
-# logo: "logo.png"
+logo: "logo.png"
 
 # Plugins
 plugins:
