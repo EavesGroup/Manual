@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-fullwidth
 subheadline:  ""
 title:  "Common Calculations in VASP"
 teaser: ""
