@@ -48,7 +48,7 @@ After identifying the portion of your code that could most benefit from optimiza
 
 Julia provides a profiling package, straightforwardly called [`Profiler.jl`](https://docs.julialang.org/en/v1/manual/profile/). The output that comes with the standard library is purely text-based. If you want to generate flamegraphs as a visual way to profile the code, like the one below, we need to import more packages.
 
-{% include figure image_path="{{ site.urlimage }}flamegraph_example.png" caption="Example of a flamegraph from the [FlameGraphs.jl](https://timholy.github.io/FlameGraphs.jl/stable/#) documentation page." alt="Example of a flamegraph" width="90%" %}
+{% include figure image_path="{{ site.urlimg }}flamegraph_example.png" caption="Example of a flamegraph from the [FlameGraphs.jl](https://timholy.github.io/FlameGraphs.jl/stable/#) documentation page." alt="Example of a flamegraph" width="90%" %}
 
 `FlameGraphs.jl` provides the basic functionality to convert the data given by Julia's `Profile.jl` into something that we can plot. We then need to add `ProfileView.jl` to be able to generate interactive plots.
 
@@ -79,7 +79,7 @@ Eavg, Econv, tempAvg = T4Chain.OneDThermal()
 ProfileView.@profview T4Chain.OneDThermal()
 ```
 
-{% include figure image_path="{{ site.urlimage }}flamegraph_Sina-example.png" caption="Example of a flamegraph from Sina's code." alt="Example of a flamegraph" width="90%" %}
+{% include figure image_path="{{ site.urlimg }}flamegraph_Sina-example.png" caption="Example of a flamegraph from Sina's code." alt="Example of a flamegraph" width="90%" %}
 
 # Memory Allocation
 
