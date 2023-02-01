@@ -1,12 +1,12 @@
-- title: Start
+- title: "Home"
   url: "/"
   side: left
 
-- title: Getting Started
+- title: "Programs"
   url: "/getting-started/"
   side: left
 
-- title: "Templates"
+- title: "Coding"
   url: "/design/"
   side: left
   dropdown:
@@ -31,7 +31,7 @@
   - title: "Portfolio"
     url: "/design/portfolio/"
 
-- title: "Header Styles"
+- title: "Derivations"
   url: "/headers/"
   side: left
   dropdown:
@@ -50,7 +50,7 @@
   - title: "No Header but Image"
     url: "/design/no-header-but-image/"
 
-- title: Documentation
+- title: Appendix
   url: "/documentation/"
   side: left
   dropdown:
@@ -58,13 +58,6 @@
     url: "/changelog/"
   - title: "Roadmap"
     url: "/roadmap/"
-
-- title: Blog
-  url: "/blog/"
-  side: left
-  dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
 
 - title: "Search"
   url: "/search/"
