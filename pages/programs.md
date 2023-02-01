@@ -1,8 +1,8 @@
 ---
 layout: page
 show_meta: false
-title: "VASP and LAMMPs and more, oh my!"
-subheadline: "Tips and Tricks for Scientific Programs"
+title: "CURC, VASP, LAMMPs, and more!"
+subheadline: "Tips and Tricks for Scientific Computing"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/programs/"
