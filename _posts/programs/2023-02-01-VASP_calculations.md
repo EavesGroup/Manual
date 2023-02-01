@@ -4,9 +4,8 @@ subheadline:  ""
 title:  "Common Calculations in VASP"
 teaser: ""
 categories:
-    - programs
+    - VASP
 tags:
-    - programs
     - VASP
     - bandstructure
     - density-of-states

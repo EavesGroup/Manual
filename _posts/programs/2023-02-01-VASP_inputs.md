@@ -4,9 +4,8 @@ subheadline:  ""
 title:  "VASP Input Files and Flags"
 teaser: "VASP has four main files that are required for any calculation and numerous flags that can be changed. This list is not exhaustive, but demonstrates some of the most common ones."
 categories:
-    - programs
+    - VASP
 tags:
-    - programs
     - VASP
     - input
 header: no
