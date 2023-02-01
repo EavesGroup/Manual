@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 subheadline:  ""
-title:  "Making Julia Work"
+title:  "Making Julia Better"
 teaser: ""
 categories:
     - Julia
