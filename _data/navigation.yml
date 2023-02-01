@@ -22,14 +22,14 @@
     - title: "Mathematica"
       url: "/coding/mathematica/"
 
-- title: "Theories"
-  url: "/theories/"
+- title: "Background Theory"
+  url: "/theory/"
   side: left
   dropdown:
     - title: "Redfield"
-      url: "/theories/redfield/"
+      url: "/theory/redfield/"
     - title: "DMFT"
-      url: "/theories/DMFT/"
+      url: "/theory/DMFT/"
 
 - title: Appendix
   url: "/appendix/"
