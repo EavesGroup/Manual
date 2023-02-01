@@ -36,7 +36,7 @@ If you want to do a calculation for a system that is relatively stiff (i.e. Si) 
 
 ##### Iterative ISIF=3
 
-The best way to relax the cell volume is to use ISIF equals 3, which allows all degrees of freedom to relax, with increasingly stricter force cutoffs (see Section~\ref{sec:incar}). This iterative process can help us identify and avoid Pulay stress. A basic cell volume relaxation calculation might have the following INCAR
+The best way to relax the cell volume is to use ISIF equals 3, which allows all degrees of freedom to relax, with increasingly stricter force cutoffs (see [Inputs]({{ site.baseurl }}programs/2023-02-01-VASP_inputs.md)). This iterative process can help us identify and avoid Pulay stress. A basic cell volume relaxation calculation might have the following INCAR
 ```bash
 ##
 System = diamond Si
@@ -106,7 +106,7 @@ If you plan to upscale to a surface structure, it is fine to be on the upper end
 
 #### Efficiency
 
-VASP parallelizes very efficiently, however, the user needs to test what combinations of settings and architecture are most effective. The user should strive to stay between 80\% and 100\% efficient, with 100\% efficiency defined as the total CPU time of the fastest calculation. There is a lot of information available on the [VASP wiki](https://www.vasp.at/wiki/index.php/Category:Parallelization), but the most important settings are NCORE, KPAR, and NBANDS.
+VASP parallelizes very efficiently, however, the user needs to test what combinations of settings and architecture are most effective. The user should strive to stay between 80% and 100% efficient, with 100% efficiency defined as the total CPU time of the fastest calculation. There is a lot of information available on the [VASP wiki](https://www.vasp.at/wiki/index.php/Category:Parallelization), but the most important settings are NCORE, KPAR, and NBANDS.
 
 The NCORE setting tells the calculation how many compute cores should work on an individual orbital. Note that NPAR is a related setting that takes precedent over NCORE, but is deprecated as of VASP 5.2.13. NPAR is specialized to the specific calculation and requires more careful thought when transferring between systems. NCORE on the other hand is typically very straightforward to use. For any calculation using more than a node, NCORE should be set to the number of cores per socket. The VASP manual says that NCORE can be set up to the number of cores per node, but Peyton has run into issues when trying to set NCORE higher than the number of cores per socket. On Summit, the number of cores per socket is 12. For a small calculation where you are using less than a node, you can use a smaller NCORE such as 6, 4, 2, or even 1. Because of how NCORE works, it should always be set to a factor of the number of cores per socket.
 
