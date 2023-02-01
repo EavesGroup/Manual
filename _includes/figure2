@@ -1,0 +1,22 @@
+<div class="row" style="justify-content: center;">
+  <figure style="display: inline-block; width: 50%; text-align: center;">
+    <img src="{{ include.image_path | relative_url }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}"
+      width="{% if include.width %}{{ include.width }}{% endif %}"
+      height="{% if include.height %}{{ include.height }}{% endif %}">
+    {%- if include.caption -%}
+    <figcaption>
+      {{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}
+    </figcaption>
+    {%- endif -%}
+  </figure>
+  <figure style="display: inline-block; width: 50%; text-align: center;">
+    <img src="{{ include.image_path2 | relative_url }}" alt="{% if include.alt2 %}{{ include.alt2 }}{% endif %}"
+      width="{% if include.width2 %}{{ include.width2 }}{% endif %}"
+      height="{% if include.height2 %}{{ include.height2 }}{% endif %}">
+    {%- if include.caption2 -%}
+    <figcaption>
+      {{ include.caption2 | markdownify | remove: "<p>" | remove: "</p>" }}
+    </figcaption>
+    {%- endif -%}
+  </figure>
+</div>
