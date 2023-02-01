@@ -39,6 +39,7 @@ improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
 urlimg: "https://sinalewis.github.io/eaves-group-manual/images/"
+urlfile: "https://sinalewis.github.io/eaves-group-manual/files/"
 
 # Logo size is 600x80 pixels
 logo: "logo.png"
