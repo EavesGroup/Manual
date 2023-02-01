@@ -2,10 +2,12 @@
   url: "/"
   side: left
 
-- title: "Programs"
+- title: "Scientific Computing"
   url: "/programs/"
   side: left
   dropdown:
+    - title: "CURC"
+      url: "/programs/CURC/"
     - title: "VASP"
       url: "/programs/VASP/"
     - title: "LAMMPS"
