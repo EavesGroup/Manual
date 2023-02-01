@@ -21,6 +21,9 @@ breadcrumbs: true
 {:toc}
 </div>
 
+<div class="medium-8 medium-pull-4 columns" markdown="1">
+{% include _improve_content.html %}
+
 ## SBATCH File
 
 The `sbatch` file is used to submit your calculation to slurm---the cluster management, job scheduling system. An example sbatch file is included in the [Appendix Code Database](/chapter/Appendix/append_codeBase#vasp-sbatch-file). The most common settings that will need to be changed are located at the beginning of the file in blue. Available options for these settings can be found in the CU Research Computing [documentation](https://curc.readthedocs.io/en/latest/running-jobs/job-resources.html).
