@@ -11,6 +11,8 @@ tags:
 header: no
 breadcrumbs: true
 ---
+{% include mathjax.html %}
+
 <div class="row">
 <div class="medium-4 medium-push-8 columns" markdown="1">
 <div class="panel radius" markdown="1">
@@ -71,9 +73,10 @@ Another way to use ISIF=3 to find the converged volume is to keep increasing ENC
 
 The ISIF equals 4 option allows most degrees of freedom to relax, but restricts the volume of the cell. We can use this option to find the ground state of the cell by running calculations at numerous volumes of the cell-using a negative value in the 2nd line of the POSCAR to specify the value-and then fitting to an equation of state. This method is the only sure way to remove all Pulay stress. The VASP manual recommends that the volumes don't differ more than 5--10\% to avoid errors introduced by basis set incompleteness. After we have a pair of volumes and their energies we can fit to an equation of state. A common choice is the Birch-Murnaghan equation of state
 $$
-	E(V) &= E_0 + \frac{9V_0B_0}{16}\left\{ \left[\left(\frac{V_0}{V}\right)^{2/3} - 1\right]^3B_0' + \left[\left(\frac{V_0}{V}\right)^{2/3}-1\right]\left[6-4\left(\frac{V_0}{V}\right)^{2/3}\right] \right\}
+\begin{equation}\label{eq:Birch-Murnaghan}	E(V) &= E_0 + \frac{9V_0B_0}{16}\left\{ \left[\left(\frac{V_0}{V}\right)^{2/3} - 1\right]^3B_0' + \left[\left(\frac{V_0}{V}\right)^{2/3}-1\right]\left[6-4\left(\frac{V_0}{V}\right)^{2/3}\right] \right\}
+\end{equation}
 $$
-where E~0~ is the ground state energy, V~0~ is the ground state volume, B~0~ is the bulk modulus, and B~0~' is the derivative of the bulk modulus with respect to pressure.
+where $$E_0$$ is the ground state energy, $$V_0$$ is the ground state volume, $$B_0$$ is the bulk modulus, and $$B_0'$$ is the derivative of the bulk modulus with respect to pressure.
 
 ##### Combination
 
