@@ -50,5 +50,5 @@ These notebooks were generated while writing the clock transition paper.[^1] The
 ### A Guide to Mathematica
 {: .t60 }
 
-{% include list-posts tag='mathematica' %}
+{% include list-posts tag='Mathematica' %}
 
