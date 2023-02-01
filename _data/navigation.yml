@@ -16,7 +16,7 @@
   side: left
   dropdown:
     - title: "Grid & Colors"
-      url: "/design/grid/"
+      url: "/coding/grid/"
     - title: "Typography"
       url: "/design/typography/typography/"
     - title: "Page/Post"
@@ -66,8 +66,4 @@
 
 - title: "Search"
   url: "/search/"
-  side: right
-
-- title: "Contact"
-  url: "/contact/"
   side: right
