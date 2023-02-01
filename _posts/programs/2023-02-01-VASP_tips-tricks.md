@@ -38,7 +38,7 @@ If you want to do a calculation for a system that is relatively stiff (i.e. Si) 
 
 ##### Iterative ISIF=3
 
-The best way to relax the cell volume is to use ISIF equals 3, which allows all degrees of freedom to relax, with increasingly stricter force cutoffs (see [Inputs]({{ site.baseurl }}programs/2023-02-01-VASP_inputs.md)). This iterative process can help us identify and avoid Pulay stress. A basic cell volume relaxation calculation might have the following INCAR
+The best way to relax the cell volume is to use ISIF equals 3, which allows all degrees of freedom to relax, with increasingly stricter force cutoffs (see [Inputs]({{ site.baseurl }}/programs/2023-02-01-VASP_inputs.md)). This iterative process can help us identify and avoid Pulay stress. A basic cell volume relaxation calculation might have the following INCAR
 ```bash
 ##
 System = diamond Si
@@ -61,7 +61,7 @@ IBRION = 2 ; ISIF = 3
 NSW = 1000
 ```
 
-I have put a few commands on the same line-separated by a semicolon-to shorten the file length a bit. This also works in an actual input file but I don't recommend it. The most important parameter here is EDIFFG, which-when negative-defines the force cutoff for the calculation to stop (see Section~\ref{sec:incar}). In this example INCAR, EDIFFG is quite large because we want to slowly step down to the desired EDIFFG. Also note the `ISTART = 0` that is important for not reading in a previous WAVECAR. Because these calculations change the cell volume, reading in a previously calculated WAVECAR would be really bad.
+I have put a few commands on the same line-separated by a semicolon-to shorten the file length a bit. This also works in an actual input file but I don't recommend it. The most important parameter here is EDIFFG, which-when negative-defines the force cutoff for the calculation to stop (see [Inputs]({{ site.baseurl }}/programs/2023-02-01-VASP_inputs.md)]). In this example INCAR, EDIFFG is quite large because we want to slowly step down to the desired EDIFFG. Also note the `ISTART = 0` that is important for not reading in a previous WAVECAR. Because these calculations change the cell volume, reading in a previously calculated WAVECAR would be really bad.
 
 For our first calculation we want to change the starting volume of the cell in the POSCAR to be away from equilibirum. By kicking the system out of equilibrium the calculation should be better able to find the actual minimum. Be careful while changing the volume to not effect the symmetry of the system. Run this system multiple times until the calculation only takes one step, i.e. the command `tail screen*`  returns a line that looks like `   1 F= XXX E0= XXX  d E =XXX` where the `XXX` are unspecified values. More explicitly, each time the run finishes, check the screen file and, if it took more than one step, copy the CONTCAR into the POSCAR and submit the job again. Peyton's script for submitting the jobs does this copying automatically.
 
@@ -73,7 +73,7 @@ Another way to use ISIF=3 to find the converged volume is to keep increasing ENC
 
 The ISIF equals 4 option allows most degrees of freedom to relax, but restricts the volume of the cell. We can use this option to find the ground state of the cell by running calculations at numerous volumes of the cell-using a negative value in the 2nd line of the POSCAR to specify the value-and then fitting to an equation of state. This method is the only sure way to remove all Pulay stress. The VASP manual recommends that the volumes don't differ more than 5--10\% to avoid errors introduced by basis set incompleteness. After we have a pair of volumes and their energies we can fit to an equation of state. A common choice is the Birch-Murnaghan equation of state
 $$
-\begin{equation}\label{eq:Birch-Murnaghan}	E(V) &= E_0 + \frac{9V_0B_0}{16}\left\{ \left[\left(\frac{V_0}{V}\right)^{2/3} - 1\right]^3B_0' + \left[\left(\frac{V_0}{V}\right)^{2/3}-1\right]\left[6-4\left(\frac{V_0}{V}\right)^{2/3}\right] \right\}
+\begin{equation}\label{eq:Birch-Murnaghan}	E(V) = E_0 + \frac{9V_0B_0}{16}\left\{ \left[\left(\frac{V_0}{V}\right)^{2/3} - 1\right]^3B_0' + \left[\left(\frac{V_0}{V}\right)^{2/3}-1\right]\left[6-4\left(\frac{V_0}{V}\right)^{2/3}\right] \right\}
 \end{equation}
 $$
 where $$E_0$$ is the ground state energy, $$V_0$$ is the ground state volume, $$B_0$$ is the bulk modulus, and $$B_0'$$ is the derivative of the bulk modulus with respect to pressure.
