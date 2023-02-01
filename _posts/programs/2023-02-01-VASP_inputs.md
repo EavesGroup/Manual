@@ -1,8 +1,8 @@
 ---
 layout: page
 subheadline:  ""
-title:  "No Header"
-teaser: "Feeling Responsive allows you to use all kinds of headers. This example shows <em>no</em> header at all. Just the navigation."
+title:  "VASP Input Files and Flags"
+teaser: "VASP has four main files that are required for any calculation and numerous flags that can be changed. This list is not exhaustive, but demonstrates some of the most common ones."
 categories:
     - programs
 tags:
