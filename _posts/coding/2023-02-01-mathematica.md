@@ -11,7 +11,14 @@ breadcrumb: true
 
 Mathematica is a useful although sometimes mysterious program for symbolic computations. These pages will attempt to highlight some of the more important or ambiguous features available.
 
-## Example Notebooks
+
+### A Guide to Mathematica
+{: .t60 }
+
+{% include list-posts tag='Mathematica' %}
+
+
+## Some Example Notebooks
 
 WARNING! Nothing here has been edited for accuracy or clarity. These notebooks simply provide a few examples of figures that have been made in Mathematica.
 
@@ -47,8 +54,4 @@ These notebooks were generated while writing the clock transition paper.[^1] The
 
 [^1]: Sina G. Lewis, Kori E. Smyser, and Joel D. Eaves, [Clock Transitions Guard Against Spin Decoherence in Singlet Fission](https://doi.org/10.1063/5.0069344), *J. Chem. Phys.* 155, 194109 **2021**.
 
-### A Guide to Mathematica
-{: .t60 }
-
-{% include list-posts tag='Mathematica' %}
 
