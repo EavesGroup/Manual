@@ -8,10 +8,12 @@
   dropdown:
     - title: "CURC"
       url: "/programs/CURC/"
-    - title: "VASP"
-      url: "/programs/VASP/"
     - title: "LAMMPS"
       url: "/programs/LAMMPS/"
+    - title: "VASP"
+      url: "/programs/VASP/"
+    - title: "Wannier"
+      url: "/programs/Wannier/"
 
 - title: "Coding"
   url: "/coding/"
