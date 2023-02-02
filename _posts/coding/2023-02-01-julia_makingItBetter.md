@@ -48,7 +48,7 @@ After identifying the portion of your code that could most benefit from optimiza
 
 Julia provides a profiling package, straightforwardly called [`Profiler.jl`](https://docs.julialang.org/en/v1/manual/profile/). The output that comes with the standard library is purely text-based. If you want to generate flamegraphs as a visual way to profile the code, like the one below, we need to import more packages.
 
-{% include figure.html image_path="{{ site.urlimg }}flamegraph_example.png" caption="Example of a flamegraph from the [FlameGraphs.jl](https://timholy.github.io/FlameGraphs.jl/stable/#) documentation page." alt="Example of a flamegraph" width="90%" %}
+<img class="t60" src="{{ site.urlimg }}flamegraph_example.png" alt="Example of a flamegraph" caption="Example of a flamegraph from the [FlameGraphs.jl](https://timholy.github.io/FlameGraphs.jl/stable/#) documentation page.">
 
 `FlameGraphs.jl` provides the basic functionality to convert the data given by Julia's `Profile.jl` into something that we can plot. We then need to add `ProfileView.jl` to be able to generate interactive plots.
 
@@ -79,13 +79,13 @@ Eavg, Econv, tempAvg = T4Chain.OneDThermal()
 ProfileView.@profview T4Chain.OneDThermal()
 ```
 
-{% include figure.html image_path="{{ site.urlimg }}flamegraph_Sina-example.png" caption="Example of a flamegraph from Sina's code." alt="Example of a flamegraph" width="90%" %}
+<img class="t60" src="{{ site.urlimg }}flamegraph_Sina-example.png" alt="Example of a flamegraph" caption="Example of a flamegraph from Sina's code.">
 
 # Memory Allocation
 
 Julia allows you to track line-by-line allocation. To do this, you need to start Julia with the `--track-allocation=<setting>` command-line option. The settings available are `none`, the default, doesn't measure allocation, `user`, measure memory allocation everywhere except Julia's core code, and `all`, which does include Julia's core code. Typically, you are interested in analysing your own code and will use the `user` setting.
 
-After starting Julia with this command-line option, you can run the code that you want analysed. Because compilation requires memory allocation, it is recommended that you force compilation by excuting your code and any auxiliary statements it requires before then calling `Profile.clear_malloc_data()`. This command resets all allocation counters and allows a compilation free view of the memory allocation in your code. After again executing the commands you wish to analyse, quit Julia to trigger the generation of `.mem.` files. These files contain the line-by-line analysis of your code. For every line where memory was allocated, the total amount in bytes is recorded on the left. For example, a section of my analysed code reads
+After starting Julia with this command-line option, you can run the code that you want analysed. Because compilation requires memory allocation, it is recommended that you force compilation by executing your code and any auxiliary statements it requires before then calling `Profile.clear_malloc_data()`. This command resets all allocation counters and allows a compilation free view of the memory allocation in your code. After again executing the commands you wish to analyse, quit Julia to trigger the generation of `.mem.` files. These files contain the line-by-line analysis of your code. For every line where memory was allocated, the total amount in bytes is recorded on the left. For example, a section of my analysed code reads
 
 ```bash
         - function velocityRescale(T::Float64, pSection, osc::Oscillators)
