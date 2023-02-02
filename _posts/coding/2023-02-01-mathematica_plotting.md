@@ -57,13 +57,12 @@ data = Transpose[{x,y}]; (* Create an (x,y) list of points for plotting *)
 </tr>
 </table>
 
-The `ImageSize` option is used here to generate nicely sized plots for exporting. Note that most style aspects of your plot will not scale with the size of the plot. Make sure that you set this parameters to a value you like before messing around too much with the size of style elements.
+The `ImageSize` option is used here to generate nicely sized plots for exporting. Note that most style aspects of your plot will not scale with the size of the plot. Make sure that you set this parameter to a value you like before messing around too much with the size of style elements.
 
 ### Axes Labels
 
-`AxesLabel` is the basic way to label the axes of your plot. Like `PlotLabel` you can pass a simple set of strings, i.e. `AxesLabel -> {"x","y"}`, or enhance the style using the `Style` function as in the below example. `FrameLabel` is a more complex option to generate axes labels, but also offers more fine tuning and better placement. To use `FrameLabel` we also need to supply the `Frame` argument. `Frame` takes as its input a Boolean or set of Booleans that decides wether or not a frame is drawn on the graphics object. `True` draws an edge on every side of the graphics object. Or you can give a nested list with the arguments in the order of `{left, right}` and then `{bottom,top}`. `FrameLabel` takes it's input in the same format and order, replacing the Booleans with a `Style` function or string or the parameter `None` to leave the edge unlabeled. By default, the left and right labels are rotated by 90 degrees, which I have undone with the `Rotate` function in the below example.
+`AxesLabel` is the basic way to label the axes of your plot. Like `PlotLabel` you can pass a simple set of strings, i.e. `AxesLabel -> {"x","y"}`, or enhance the style using the `Style` function as in the below example. `FrameLabel` is a more complex option to generate axes labels, but also offers more fine-tuning and better placement. To use `FrameLabel` we also need to supply the `Frame` argument. `Frame` takes as its input a Boolean or set of Booleans that decides whether a frame is drawn on the graphics object. `True` draws an edge on every side of the graphics object. Or you can give a nested list with the arguments in the order of `{left, right}` and then `{bottom,top}`. `FrameLabel` takes its input in the same format and order, replacing the Booleans with a `Style` function or string or the parameter `None` to leave the edge unlabeled. By default, the left and right labels are rotated by 90 degrees, which I have undone with the `Rotate` function in the below example.
 
-{% raw %}
 <table width="100%" style="table-layout: fixed; border: 1px $border-color;">
  <tr>
     <td><code>
