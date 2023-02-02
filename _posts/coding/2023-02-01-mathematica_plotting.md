@@ -98,6 +98,7 @@ data2 = Transpose[{x,y2}]; (* Create an (x,y) list of points for plotting *)
     <td><code>LListPlot[{data, data2}, PlotLegends -> Automatic, ImageSize -> Large]</code></td>
     <td><code>ListPlot[{data, data2}, PlotLegends -> Placed[{Style["y1", 18], Style["y2", 18]}, {1.0, 0.8}], ImageSize -> Large]</code></td>
  </tr>
+ <tr>
  <td width="50%">
   <img src="{{ site.urlimg }}plotLegends_example.png"
        alt="example of adding a legend"
@@ -108,6 +109,7 @@ data2 = Transpose[{x,y2}]; (* Create an (x,y) list of points for plotting *)
        alt="example of adding a legend"
        width="100%">
 </td>
+</tr>
 </table>
 
 ## Style
@@ -116,7 +118,7 @@ data2 = Transpose[{x,y2}]; (* Create an (x,y) list of points for plotting *)
 
 `PlotStlye` is used to alter the default style or color of your data. The input parameter is typically a set of sets, with each set containing the style options for a set of data. If the number of data sets is longer than the supplied `PlotStyle` list then the stlye options will simply repeat cyclically. For line data the thickness, color, and style (dashed, dotted, etc) can be set within `PlotStyle`. For point data we need to add the argument `PlotMarkers`.
 
-{% raw %}
+
 <table width="100%" style="table-layout: fixed; border: 1px $border-color;">
  <tr>
     <td><code>ListPlot[{data, data2, data3, data4}, 
@@ -137,7 +139,6 @@ data2 = Transpose[{x,y2}]; (* Create an (x,y) list of points for plotting *)
 </td>
  </tr>
 </table>
-{% endraw %}
 
 The argument `Joined` was added to plot the first and third/last set of (x, y) point data as lines.
 
@@ -156,12 +157,12 @@ When we use the argument [`Frame`]("/Manuals/chapter/Mathematica/plotting#axes-l
  </tr>
  <tr>
  <td width="50%">
-  <img src="{{ site.urlimg }}frameticks_example.png"
+  <img src="{{ site.urlimg }}{{ frameticks_example.png }}"
        alt=""
        width="100%">
 </td>
  <td width="50%">
-  <img src="{{ site.urlimg }}frameticks_example2.png"
+  <img src="{{ site.urlimg }}{{ frameticks_example2.png }}"
        alt=""
        width="100%">
 </td>
