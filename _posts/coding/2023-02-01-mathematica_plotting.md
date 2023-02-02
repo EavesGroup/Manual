@@ -99,12 +99,12 @@ data2 = Transpose[{x,y2}]; (* Create an (x,y) list of points for plotting *)
     <td><code>ListPlot[{data, data2}, PlotLegends -> Placed[{Style["y1", 18], Style["y2", 18]}, {1.0, 0.8}], ImageSize -> Large]</code></td>
  </tr>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/plotLegends_example.png"
+  <img src="{{ site.urlimg }}plotLegends_example.png"
        alt="example of adding a legend"
        width="100%">
 </td>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/plotLegends_example2.png"
+  <img src="{{ site.urlimg }}plotLegends_example2.png"
        alt="example of adding a legend"
        width="100%">
 </td>
@@ -126,12 +126,12 @@ data2 = Transpose[{x,y2}]; (* Create an (x,y) list of points for plotting *)
  </tr>
  <tr>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/plotStyle_example.png"
+  <img src="{{ site.urlimg }}plotStyle_example.png"
        alt="example with point data"
        width="100%">
 </td>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/plotStyle_example2.png"
+  <img src="{{ site.urlimg }}plotStyle_example2.png"
        alt="example with line data"
        width="100%">
 </td>
@@ -156,12 +156,12 @@ When we use the argument [`Frame`]("/Manuals/chapter/Mathematica/plotting#axes-l
  </tr>
  <tr>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/frameticks_example.png"
+  <img src="{{ site.urlimg }}frameticks_example.png"
        alt=""
        width="100%">
 </td>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/frameticks_example2.png"
+  <img src="{{ site.urlimg }}frameticks_example2.png"
        alt=""
        width="100%">
 </td>
@@ -186,12 +186,12 @@ There is no default aspect ratio for a figure. The figure simply fills the space
  </tr>
  <tr>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/aspectRatio_example.png"
+  <img src="{{ site.urlimg }}aspectRatio_example.png"
        alt=""
        width="100%">
 </td>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/aspectRatio_example2.png"
+  <img src="{{ site.urlimg }}aspectRatio_example2.png"
        alt=""
        width="100%">
 </td>
