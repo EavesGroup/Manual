@@ -5,6 +5,7 @@ categories:
     - appendix
 tags:
     - appendix
+    - thesis
 header: no
 breadcrumb: true
 ---
@@ -28,22 +29,22 @@ Currently embargoed.
 
 ## R. Peyton Cline (2015-2020)
 
-<a class="theses" href="/Manuals/assets/files/theses/R_Peyton_Cline.pdf">Local Quantum Impurities in Large-Scale Systems: Trapped-Hole Diffusion in Cadmium-Chalcogenide Nanocrystals and Locally-Varying Vibrational Modes in Polytetrafluoroethylene</a>
+<a class="theses" href="{{ site.urlfile }}phd_theses/R_Peyton_Cline.pdf">Local Quantum Impurities in Large-Scale Systems: Trapped-Hole Diffusion in Cadmium-Chalcogenide Nanocrystals and Locally-Varying Vibrational Modes in Polytetrafluoroethylene</a>
 
 ## Alyssa R. Landin (2013-2018)
 
-<a class="theses" href="/Manuals/assets/files/theses/Alyssa_Landin.pdf">The Role of Defects on the Optical, Electronic, and Magnetic Properties of Iron-Sulfur Solids</a>
+<a class="theses" href="{{ site.urlfile }}phd_theses/Alyssa_Landin.pdf">The Role of Defects on the Optical, Electronic, and Magnetic Properties of Iron-Sulfur Solids</a>
 
 ## Steven E. Strong (2012-2017)
 
-<a class="theses" href="/Manuals/assets/files/theses/Steve_Strong.pdf">Molecular Dynamics in Mesoscopic Equilibrium and Nonequilibrium Systems with Applications in Sustainability</a>
+<a class="theses" href="{{ site.urlfile }}phd_theses/Steve_Strong.pdf">Molecular Dynamics in Mesoscopic Equilibrium and Nonequilibrium Systems with Applications in Sustainability</a>
 
 ## Paul Emery Teichen (2009-2015)
 
-<a class="theses" href="/Manuals/assets/files/theses/Paul_Teichen.pdf">Multielectron Dynamics of Singlet Fission in the Condensed Phase</a>
+<a class="theses" href="{{ site.urlfile }}phd_theses/Paul_Teichen.pdf">Multielectron Dynamics of Singlet Fission in the Condensed Phase</a>
 
 ## Joseph H.J. Ostrowski (2009-2014)
 
-<a class="theses" href="/Manuals/assets/files/theses/Joe_Ostrowski.pdf">Tunable Surface Hydrophobicity and Fluid Transport through Nanoporous Membranes</a>
+<a class="theses" href="{{ site.urlfile }}phd_theses/Joe_Ostrowski.pdf">Tunable Surface Hydrophobicity and Fluid Transport through Nanoporous Membranes</a>
 
 
