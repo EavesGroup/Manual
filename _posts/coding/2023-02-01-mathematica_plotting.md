@@ -154,8 +154,12 @@ When we use the argument [`Frame`]("/Manuals/chapter/Mathematica/plotting#axes-l
 
 <table width="100%" style="table-layout: fixed; border: 1px $border-color;">
  <tr>
-    <td><code>ListPlot[{data}, ImageSize -> Large, Ticks -> {Automatic, {0.0, 0.5, E/4, {1.0, "1.0"}}}, TicksStyle -> Directive[Red, 14]]</code></td>
-    <td><code>ListPlot[{data}, ImageSize -> Large, Frame -> {{True, False}, {True, False}},   FrameTicks -> {{{0.0, {0.5, 1/2}, {Exp[1]/4, E/4, {1.0, 0.00}, Directive[Black, Dashed]}, {1.0, "1.0"}}, None}, {Automatic, Automatic}}, FrameTicksStyle -> Directive[Blue, 14]]</code></td>
+    <td><code>
+{% raw %}ListPlot[{data}, ImageSize -> Large, Ticks -> {Automatic, {0.0, 0.5, E/4, {1.0, "1.0"}}}, TicksStyle -> Directive[Red, 14]]
+{% endraw %}</code></td>
+    <td><code>
+{% raw %}ListPlot[{data}, ImageSize -> Large, Frame -> {{True, False}, {True, False}},   FrameTicks -> {{{0.0, {0.5, 1/2}, {Exp[1]/4, E/4, {1.0, 0.00}, Directive[Black, Dashed]}, {1.0, "1.0"}}, None}, {Automatic, Automatic}}, FrameTicksStyle -> Directive[Blue, 14]]
+{% endraw %}</code></td>
  </tr>
  <tr>
  <td width="50%">
