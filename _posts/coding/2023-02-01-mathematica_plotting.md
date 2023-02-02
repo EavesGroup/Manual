@@ -188,12 +188,12 @@ There is no default aspect ratio for a figure. The figure simply fills the space
  <td width="50%">
   <img src="{{ site.urlimg }}aspectRatio_example.png"
        alt=""
-       width="100%">
+       width="100%"/>
 </td>
  <td width="50%">
   <img src="{{ site.urlimg }}aspectRatio_example2.png"
        alt=""
-       width="100%">
+       width="100%"/>
 </td>
  </tr>
 </table>
