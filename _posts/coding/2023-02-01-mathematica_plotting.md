@@ -121,10 +121,10 @@ data2 = Transpose[{x,y2}]; (* Create an (x,y) list of points for plotting *)
 
 <table width="100%" style="table-layout: fixed; border: 1px $border-color;">
  <tr>
-    <td><code>ListPlot[{data, data2, data3, data4}, 
+    <td><code>{% raw %}ListPlot[{data, data2, data3, data4}, 
  PlotLegends -> 
-  Placed[{Style["y1", 18], Style["y2", 18], Style["y3", 18], Style["y4", 18]}, {1.0, 0.8}], ImageSize -> Large, PlotStyle -> {{Black}, {Red, Opacity[0.6]}, {Blue}}, PlotMarkers -> {{Automatic, Small}, {Automatic, Medium}, {Automatic, Large}, {"\[Beta]", Large}}]</code></td>
-    <td><code>ListPlot[{data, data2, data3}, PlotLegends -> Placed[{Style["y1", 18], Style["y2", 18], Style["y3", 18], Style["y4", 18]}, {1.0, 0.8}], ImageSize -> Large, Joined -> True, PlotStyle -> {{Black}, {Red, Opacity[0.6], Dashed}, {Green, Thick}}]</code></td>
+  Placed[{Style["y1", 18], Style["y2", 18], Style["y3", 18], Style["y4", 18]}, {1.0, 0.8}], ImageSize -> Large, PlotStyle -> {{Black}, {Red, Opacity[0.6]}, {Blue}}, PlotMarkers -> {{Automatic, Small}, {Automatic, Medium}, {Automatic, Large}, {"\[Beta]", Large}}]{% endraw %}</code></td>
+    <td><code>{% raw %}ListPlot[{data, data2, data3}, PlotLegends -> Placed[{Style["y1", 18], Style["y2", 18], Style["y3", 18], Style["y4", 18]}, {1.0, 0.8}], ImageSize -> Large, Joined -> True, PlotStyle -> {{Black}, {Red, Opacity[0.6], Dashed}, {Green, Thick}}]{% endraw %}</code></td>
  </tr>
  <tr>
  <td width="50%">
