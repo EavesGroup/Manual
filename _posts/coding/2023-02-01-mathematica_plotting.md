@@ -47,11 +47,11 @@ data = Transpose[{x,y}]; (* Create an (x,y) list of points for plotting *)
  </tr>
  <tr>
  <td>
-  <img src="/Manuals/assets/images/Mathematica/plotLabel_example.png"
+  <img src="{{ site.urlimg }}plotLabel_example.png"
        alt="no style in label"
        width="100%">
 </td>
- <td><img src="/Manuals/assets/images/Mathematica/plotLabel_wStyle_example.png"
+ <td><img src="{{ site.urlimg }}plotLabel_wStyle_example.png"
        alt="using style with label"
        width="100%"></td>
 </tr>
@@ -71,12 +71,12 @@ The `ImageSize` option is used here to generate nicely sized plots for exporting
  </tr>
  <tr>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/axesLabel_example.png"
+  <img src="{{ site.urlimg }}axesLabel_example.png"
        alt="using an axes label"
        width="100%">
 </td>
  <td width="50%">
-  <img src="/Manuals/assets/images/Mathematica/frameLabel_example.png"
+  <img src="{{ site.urlimg }}frameLabel_example.png"
        alt="using a frame label"
        width="100%">
 </td>
