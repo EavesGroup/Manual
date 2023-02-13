@@ -47,4 +47,8 @@ Currently embargoed.
 
 <a class="theses" href="{{ site.urlfile }}phd_theses/Joe_Ostrowski.pdf">Tunable Surface Hydrophobicity and Fluid Transport through Nanoporous Membranes</a>
 
+## Joel D. Eaves
+
+<a class="theses" href="{{ site.urlfile }}phd_theses/Joel_Eaves.pdf">Vibrational Dynamics in Water from the Molecule's Perspective</a>
+
 
