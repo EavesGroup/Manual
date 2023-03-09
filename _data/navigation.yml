@@ -45,6 +45,8 @@
       url: "/appendix/people/"
     - title: "PhD Theses"
       url: "/appendix/phd_theses/"
+    - title: "more..."
+      url: "/appendix/"
 
 - title: "Search"
   url: "/search/"
