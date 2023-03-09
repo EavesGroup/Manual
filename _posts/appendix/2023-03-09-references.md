@@ -1,6 +1,6 @@
 ---
 layout: page-fullwidth
-title:  "Code Base"
+title:  "References"
 categories:
     - appendix
 tags:
@@ -8,7 +8,7 @@ tags:
 header: no
 breadcrumb: true
 ---
-<div class="row">
+<!-- <div class="row">
 <div class="medium-4 medium-push-8 columns" markdown="1">
 <div class="panel radius" markdown="1">
 **Table of Contents**
@@ -16,7 +16,7 @@ breadcrumb: true
 *  TOC
 {:toc}
 </div>
-</div><!-- /.medium-4.columns -->
+</div>/.medium-4.columns -->
 
 
 
@@ -34,8 +34,10 @@ breadcrumb: true
 {
         "fields":["author","title","description"]
         "items":[
-                {"author":"Ulrich Weiss", "title":"Quantum Dissipative Systems"},
-                {"author":"David Nelson", "title":"Defects and Geometry in Condensed Matter Physics"}
+                {"author":"Weiss, Ulrich", "title":"Quantum Dissipative Systems"},
+                {"author":"Nelson, David", "title":"Defects and Geometry in Condensed Matter Physics"},
+                {"author":"Van Kampen, N.G.","title":"Stochastic Processes in Physics and Chemistry"},
+                {"author":"Zwanzig, Robert","title":"Nonequilibrium Statistical Mechanics"}
                 ]
 }
 ```
