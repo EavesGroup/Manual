@@ -20,7 +20,8 @@ breadcrumb: true
 
 | Author | Title | Description |
 | :----- | ----- | :---------- |
-| Weiss, Ulrich | Quantum Dissipative Systems |  |
+| Mahan, Gerald D. | Many-Particle Physics |  |
 | Nelson, David | Defects and Geometry in Condensed Matter Physics |  |
 | Van Kampen, N.G. | Stochastic Processes in Physics and Chemistry |  |
+| Weiss, Ulrich | Quantum Dissipative Systems |  |
 | Zwanzig, Robert | Nonequilibrium Statistical Mechanics |  |
