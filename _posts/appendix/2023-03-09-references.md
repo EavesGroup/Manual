@@ -20,20 +20,18 @@ breadcrumb: true
 
 ## Papers
 
-<!-- paper structure: link to paper through DOI with title of paper as the text. Follow this header link with information about the author(s) what makes the paper worth listing here -->
+<!-- paper structure: link to paper through DOI with title of paper as the text. Follow this header link with information about the author(s) what makes the paper worth listing here
+The '>' at the end of the line forces a linebreak
+-->
 #### <a href="https://doi.org/10.1021/cr1002613">Singlet Fission</a>
-Author(s): Millicent B. Smith and Josef Michl
-
-Year: 2010
-
+Author(s): Millicent B. Smith and Josef Michl >
+Year: 2010 >
 Notes: 
 
 #### <a href="">Title</a>
-Author(s):
-
-Year: 
-
-Notes:
+Author(s): >
+Year: >
+Notes: >
 
 ## Books
 
