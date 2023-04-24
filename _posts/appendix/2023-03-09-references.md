@@ -29,7 +29,11 @@ Year: 2010
 Notes: 
 
 #### <a href="">Title</a>
+Author(s):
 
+Year: 
+
+Notes:
 
 ## Books
 
