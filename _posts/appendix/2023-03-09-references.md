@@ -28,17 +28,12 @@ Author(s): Millicent B. Smith and Josef Michl
 Year: 2010
 Notes: 
 
-### <a href="">Title</a>
-Author(s):  
-Year:   
-Notes:
-
 ## Books
 
 | Author | Title | Description |
 | :----- | ----- | :---------- |
 | Mahan, Gerald D. | Many-Particle Physics |  |
-| Nelson, David | Defects and Geometry in Condensed Matter Physics |  |
 | Van Kampen, N.G. | Stochastic Processes in Physics and Chemistry |  |
 | Weiss, Ulrich | Quantum Dissipative Systems |  |
 | Zwanzig, Robert | Nonequilibrium Statistical Mechanics |  |
+| Nelson, David | Defects and Geometry in Condensed Matter Physics |  |
