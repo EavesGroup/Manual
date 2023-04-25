@@ -20,11 +20,10 @@ breadcrumb: true
 
 ## Papers
 
-<!-- Need to wrap the html style link in an html style header or things break -->
 <!-- Each line has extra white space at the end (hit space at least twice) so that each line is actually built on it's own line on the page -->
 <!-- Each paper entry should include the title/doi link as the header, the author(s), the year and journal, and then a note about why
 this paper deserves to be included in this reference section -->
-<h3><a href="https://doi.org/10.1021/cr1002613">Singlet Fission</a></h3>
+### [Singlet Fission](https://doi.org/10.1021/cr1002613)
 
 Author(s): Millicent B. Smith and Josef Michl  
 Year and Journal: 2010, Chemical Reviews
