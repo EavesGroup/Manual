@@ -13,6 +13,7 @@ tags:
     - parallelization
 header: no
 breadcrumbs: true
+author: sinalewis
 ---
 <div class="row">
 <div class="medium-4 medium-push-8 columns" markdown="1">

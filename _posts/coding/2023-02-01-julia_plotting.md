@@ -10,6 +10,7 @@ tags:
     - plotting
 header: no
 breadcrumbs: true
+author: sinalewis
 ---
 
 The main Julia plotting package is `Plots.jl`. This package imports most plot commands that you need. However, `Plots.jl` is really what is called a metapackage, which means it acts as an interface for other plotting libraries. The plotting library is decided by changing the backend.

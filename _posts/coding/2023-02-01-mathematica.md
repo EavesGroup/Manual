@@ -7,6 +7,7 @@ tags:
     - coding
 header: no
 breadcrumb: true
+author: sinalewis
 ---
 
 Mathematica is a useful although sometimes mysterious program for symbolic computations. These pages will attempt to highlight some of the more important or ambiguous features available.
