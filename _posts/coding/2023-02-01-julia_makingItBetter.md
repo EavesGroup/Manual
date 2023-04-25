@@ -25,7 +25,7 @@ author: sinalewis
 </div>
 </div><!-- /.medium-4.columns -->
 
-<div class="medium-12 medium-pull-4 columns" markdown="1">
+<div class="medium-8 medium-pull-4 columns" markdown="1">
 
 # Profiling
 
