@@ -1,6 +1,6 @@
 ---
 layout: page-fullwidth
-title:  "Code Base"
+title:  "How to Add to this Manual"
 categories:
     - appendix
 tags:
