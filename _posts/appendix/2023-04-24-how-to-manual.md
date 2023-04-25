@@ -15,6 +15,6 @@ The best way to learn the layout and file structure of this manual is to explore
 Every file starts with a short snippet of what is known as YAML (YAML Ain't Markup Language or Yet Another Markup Language. Yes, confusing I know). If you're familiar with JSON, just know that YAML is pretty similar. This section of YAML serves to set the look of the page and its relation to other content on the website. If you look through the files that make up the bulk of this webpage you will note 6 main keys appear on each one: layout, title, categories, tags, header, and breadcrumb.
 
 ### Layout
-As the name suggests, this tag sets the layout of the page, which controls a lot of how the page looks. 
+As the name suggests, this tag sets the layout of the page, which controls a lot of how the page looks. The majority of pages have the layout "page-fullwidth". The main landing pages (i.e. for Julia or VASP) have the "page" layout. I have also added [a copy of this page]({{ site.url }}/appendix/ex_page-fullwidth) with the "page" layout for a more direct comparison. 
 
 
