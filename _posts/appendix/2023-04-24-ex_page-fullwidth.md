@@ -1,5 +1,8 @@
 ---
 layout: page
+title: "Temporary Example"
+categories:
+    - appendix
 header: no
 breadcrumb: true
 ---
