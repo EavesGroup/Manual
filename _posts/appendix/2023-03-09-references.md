@@ -23,9 +23,11 @@ breadcrumb: true
 <!-- paper structure: link to paper through DOI with title of paper as the text. Follow this header link with information about the author(s) what makes the paper worth listing here
 -->
 ### <a href="https://doi.org/10.1021/cr1002613">Singlet Fission</a>
+
 Author(s): Millicent B. Smith and Josef Michl
 Year: 2010
 Notes: 
+
 
 
 ## Books
