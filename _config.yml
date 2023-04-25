@@ -106,7 +106,6 @@ defaults:
       show_meta: false # Hide metadata for all pages
       # sidebar:    		# Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: sinalewis # Default author for pages
   - scope:
       path: ""
       type: "posts"
@@ -114,7 +113,6 @@ defaults:
       show_meta: true # Show metadata for all posts
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: sinalewis # Default author for posts
 
 #       _   __            _             __  _
 #      / | / /___ __   __(_)___ _____ _/ /_(_)___  ____
