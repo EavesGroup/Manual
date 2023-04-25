@@ -43,10 +43,8 @@
       url: "/appendix/code/"
     - title: "Color Palettes"
       url: "/appendix/colors/"
-    - title: "People"
-      url: "/appendix/people/"
-    - title: "PhD Theses"
-      url: "/appendix/phd_theses/"
+    - title: "References"
+      url: "/appendix/references/"
     - title: "more..."
       url: "/appendix/"
 
