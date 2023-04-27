@@ -5,13 +5,14 @@ title:  "Using Julia on a Supercomputer"
 teaser: ""
 categories:
     - Julia
+    - coding
 tags:
     - Julia
     - summit
     - alpine
     - CURC
 header: no
-breadcrumbs: true
+breadcrumb: true
 author: sinalewis
 ---
 
