@@ -21,6 +21,7 @@ header: no
 
 ## Categories
 
+<div>
 {% for category in site.categories %}
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <h2 style="font-size:rem-calc(29);">{{ category_name }}</h2>
@@ -30,9 +31,11 @@ header: no
     {% endfor %}
     </ul>
 {% endfor %}
+</div>
 
 ## Tags
 
+<div>
 {% for tag in site.tags %}
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <h2 style="font-size:rem-calc(29);">{{ tag_name }}</h2>
@@ -42,3 +45,4 @@ header: no
     {% endfor %}
     </ul>
 {% endfor %}
+</div>
