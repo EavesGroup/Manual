@@ -154,7 +154,7 @@ img.hover-shadow {
 <div class="row">
 {% for img in images limit:3 %}
 {% capture total_img %}{% increment img_num %}{% endcapture %}
-<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}" %}"></div>
+<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}"></div>
 {% endfor %}
 </div>
 <div class="row">
