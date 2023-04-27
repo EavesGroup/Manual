@@ -45,3 +45,13 @@ If you create a webpage and want to take ownership for the content, or just allo
 ### File Names
 
 ### File Location
+
+## Markdown and Templating Language Info
+
+### Templating
+
+#### Kramdown {:}
+[Example](https://kramdown.gettalong.org/converter/html.html#toc)
+
+#### Liquid {{}}
+[Example](https://jekyllrb.com/docs/liquid/)
