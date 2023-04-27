@@ -33,6 +33,7 @@ Breadcrumbs are a way to help the user navigate the site. Setting the tag "bread
 IMPORTANT: make sure that the key is breadcrumb not breadcrumbs.
 
 ### Author
+If you create a webpage and want to take ownership for the content, or just allow for someone to contact you if they have questions, you can add the "author" tag to the YAML. This tag requires you to create a short profile in the file "_author/authors.yml".
 
 
 ## Category Pages
