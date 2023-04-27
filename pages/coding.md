@@ -8,7 +8,7 @@ header:
 permalink: "/coding/"
 ---
 <ul>
-    {% for post in site.categories.coding %}
+    {% for post in (site.categories.coding && site.tags.coding) %}
     <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
