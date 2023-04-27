@@ -4,9 +4,10 @@ subheadline:  ""
 title:  "Plotting"
 teaser: ""
 categories:
-    - Test
-tags:
+    - coding
     - Julia
+tags:
+    - Test
     - plotting
 header: no
 breadcrumbs: true
