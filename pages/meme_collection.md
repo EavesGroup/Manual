@@ -153,13 +153,13 @@ img.hover-shadow {
 
 <div class="row">
 {% for img in images limit:3 %}
-{% increment img_num %}
+{% capture total_img %}{% increment img_num %}{% endcapture %}
 <div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ img }}"></div>
 {% endfor %}
 </div>
 <div class="row">
 {% for img in images limit:3 offset: continue %}
-{% increment img_num %}
+{% capture total_img %}{% increment img_num %}{% endcapture %}
 <div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src=img></div>
 {% endfor %}
 </div>
@@ -170,7 +170,7 @@ img.hover-shadow {
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
   {% for img in images %}
-  {% increment img_number %}
+{% capture total_img %}{% increment img_number %}{% endcapture %}
     <div class="mySlides">
       <div class="numbertext">{{ img_number }} / {{ num_imgs }}</div>
       <img src="{{ img }}" style="width:100%">
