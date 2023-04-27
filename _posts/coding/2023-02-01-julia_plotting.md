@@ -5,12 +5,11 @@ title:  "Plotting"
 teaser: ""
 categories:
     - Julia
-    - coding
 tags:
     - Julia
     - plotting
 header: no
-breadcrumbs: true
+breadcrumb: true
 author: sinalewis
 ---
 
