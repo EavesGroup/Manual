@@ -149,7 +149,7 @@ img.hover-shadow {
 </style>
 
 {% assign num_imgs = 2 %}
-{% assign images = "chatGPT_dealership.png, chatGPT_play.png, "machine_learning_xkcd.png" | split: ", " %}
+{% assign images = "chatGPT_dealership.png, chatGPT_play.png, machine_learning_xkcd.png" | split: ", " %}
 
 <div class="row">
 {% for img in images limit:3 %}
