@@ -4,7 +4,7 @@ subheadline:  ""
 title:  "Plotting"
 teaser: ""
 categories:
-    - Julia
+    - Test
 tags:
     - Julia
     - plotting
