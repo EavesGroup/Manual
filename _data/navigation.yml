@@ -48,6 +48,10 @@
     - title: "more..."
       url: "/appendix/"
 
+- title: "Laughs"
+  url: "/memes/"
+  side: right
+
 - title: "Categories and Tags"
   url: "/categories/"
   side: right
