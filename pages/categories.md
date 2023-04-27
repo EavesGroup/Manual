@@ -28,7 +28,7 @@ header: no
     {% for post in site.categories[category_name] %}
     <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-    <ul>
+    </ul>
     </div>
 {% endfor %}
 </div>
