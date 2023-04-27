@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Random Useful Commands to Add as an Alias"
 teaser: ""
 categories:
+    - programs
     - CURC
 tags:
     - CURC

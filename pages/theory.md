@@ -8,7 +8,7 @@ header:
 permalink: "/theory/"
 ---
 <div>
-    {% for post in site.categories.theory %}
+    {% for post in site.tags.theory %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>

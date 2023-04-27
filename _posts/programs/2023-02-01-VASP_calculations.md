@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Common Calculations in VASP"
 teaser: ""
 categories:
+    - programs
     - VASP
 tags:
     - VASP

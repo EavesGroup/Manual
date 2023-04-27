@@ -23,16 +23,17 @@ Many fullwidth pages look fairly narrow because they have the table of contents 
 This tag is exactly what it says, a simple string that supplies the title that appears at the top of the page. The title does not need to match the name of the file, but I frequently make them similar.
 
 ### Categories and Tags
-Categories and tags are important for how the webpage is structured. As discussed in the [below section](#category-pages), pages are automatically included on certain landing pages based on their category keys (i.e. appendix or coding) or their tag keys (i.e. Julia or LAMMPS). As discussed in [another section](#file-location) I tend to sort files also based on their top level category; for example, all VASP related files are in the programs category. Listed categories and tags also end up at the bottom of the page. SUGGESTED FUNCTIONALITY that is not yet implemented: alphabetically sort the categories and tags on the master page.
+Categories and tags are important for how the webpage is structured. As discussed in the [below section](#category-pages), pages are automatically included on certain landing pages based on their tag keys (i.e. coding, Julia, or LAMMPS) and as mentioned in [the breadcrumb section](#breadcrumb) the listed categories and their order define what appears in the breadcrumb list. As discussed in [another section](#file-location) I tend to sort files also based on their top level category; for example, all VASP related files are in the programs category. Listed categories and tags also end up at the bottom of the page. SUGGESTED FUNCTIONALITY that is not yet implemented: alphabetically sort the categories and tags on the master page.
 
 ### Header
-The header is a banner that stretches across the top of the page [different types of headers](https://phlow.github.io/feeling-responsive/design/no-header/)
+The header is a banner that stretches across the top of the page. Most pages use "header: no", so that the first thing on the page is the title and then the content. Landing category pages, such as VASP or coding, have a specified title and image for the header. The creator of the template has example of [most type of headers](https://phlow.github.io/feeling-responsive/design/no-header/) that you would want to create.
 
 ### Breadcrumb
-Be sure that the key is breadcrumb not breadcrumbs. 
-
+Breadcrumbs are a way to help the user navigate the site. Setting the tag "breadcrumb: true" creates the grey banner at the top of the page that, for example on the Julia page, reads "START / CODING / JULIA". This then allows the user to start from a page and work their way back up the hierarchy of files. Breadcrumbs rely on the categories listed on the page, and their order. If the order is incorrect to how the files are structured, the links will be broken. 
+IMPORTANT: make sure that the key is breadcrumb not breadcrumbs.
 
 ### Author
+
 
 ## Category Pages
 

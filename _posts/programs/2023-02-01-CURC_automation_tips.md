@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Automation Tips"
 teaser: ""
 categories:
+    - programs
     - CURC
 tags:
     - CURC

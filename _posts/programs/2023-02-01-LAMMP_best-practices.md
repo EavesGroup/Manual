@@ -2,6 +2,7 @@
 layout: page
 title:  "LAMMPS"
 categories:
+    - programs
     - LAMMPS
 tags:
     - LAMMPS

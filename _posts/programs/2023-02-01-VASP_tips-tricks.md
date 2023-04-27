@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "VASP Misc. Tips and Tricks"
 teaser: ""
 categories:
+    - programs
     - VASP
 tags:
     - VASP

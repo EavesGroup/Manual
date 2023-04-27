@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Installing VASP"
 teaser: ""
 categories:
+    - programs
     - VASP
 tags:
     - VASP
