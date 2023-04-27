@@ -23,5 +23,14 @@ Many fullwidth pages look fairly narrow because they have the table of contents 
 This tag is exactly what it says, a simple string that supplies the title that appears at the top of the page. The title does not need to match the name of the file, but I frequently make them similar.
 
 ### Categories and Tags
-Categories and tags are important for how the webpage is structured. Listed categories and tags also end up at the bottom of the page.
+Categories and tags are important for how the webpage is structured. As discussed in the [below section](#category-pages), pages are automatically included on certain landing pages based on their category keys (i.e. appendix or coding) or their tag keys (i.e. Julia or LAMMPS). Listed categories and tags also end up at the bottom of the page. SUGGESTED FUNCTIONALITY that is not yet implemented: a page with all categories and tags, the search function doesn't seem to help you find all the posts/pages with certain tags.
 
+### Header
+
+### Breadcrumb
+
+### Author
+
+## Category Pages
+
+### 
