@@ -23,7 +23,7 @@ header: no
 {% for category in site.categories %}
 <div>
     {% capture category_name %}{{ category | first }}{% endcapture %}
-    <h3>{{ category_name }}</h3>
+    <h2 style="font-size:rem-calc(29);">{{ category_name }}</h2>
     <ul>
     {% for post in site.categories[category_name] %}
     <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
@@ -39,7 +39,7 @@ header: no
 {% for tag in site.tags %}
 <div>
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
-    <h3>{{ tag_name }}</h3>
+    <h2 style="font-size:rem-calc(29);">{{ tag_name }}</h2>
     <ul>
     {% for post in site.tags[tag_name] %}
     <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
