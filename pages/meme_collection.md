@@ -1,7 +1,7 @@
 ---
 layout: page
 show_meta: false
-title: "Page of Laughs"
+title: "Lab Life: Memes Edition"
 header: no
 permalink: "/memes/"
 ---

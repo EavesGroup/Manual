@@ -2,7 +2,7 @@
   url: "/"
   side: left
 
-- title: "Scientific Computing"
+- title: "Computing Toolbox"
   url: "/programs/"
   side: left
   dropdown:
@@ -48,11 +48,11 @@
     - title: "more..."
       url: "/appendix/"
 
-- title: "Laughs"
+- title: "Research Riffs"
   url: "/memes/"
   side: right
 
-- title: "Categories and Tags"
+- title: "Tag Cloud"
   url: "/categories/"
   side: right
 
