@@ -41,7 +41,7 @@ header: no
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <h3>{{ tag_name }}</h3>
     <ul>
-    {% for post in site.tag[tag_name] %}
+    {% for post in site.tags[tag_name] %}
     <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
     </ul>
