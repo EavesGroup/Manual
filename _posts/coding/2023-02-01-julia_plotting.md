@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Plotting"
 teaser: ""
 categories:
+    - coding
     - Julia
 tags:
     - Julia

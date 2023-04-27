@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Making Julia Work"
 teaser: ""
 categories:
+    - coding
     - Julia
 tags:
     - Julia

@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Commenting in Mathematica"
 teaser: "Have you ever wanted your Mathematica notebooks to look nicely organized and polished? Look here for tips that will help you get there."
 categories:
+    - coding
     - Mathematica
 tags:
     - Mathematica

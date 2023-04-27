@@ -4,6 +4,7 @@ subheadline:  ""
 title:  "Using Julia on a Supercomputer"
 teaser: ""
 categories:
+    - coding
     - Julia
 tags:
     - Julia
