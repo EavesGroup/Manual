@@ -7,8 +7,8 @@ header:
    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/appendix/"
 ---
-<ul>
+<div>
     {% for post in site.categories.appendix %}
-    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
-</ul>
+</div>
