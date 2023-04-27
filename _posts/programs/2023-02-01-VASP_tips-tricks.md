@@ -9,7 +9,7 @@ tags:
     - VASP
     - misc
 header: no
-breadcrumbs: true
+breadcrumb: true
 ---
 {% include mathjax.html %}
 

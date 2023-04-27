@@ -12,7 +12,7 @@ tags:
     - benchmarking
     - parallelization
 header: no
-breadcrumbs: true
+breadcrumb: true
 author: sinalewis
 ---
 <div class="row">

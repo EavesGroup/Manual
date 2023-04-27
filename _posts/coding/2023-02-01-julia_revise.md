@@ -9,7 +9,7 @@ tags:
     - Julia
     - usefulPkgs
 header: no
-breadcrumbs: true
+breadcrumb: true
 author: sinalewis
 ---
 

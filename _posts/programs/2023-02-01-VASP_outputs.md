@@ -9,7 +9,7 @@ tags:
     - VASP
     - output
 header: no
-breadcrumbs: true
+breadcrumb: true
 ---
 <div class="row">
 <div class="medium-4 medium-push-8 columns" markdown="1">
