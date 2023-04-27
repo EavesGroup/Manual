@@ -16,23 +16,30 @@ title: "Categories and Tags"
 
 <div class="medium-8 medium-pull-4 columns" markdown="1">
 
-# Categories
+## Categories
 
+<div>
 {% for category in site.categories %}
+<div>
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <h3>{{ category_name }}</h3>
     {% for post in site.categories[category_name] %}
     <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
+    </div>
 {% endfor %}
+</div>
 
+## Tags
 
-# Tags
-
+<div>
 {% for tag in site.tags %}
+<div>
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <h3>{{ tag_name }}</h3>
     {% for post in site.tag[tag_name] %}
     <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
+    </div>
 {% endfor %}
+</div>
