@@ -2,6 +2,7 @@
 layout: page-fullwidth
 permalink: /categories/
 title: "Categories and Tags"
+header: no
 ---
 
 <div class="row">
@@ -23,9 +24,11 @@ title: "Categories and Tags"
 <div>
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <h3>{{ category_name }}</h3>
+    <ul>
     {% for post in site.categories[category_name] %}
-    <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
+    <ul>
     </div>
 {% endfor %}
 </div>
@@ -37,9 +40,11 @@ title: "Categories and Tags"
 <div>
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <h3>{{ tag_name }}</h3>
+    <ul>
     {% for post in site.tag[tag_name] %}
-    <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
+    </ul>
     </div>
 {% endfor %}
 </div>
