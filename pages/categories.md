@@ -22,7 +22,6 @@ header: no
 ## Categories
 
 {% for category in site.categories %}
-
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <h2 style="font-size:rem-calc(29);">{{ category_name }}</h2>
     <ul>
