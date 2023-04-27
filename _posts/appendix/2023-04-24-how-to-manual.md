@@ -22,6 +22,6 @@ Many fullwidth pages look fairly narrow because they have the table of contents 
 ### Title
 This tag is exactly what it says, a simple string that supplies the title that appears at the top of the page. The title does not need to match the name of the file, but I frequently make them similar.
 
-### Categories
-Categories are important for how the webpage is structured. Listed categories also end up at the bottom of the page
+### Categories and Tags
+Categories and tags are important for how the webpage is structured. Listed categories and tags also end up at the bottom of the page.
 
