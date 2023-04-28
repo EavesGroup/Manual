@@ -148,13 +148,14 @@ img.hover-shadow {
 }
 </style>
 
+<!-- increment num_imgs for each added file -->
 {% assign num_imgs = 4 %}
 <!-- add image filename and caption, one per line with the line ended by a colon -->
 {% capture imgData %}
-chatGPT_dealership.png, "The Eaves Group Dealership as told by ChatGPT":
-chatGPT_play.png, "Day in the Life of the Eaves Group":
-machine_learning_xkcd.png, "Machine Learning as told by xkcd":
-phd092421s.gif, "PhD Comics"
+chatGPT_dealership.png, The Eaves Group Dealership as told by ChatGPT:
+chatGPT_play.png, Day in the Life of the Eaves Group:
+machine_learning_xkcd.png, Machine Learning as told by xkcd:
+phd092421s.gif, PhD Comics
 {% endcapture %}
 
 {% assign imgData = imgData | split: ":" %}
