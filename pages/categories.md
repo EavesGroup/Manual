@@ -25,7 +25,7 @@ header: no
 {% for c in site.categories %}
     {% assign cats = cats | push: c[0] %}
 {% endfor %}
-{% assign sorted_cats = cats | sort_natural}
+{% assign sorted_cats = cats | sort_natural %}
 
 {% for category in sorted_cats %}
 ### {{ category }}
@@ -45,7 +45,7 @@ header: no
 {% for t in site.categories %}
     {% assign tags = tags | push: t[0] %}
 {% endfor %}
-{% assign sorted_tags = tags | sort_natural}
+{% assign sorted_tags = tags | sort_natural %}
 
 {% for tag in sorted_tags %}
 ### {{ tag }}
