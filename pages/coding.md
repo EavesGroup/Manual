@@ -8,7 +8,7 @@ header:
 permalink: "/coding/"
 ---
 <div>
-    {% for post in site.tags.coding %}
+    {% for post in site.tags.coding sort_natural%}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>

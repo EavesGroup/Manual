@@ -8,7 +8,7 @@ header:
 permalink: "/appendix/"
 ---
 <div>
-    {% for post in site.tags.appendix %}
+    {% for post in site.tags.appendix sort_natural %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
