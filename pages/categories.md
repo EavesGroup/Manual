@@ -21,30 +21,29 @@ header: no
 
 ## Categories
 
-<div>
 <!-- {% assign sorted_cats = site.categories | sort_natural %} -->
 {% for category in site.categories | sort_natural %}
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    <h2 style="font-size:rem-calc(29);">{{ category_name }}</h2>
-    <ul>
-    {% for post in site.categories[category_name] %}
-    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
+{% capture category_name %}{{ category | first }}{% endcapture %}
+### {{ category_name }}
+<ul>
+{% for post in site.categories[category_name] %}
+<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
-</div>
+</ul>
+{% endfor %}
+
+<small markdown="1">[Up to table of contents](#toc)</small>
+{: .text-right }
 
 ## Tags
 
-<div>
 {% assign sorted_tags = site.tags | sort_natural %}
 {% for tag in sorted_tags %}
-    {% capture tag_name %}{{ tag | first }}{% endcapture %}
-    <h2 style="font-size:rem-calc(29);">{{ tag_name }}</h2>
-    <ul>
-    {% for post in site.tags[tag_name] %}
-    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
+{% capture tag_name %}{{ tag | first }}{% endcapture %}
+### {{ tag_name }}
+<ul>
+{% for post in site.tags[tag_name] %}
+<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
-</div>
+</ul>
+{% endfor %}
