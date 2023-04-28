@@ -163,7 +163,7 @@ phd092421s.gif, PhD Comics
 <div class="row">
 {% for entry in imgData limit:3 reversed%}
 {% capture total_img %}{% increment img_num %}{% endcapture %}
-{% assign img = entry | split: ", " | first | lstrip %}
+{% assign img = entry | split: ", " | first | strip %}
 {% assign caption = entry | split: ", " | last %}
 <div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}" caption="{{ caption }}"></div>
 {% endfor %}
@@ -173,7 +173,7 @@ phd092421s.gif, PhD Comics
 <div class="row">
 {% for entry in imgData limit:3 offset: continue %}
 {% capture total_img %}{% increment img_num %}{% endcapture %}
-{% assign img = entry | split: ", " | first  | lstrip %}
+{% assign img = entry | split: ", " | first  | strip %}
 {% assign caption = entry | split: ", " | last %}
 <div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}" caption="{{ caption }}"></div>
 {% endfor %}
@@ -185,7 +185,7 @@ phd092421s.gif, PhD Comics
   <div class="modal-content">
   {% for entry in imgData %}
 {% capture total_img %}{% increment img_number %}{% endcapture %}
-{% assign img = entry | split: ", " | first | lstrip %}
+{% assign img = entry | split: ", " | first | strip %}
 {% assign caption = entry | split: ", " | last %}
     <div class="mySlides">
       <div class="numbertext">{{ img_number }} / {{ num_imgs }}</div>
@@ -199,7 +199,7 @@ phd092421s.gif, PhD Comics
     </div>
     {% for entry in imgData %}
 {% capture total_img %}{% increment img_number %}{% endcapture %}
-{% assign img = entry | split: ", " | first | lstrip %}
+{% assign img = entry | split: ", " | first | strip %}
 {% assign caption = entry | split: ", " | last %}
     <div class="column">
       <img class="demo cursor" src="{{ site.urlimg }}memes/{{ img }}" style="width:100%" onclick="currentSlide({{ img_num }})" alt="{{ caption }}">
