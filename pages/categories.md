@@ -21,11 +21,16 @@ header: no
 
 ## Categories
 
-{% for category in site.categories | sort_natural %}
-{% capture category_name %}{{ category | first }}{% endcapture %}
-### {{ category_name }}
+{% assign cats = "" | split:"" %}
+{% for c in site.categories %}
+    {% assign cats = cats | push: c[0] %}
+{% endfor %}
+{% assign sorted_cats = cats | sort_natural}
+
+{% for category in sorted_cats %}
+### {{ category }}
 <ul>
-{% for post in site.categories[category_name] %}
+{% for post in site.categories[category] %}
 <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
@@ -36,11 +41,16 @@ header: no
 
 ## Tags
 
-{% for tag in site.tags | sort_natural %}
-{% capture tag_name %}{{ tag | first }}{% endcapture %}
-### {{ tag_name }}
+{% assign tags = "" | split:"" %}
+{% for t in site.categories %}
+    {% assign tags = tags | push: t[0] %}
+{% endfor %}
+{% assign sorted_tags = tags | sort_natural}
+
+{% for tag in sorted_tags %}
+### {{ tag }}
 <ul>
-{% for post in site.tags[tag_name] %}
+{% for post in site.tags[tag] %}
 <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
