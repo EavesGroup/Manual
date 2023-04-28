@@ -148,29 +148,44 @@ img.hover-shadow {
 }
 </style>
 
-{% assign num_imgs = 2 %}
-{% assign images = "chatGPT_dealership.png, chatGPT_play.png, machine_learning_xkcd.png" | split: ", " %}
+{% assign num_imgs = 4 %}
+<!-- add image filename and caption, one per line with the line ended by a colon -->
+{% capture imgData %}
+chatGPT_dealership.png, "The Eaves Group Dealership as told by ChatGPT":
+chatGPT_play.png, "Day in the Life of the Eaves Group":
+machine_learning_xkcd.png, "Machine Learning as told by xkcd":
+phd092421s.gif, "PhD Comics"
+{% endcapture %}
+
+{% assign imgData = imgData | split: ":" %}
 
 <div class="row">
-{% for img in images limit:3 %}
+{% for entry in imgData limit:3 reversed%}
 {% capture total_img %}{% increment img_num %}{% endcapture %}
-<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}"></div>
-{% endfor %}
-</div>
-<div class="row">
-{% for img in images limit:3 offset: continue %}
-{% capture total_img %}{% increment img_num %}{% endcapture %}
-<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}"></div>
+{% assign img = entry | split: ", " | first %}
+{% assign caption = entry | split: ", " | last %}
+<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}" caption="{{ caption }}"></div>
 {% endfor %}
 </div>
 
+<!-- Copy this section for every additional image over a multiple of 3 -->
+<div class="row">
+{% for entry in imgData limit:3 offset: continue %}
+{% capture total_img %}{% increment img_num %}{% endcapture %}
+{% assign img = entry | split: ", " | first %}
+{% assign caption = entry | split: ", " | last %}
+<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}" caption="{{ caption }}"></div>
+{% endfor %}
+</div>
 
 
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
-  {% for img in images %}
+  {% for entry in imgData %}
 {% capture total_img %}{% increment img_number %}{% endcapture %}
+{% assign img = entry | split: ", " | first %}
+{% assign caption = entry | split: ", " | last %}
     <div class="mySlides">
       <div class="numbertext">{{ img_number }} / {{ num_imgs }}</div>
       <img src="{{ site.urlimg }}memes/{{ img }}" style="width:100%">
@@ -178,21 +193,17 @@ img.hover-shadow {
 {% endfor %}
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    <!-- <div class="caption-container">
+    <div class="caption-container">
       <p id="caption"></p>
     </div>
+    {% for entry in imgData %}
+{% capture total_img %}{% increment img_number %}{% endcapture %}
+{% assign img = entry | split: ", " | first %}
+{% assign caption = entry | split: ", " | last %}
     <div class="column">
-      <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+      <img class="demo cursor" src="{{ site.urlimg }}memes/{{ img }}" style="width:100%" onclick="currentSlide({{ img_num }})" alt="{{ caption }}">
     </div>
-    <div class="column">
-      <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div> -->
+    {% endfor %}
   </div>
 </div>
 
