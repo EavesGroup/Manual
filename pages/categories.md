@@ -22,8 +22,8 @@ header: no
 ## Categories
 
 <div>
-{% assign sorted_cats = site.categories | sort_natural %}
-{% for category in sorted_cats %}
+<!-- {% assign sorted_cats = site.categories | sort_natural %} -->
+{% for category in site.categories | sort_natural %}
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <h2 style="font-size:rem-calc(29);">{{ category_name }}</h2>
     <ul>
