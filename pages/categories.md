@@ -22,7 +22,7 @@ header: no
 ## Categories
 
 <div>
-{% assign sorted_cats = site.categories | sort %}
+{% assign sorted_cats = site.categories | sort_natural %}
 {% for category in sorted_cats %}
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <h2 style="font-size:rem-calc(29);">{{ category_name }}</h2>
@@ -37,7 +37,7 @@ header: no
 ## Tags
 
 <div>
-{% assign sorted_tags = site.tags | sort %}
+{% assign sorted_tags = site.tags | sort_natural %}
 {% for tag in sorted_tags %}
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <h2 style="font-size:rem-calc(29);">{{ tag_name }}</h2>
