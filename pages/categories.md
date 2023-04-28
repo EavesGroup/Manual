@@ -54,10 +54,10 @@ header: no
 <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-{% if {{{% increment var %} | modulo: 5 }} == 0  %}
+<!-- {% if {{{% increment var %} | modulo: 5 }} == 0  %}
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
-{% endif %}
+{% endif %} -->
 {% endfor %}
 
 <small markdown="1">[Up to table of contents](#toc)</small>
