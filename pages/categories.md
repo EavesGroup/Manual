@@ -21,7 +21,6 @@ header: no
 
 ## Categories
 
-<!-- {% assign sorted_cats = site.categories | sort_natural %} -->
 {% for category in site.categories | sort_natural %}
 {% capture category_name %}{{ category | first }}{% endcapture %}
 ### {{ category_name }}
@@ -37,8 +36,7 @@ header: no
 
 ## Tags
 
-{% assign sorted_tags = site.tags | sort_natural %}
-{% for tag in sorted_tags %}
+{% for tag in site.tags | sort_natural %}
 {% capture tag_name %}{{ tag | first }}{% endcapture %}
 ### {{ tag_name }}
 <ul>

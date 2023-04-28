@@ -8,7 +8,7 @@ header:
 permalink: "/programs/"
 ---
 <div>
-    {% for post in site.tags.programs sort_natural %}
+    {% for post in site.tags.programs | sort_natural %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
