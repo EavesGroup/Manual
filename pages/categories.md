@@ -42,7 +42,7 @@ header: no
 ## Tags
 
 {% assign tags = "" | split:"" %}
-{% for t in site.categories %}
+{% for t in site.tags %}
     {% assign tags = tags | push: t[0] %}
 {% endfor %}
 {% assign sorted_tags = tags | sort_natural %}
