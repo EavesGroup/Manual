@@ -33,8 +33,8 @@ header: no
 
 <summary><p id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey">&#9002</p></summary>
 <div class="row">
-<div class="small-3 column"></div>
-<div class="small-9 column">
+<div class="small-1 column"></div>
+<div class="small-11 column">
 <ul>
 {% for post in site.categories[category] %}
 <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
