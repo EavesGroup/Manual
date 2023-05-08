@@ -28,10 +28,10 @@ header: no
 {% assign sorted_cats = cats | sort_natural %}
 
 {% for category in sorted_cats %}
-<span> ### {{ category }} </span>
+### {{ category }}
 <details>
 
-<summary><p id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey">&#9002;</p></summary>
+<summary><p id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey; position:absolute; margin-top:-22px"">〉</p></summary>
 <div class="row">
 <div class="small-1 column"></div>
 <div class="small-11 column">
