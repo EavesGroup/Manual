@@ -26,11 +26,8 @@ this paper deserves to be included in this reference section -->
 ### [Singlet Fission](https://doi.org/10.1021/cr1002613)
 
 Author(s): Millicent B. Smith and Josef Michl  
-Year and Journal: 2010, Chemical Reviews
+Year and Journal: 2010, Chemical Reviews  
 Notes: 
-
-
-
 
 ## Books
 
@@ -41,3 +38,10 @@ Notes:
 | Weiss, Ulrich | Quantum Dissipative Systems |  |
 | Zwanzig, Robert | Nonequilibrium Statistical Mechanics |  |
 | Nelson, David | Defects and Geometry in Condensed Matter Physics |  |
+
+
+## Lists of Useful Papers
+
+### [DMFT](https://lists.papersapp.com/z7MTUPLN9xk2)
+
+

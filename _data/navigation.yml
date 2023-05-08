@@ -26,6 +26,15 @@
     - title: "Mathematica"
       url: "/coding/mathematica/"
 
+- title: "Standard Operating Procedure"
+  url: "/SOP/"
+  side: left
+  dropdown:
+    - title: "Plotting"
+      url: "/SOP/plots/"
+    - title: "Data Management"
+      url: "/SOP/data/"
+
 - title: "Background Theory"
   url: "/theory/"
   side: left
