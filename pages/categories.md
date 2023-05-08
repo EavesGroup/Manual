@@ -28,14 +28,17 @@ header: no
 {% assign sorted_cats = cats | sort_natural %}
 
 {% for category in sorted_cats %}
+### {{ category }}
 <details>
 
-<summary><h3> {{ category }} </h3></summary>
+<summary><p id="dropdown" onClick="changeDropdown()" style="color:$grey-10">>>>>>>>>>>>>>>>>>>>>>>>>></p></summary>
+<div class="row t30">
 <ul>
 {% for post in site.categories[category] %}
 <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+</div>
 </details>
 {% endfor %}
 
@@ -61,3 +64,9 @@ header: no
 
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
+
+
+<script>
+function changeDropdown() {
+  document.getElementById("dropdown").textContent = "-------------------------";
+}</script>
