@@ -49,11 +49,11 @@
 - title: "Theory"
   url: "/theory/"
   side: left
-  dropdown:
-    - title: "Redfield"
-      url: "/theory/redfield/"
-    - title: "DMFT"
-      url: "/theory/DMFT/"
+  # dropdown:
+  #   - title: "Redfield"
+  #     url: "/theory/redfield/"
+  #   - title: "DMFT"
+  #     url: "/theory/DMFT/"
 
 - title: Appendix
   url: "/appendix/"
