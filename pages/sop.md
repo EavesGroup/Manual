@@ -1,7 +1,7 @@
 ---
 layout: page
 show_meta: false
-title: ""
+title: "Standard Operating Procedure"
 subheadline: ""
 permalink: "/sop/"
 ---
