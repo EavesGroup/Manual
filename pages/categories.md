@@ -34,7 +34,7 @@ header: no
 ### {{ category }}
 <details>
 
-<summary><h3 id="exHeader" style="float:left; color:white; margin: -35px 0px 0px 0px">{{ category }}<h3 id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</h3></h3></summary>
+<summary><h3 id="exHeader" style="float:left; color:white; margin: -35px 0px 0px 0px">{{ category }}<div id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h3></summary>
 <div class="row">
 <div class="small-1 column"></div>
 <div class="small-11 column">
