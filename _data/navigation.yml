@@ -51,6 +51,8 @@
       url: "/theory/esm/"
     - title: "Non-Equilibrium Stat. Mech."
       url: "/theory/nesm/"
+    - title: "Quantum Dynamics"
+      url: "/theory/quantumDynamics/"
 
 - title: Appendix
   url: "/appendix/"
