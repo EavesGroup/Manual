@@ -2,31 +2,42 @@
   url: "/"
   side: left
 
-- title: "Computing Toolbox"
-  url: "/programs/"
+- title: ""
   side: left
   dropdown:
-    - title: "CURC"
-      url: "/programs/CURC/"
-    - title: "LAMMPS"
-      url: "/programs/LAMMPS/"
-    - title: "VASP"
-      url: "/programs/VASP/"
-    - title: "Wannier"
-      url: "/programs/Wannier/"
-    - title: "more..."
+    - title: "Computing Toolbox"
       url: "/programs/"
+      dropdown:
+        - title: "CURC"
+          url: "/programs/CURC/"
+    - title: "Coding"
+      url: "/coding/"
 
-- title: "Coding"
-  url: "/coding/"
-  side: left
-  dropdown:
-    - title: "Julia"
-      url: "/coding/julia/"
-    - title: "Mathematica"
-      url: "/coding/mathematica/"
+# - title: "Computing Toolbox"
+#   url: "/programs/"
+#   side: left
+#   dropdown:
+#     - title: "CURC"
+#       url: "/programs/CURC/"
+#     - title: "LAMMPS"
+#       url: "/programs/LAMMPS/"
+#     - title: "VASP"
+#       url: "/programs/VASP/"
+#     - title: "Wannier"
+#       url: "/programs/Wannier/"
+#     - title: "more..."
+#       url: "/programs/"
 
-- title: "Standard Operating Procedure"
+# - title: "Coding"
+#   url: "/coding/"
+#   side: left
+#   dropdown:
+#     - title: "Julia"
+#       url: "/coding/julia/"
+#     - title: "Mathematica"
+#       url: "/coding/mathematica/"
+
+- title: "Standard Procedure"
   url: "/SOP/"
   side: left
   dropdown:
@@ -35,7 +46,7 @@
     - title: "Data Management"
       url: "/SOP/data/"
 
-- title: "Background Theory"
+- title: "Theory"
   url: "/theory/"
   side: left
   dropdown:
