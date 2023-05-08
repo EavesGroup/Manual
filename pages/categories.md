@@ -28,12 +28,15 @@ header: no
 {% assign sorted_cats = cats | sort_natural %}
 
 {% for category in sorted_cats %}
-### {{ category }}
+<details>
+
+<summary><h3> {{ category }} </h3></summary>
 <ul>
 {% for post in site.categories[category] %}
 <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+</details>
 {% endfor %}
 
 <small markdown="1">[Up to table of contents](#toc)</small>
