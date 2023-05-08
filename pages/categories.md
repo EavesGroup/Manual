@@ -34,7 +34,7 @@ header: no
 ### {{ category }}
 <details>
 
-<summary><div style="float:left; color:white; margin: -25px 0px 0px 0px">{{ category }}</div><div id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey; display:inline; margin: -25px 0px 0px 0px">&#9002;</div></summary>
+<summary><h3 id="exHeader" style="float:left; color:gray; margin: -45px 0px 0px 0px">{{ category }}<div id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">&#9002;</div></h3></summary>
 <div class="row">
 <div class="small-1 column"></div>
 <div class="small-11 column">
@@ -82,11 +82,17 @@ header: no
 
 
 <script>
-function changeDropdown(id) {
+function myFunction(id) {
   var x = document.getElementById(id);
-  if (x.textContent === '〉'){
-    x.textContent = '﹀';
+  var el = document.getElementById('exHeader');
+  var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+  var fontSize = parseFloat(style); 
+  if (x.innerText === "〉") {
+    x.innerText = "﹀";
+    x.style.fontSize = (fontSize+7)+'px';
   } else {
-    x.textContent = '〉';
+  	x.innerHTML = "〉";
+    x.style.fontSize = style;
   }
-}</script>
+}
+</script>
