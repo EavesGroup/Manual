@@ -3,13 +3,13 @@
   side: left
 
 - title: "Standard Procedure"
-  url: "/SOP/"
+  url: "/sop/"
   side: left
   dropdown:
     - title: "Plotting"
-      url: "/SOP/plots/"
+      url: "/sop/plots/"
     - title: "Data Management"
-      url: "/SOP/data/"
+      url: "/sop/data/"
 
 - title: "Computer"
   side: left
