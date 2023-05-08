@@ -2,7 +2,7 @@
   url: "/"
   side: left
 
-- title: "Standard Procedure"
+- title: "Standard Procedures"
   url: "/sop/"
   side: left
   dropdown:
@@ -11,14 +11,11 @@
     - title: "Data Management"
       url: "/sop/data/"
 
-- title: "Computer"
+- title: "Computing"
   side: left
   dropdown:
-    - title: "Computing Toolbox"
+    - title: "Software"
       url: "/programs/"
-      dropdown:
-        - title: "CURC"
-          url: "/programs/CURC/"
     - title: "Coding"
       url: "/coding/"
 
@@ -47,11 +44,11 @@
 - title: "Theory"
   url: "/theory/"
   side: left
-  # dropdown:
-  #   - title: "Redfield"
-  #     url: "/theory/redfield/"
-  #   - title: "DMFT"
-  #     url: "/theory/DMFT/"
+  dropdown:
+    - title: "Open Quantum Systems"
+      url: "/theory/openQS/"
+    - title: "Statistical Mechanics"
+      url: "/theory/statMech/"
 
 - title: Appendix
   url: "/appendix/"
