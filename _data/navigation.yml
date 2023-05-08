@@ -2,11 +2,23 @@
   url: "/"
   side: left
 
-- title: ""
+- title: "Standard Procedure"
+  url: "/SOP/"
+  side: left
+  dropdown:
+    - title: "Plotting"
+      url: "/SOP/plots/"
+    - title: "Data Management"
+      url: "/SOP/data/"
+
+- title: "Computer"
   side: left
   dropdown:
     - title: "Computing Toolbox"
       url: "/programs/"
+      dropdown:
+        - title: "CURC"
+          url: "/programs/CURC/"
     - title: "Coding"
       url: "/coding/"
 
@@ -33,15 +45,6 @@
 #       url: "/coding/julia/"
 #     - title: "Mathematica"
 #       url: "/coding/mathematica/"
-
-- title: "Standard Procedure"
-  url: "/SOP/"
-  side: left
-  dropdown:
-    - title: "Plotting"
-      url: "/SOP/plots/"
-    - title: "Data Management"
-      url: "/SOP/data/"
 
 - title: "Theory"
   url: "/theory/"
