@@ -63,7 +63,7 @@ header: no
 ### {{ tag }}
 <details>
 
-<summary><p id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey">&#9002;</p></summary>
+<summary><h3 style="float:left; color:white; margin: -35px 0px 0px 0px">{{ tag }}<div id="dropdown-{{ tag }}" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h3></summary>
 <div class="row">
 <div class="small-1 column"></div>
 <div class="small-11 column">
