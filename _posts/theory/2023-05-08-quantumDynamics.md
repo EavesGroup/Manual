@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Open Quantum Systems"
+title:  "Quantum Dynamics"
 categories:
     - theory
 
@@ -13,5 +13,5 @@ breadcrumb: true
 
 {: .t60 }
 
-{% include list-posts tag='open quantum systems' %}
+{% include list-posts tag='quantum dynamics' %}
 
