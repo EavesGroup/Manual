@@ -7,9 +7,6 @@
   dropdown:
     - title: "Computing Toolbox"
       url: "/programs/"
-      dropdown:
-        - title: "CURC"
-          url: "/programs/CURC/"
     - title: "Coding"
       url: "/coding/"
 
