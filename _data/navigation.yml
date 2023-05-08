@@ -45,10 +45,12 @@
   url: "/theory/"
   side: left
   dropdown:
-    - title: "Open Quantum Systems"
-      url: "/theory/openQS/"
-    - title: "Statistical Mechanics"
-      url: "/theory/statMech/"
+    - title: "Electronic Structure Theory"
+      url: "/theory/est/"
+    - title: "Equilibrium Stat. Mech."
+      url: "/theory/esm/"
+    - title: "Non-Equilibrium Stat. Mech."
+      url: "/theory/nesm/"
 
 - title: Appendix
   url: "/appendix/"
