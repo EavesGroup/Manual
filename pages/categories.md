@@ -72,9 +72,9 @@ header: no
 <script>
 function changeDropdown(id) {
   var x = document.getElementById(id);
-  if (x === "&#9002;"){
-    x.textContent = "&#65088;";
+  if (x.textConent === '〉'){
+    x.textContent = '﹀';
   } else {
-    x.textContent = "&#9002;";
+    x.textContent = '〉';
   }
 }</script>
