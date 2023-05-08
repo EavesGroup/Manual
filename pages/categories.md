@@ -31,7 +31,7 @@ header: no
 ### {{ category }}
 <details>
 
-<summary><p id="dropdown" onClick="changeDropdown()" style="color:$grey-10">>>>>>>>>>>>>>>>>>>>>>>>>></p></summary>
+<summary><p id="dropdown-{{ category }}" onClick="changeDropdown()" style="color:grey">>>>>>>>>>>>>>>>>>>>>>>>>></p></summary>
 <div class="row t30">
 <ul>
 {% for post in site.categories[category] %}
