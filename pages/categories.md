@@ -31,7 +31,7 @@ header: no
 ### {{ category }}
 <details>
 
-<summary><p id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey">&#9002</p></summary>
+<summary><p id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey">&#9002;</p></summary>
 <div class="row">
 <div class="small-1 column"></div>
 <div class="small-11 column">
@@ -72,9 +72,9 @@ header: no
 <script>
 function changeDropdown(id) {
   var x = document.getElementById(id);
-  if (x === "&#9002"){
-    x.textContent = "&#65088";
+  if (x === "&#9002;"){
+    x.textContent = "&#65088;";
   } else {
-    x.textContent = "&#9002";
+    x.textContent = "&#9002;";
   }
 }</script>
