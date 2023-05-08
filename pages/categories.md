@@ -31,7 +31,7 @@ header: no
 ### {{ category }}
 <details>
 
-<summary><p id="dropdown-{{ category }}" onClick="changeDropdown()" style="color:grey">>>>>>>>>>>>>>>>>>>>>>>>>></p></summary>
+<summary><p id="dropdown-{{ category }}" onClick="changeDropdown(this.id)" style="color:grey">&#3009</p></summary>
 <div class="row t30">
 <ul>
 {% for post in site.categories[category] %}
@@ -67,6 +67,11 @@ header: no
 
 
 <script>
-function changeDropdown() {
-  document.getElementById("dropdown").textContent = "-------------------------";
+function changeDropdown(id) {
+  var x = document.getElementById(id)
+  if (x === "&#3009"){
+    x.textContent = "&#FE40";
+  } else {
+    x.textContent = "&#3009";
+  }
 }</script>
