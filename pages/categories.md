@@ -71,7 +71,7 @@ header: no
 
 <script>
 function changeDropdown(id) {
-  var x = document.getElementById(id)
+  var x = document.getElementById(id);
   if (x === "&#3009"){
     x.textContent = "&#FE40";
   } else {
