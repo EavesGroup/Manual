@@ -36,7 +36,6 @@
 #       url: "/programs/Wannier/"
 #     - title: "more..."
 #       url: "/programs/"
-
 # - title: "Coding"
 #   url: "/coding/"
 #   side: left
@@ -45,7 +44,6 @@
 #       url: "/coding/julia/"
 #     - title: "Mathematica"
 #       url: "/coding/mathematica/"
-
 - title: "Theory"
   url: "/theory/"
   side: left
