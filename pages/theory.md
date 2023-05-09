@@ -8,8 +8,19 @@ header:
 permalink: "/theory/"
 ---
 
+<small markdown="1">[Down to alphabetical list](#all)</small>
+{: .text-right }
+
+## [Electronic Structure Theory]({{ site.url }}{{ site.baseurl }}/theory/est/)
+
+## [Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/esm/)
+
+## [Non-Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/nesm/)
+
+## [Quantum Dynamics]({{ site.url }}{{ site.baseurl }}/theory/quantumDynamics/)
 
 
+## All
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.theory %}

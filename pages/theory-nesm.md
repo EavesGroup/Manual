@@ -1,12 +1,10 @@
 ---
 layout: page
+show_meta: false
 title:  "Non-Equilibrium Statistical Mechanics"
-categories:
-    - theory
-tags:
-    - theory
-header: no
-breadcrumb: true
+header:
+   image_fullwidth: "header_unsplash_5.jpg"
+permalink: "/nesm/"
 ---
 
 
