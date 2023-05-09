@@ -48,6 +48,8 @@ Welcome to the Eaves Research Group manual! The [Eaves Research Group at CU Boul
 
 This manual is designed to be a consolidated platform for previous members to share and pass down their knowledge to current and future members. The manual covers a wide range of topics that are important for conducting research in the Eaves group. These topics include the often overlooked procedures for data management and research presentation, as well as useful information about computing and theory.
 
+Didn't find something you were looking for? Please [add](https://github.com/EavesGroup/Manual) it! Instructions to navigate adding or editing pages so can be found [here]({{ site.url }}{{ site.baseurl }}/appendix/how-to-manual/). This manual is not an exhaustive list of important topics or every detail of the topics that are included. The manual is, by design, an ever-growing and changing record of topics that Eaves group members felt should be written down, either because they were important or just because finding the information initially was annoying. 
+
 
 <!-- <div id="videoModal" class="reveal-modal large" data-reveal="">
   <div class="flex-video widescreen vimeo" style="display: block;">
