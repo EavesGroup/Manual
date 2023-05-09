@@ -13,7 +13,7 @@ Congratulations on joining the Eaves research group! The purpose of this section
 
 > ...the only difference between screwing around and science is writing it down.
 
-In that spirit, we have come up with a series of standard operating procedures to best make sure our science is at minimum internally "written" down and, when published, clear and consistent.
+In that spirit, we have come up with a series of standard operating procedures to best make sure our science is, at minimum, internally "written" down and, when published, clear and consistent.
 
 
 {% assign titles = "" | split: "" %}
