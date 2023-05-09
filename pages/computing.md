@@ -60,6 +60,8 @@ permalink: "/computing/"
 
 ## All 
 
+---
+
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.computing %}
     {% assign titles = titles | push: post.title %}
