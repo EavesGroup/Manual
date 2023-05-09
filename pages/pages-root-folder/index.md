@@ -44,9 +44,9 @@ permalink: /index.html
 homepage: true
 ---
 
-The Eaves Research Group at CU Boulder specializes in developing theories and simulations to uncover the fundamental principles that govern the behavior of complex systems. Our primary approach involves constructing physically intuitive models that simplify complex behaviors into manageable components. This method unites the modeling traditions of condensed matter physics with theoretical and computational chemistry methods.
+Welcome to the Eaves Research Group manual! The [Eaves Research Group at CU Boulder](https://www.colorado.edu/lab/eavesgroup) specializes in developing theories and simulations to uncover the fundamental principles that govern the behavior of complex systems. Our primary approach involves constructing physically intuitive models that simplify complex behaviors into manageable components. This method unites the modeling traditions of condensed matter physics with theoretical and computational chemistry methods.
 
-Through this webpage, members of the Eaves Group can share resources and knowledge gained during their tenure with the group. Our goal is to provide a platform for future members to more easily build upon our work and make further advancements in this field.
+This manual is designed to be a consolidated platform for previous members to share and pass down their knowledge to current and future members. The manual covers a wide range of topics that are important for conducting research in the Eaves group. These topics include the often overlooked procedures for data management and research presentation, as well as useful information about computing and theory.
 
 
 <!-- <div id="videoModal" class="reveal-modal large" data-reveal="">
