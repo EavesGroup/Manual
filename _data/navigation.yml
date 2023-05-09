@@ -12,6 +12,7 @@
       url: "/sop/data/"
 
 - title: "Computing"
+  url: "/computing/"
   side: left
   dropdown:
     - title: "Software"
