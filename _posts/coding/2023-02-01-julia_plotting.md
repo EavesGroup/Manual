@@ -1,7 +1,7 @@
 ---
 layout: page
 subheadline:  ""
-title:  "Plotting"
+title:  "Plotting in Julia"
 teaser: ""
 categories:
     - coding
