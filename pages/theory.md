@@ -8,6 +8,9 @@ header:
 permalink: "/theory/"
 ---
 
+
+
+
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.theory %}
     {% assign titles = titles | push: post.title %}
