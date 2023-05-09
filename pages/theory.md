@@ -111,7 +111,7 @@ permalink: "/theory/"
 <div class="row">
 <div class="small-6 columns">
     {% for p in sorted_titles %}
-        {% assign loopindex = forloop.index | modulo: 2 %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
     {% if loopindex == 1 %}
     {% assign matched_post = site.tags.theory | where:"title",p %}
     {% assign post = matched_post[0] %}
@@ -121,8 +121,8 @@ permalink: "/theory/"
     </div>
     <div class="small-6 columns">
     {% for p in sorted_titles %}
-        {% assign loopindex = forloop.index | modulo: 2 %}
-    {% if loopindex == 2 %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 0 %}
     {% assign matched_post = site.tags.theory | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
