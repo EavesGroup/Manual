@@ -11,13 +11,51 @@ permalink: "/theory/"
 <small markdown="1">[Down to alphabetical list](#all)</small>
 {: .text-right }
 
-## [Electronic Structure Theory]({{ site.url }}{{ site.baseurl }}/theory/est/)
+## [Electronic Structure Theory]({{ site.url }}{{ site.baseurl }}/est/)
 
-## [Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/esm/)
+<details>
 
-## [Non-Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/nesm/)
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Electronic Structure Theory<div id="dropdown-est" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
 
-## [Quantum Dynamics]({{ site.url }}{{ site.baseurl }}/theory/quantumDynamics/)
+{% assign titles = "" | split: "" %}
+{% for post in site.tags.'electronic structure theory' %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div>
+    {% for p in sorted_titles %}
+    {% assign matched_post = site.tags.'electronic structure theory' | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    {% endfor %}
+</div>
+</details>
+
+## [Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/esm/)
+
+<details>
+
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Equilibrium Statistical Mechanics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
+
+{% assign titles = "" | split: "" %}
+{% for post in site.tags.'electronic structure theory' %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div>
+    {% for p in sorted_titles %}
+    {% assign matched_post = site.tags.'electronic structure theory' | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    {% endfor %}
+</div>
+</details>
+
+## [Non-Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/nesm/)
+
+## [Quantum Dynamics]({{ site.url }}{{ site.baseurl }}/quantumDynamics/)
 
 
 ## All
@@ -36,3 +74,22 @@ permalink: "/theory/"
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
+
+
+<script>
+function changeDropdown(id) {
+  var x = document.getElementById(id);
+  var el = document.getElementById('exHeader');
+  var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+  var fontSize = parseFloat(style); 
+  if (x.innerText === "〉") {
+    x.innerText = "﹀";
+    x.style.fontSize = (fontSize+7)+'px';
+    x.style.margin = "0px 0px 0px 10px";
+  } else {
+  	x.innerHTML = "〉";
+    x.style.fontSize = style;
+    x.style.margin = "-2px 0px 0px 10px";
+  }
+}
+</script>

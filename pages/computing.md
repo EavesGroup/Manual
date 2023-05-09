@@ -55,6 +55,24 @@ permalink: "/computing/"
 
 </details>
 
+
+## All 
+
+{% assign titles = "" | split: "" %}
+{% for post in site.tags.computing %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div>
+    {% for p in sorted_titles %}
+    {% assign matched_post = site.tags.computing | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    {% endfor %}
+</div>
+
+
 <script>
 function changeDropdown(id) {
   var x = document.getElementById(id);
@@ -72,19 +90,3 @@ function changeDropdown(id) {
   }
 }
 </script>
-
-## All 
-
-{% assign titles = "" | split: "" %}
-{% for post in site.tags.computing %}
-    {% assign titles = titles | push: post.title %}
-{% endfor %}
-{% assign sorted_titles = titles | sort_natural %}
-
-<div>
-    {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.computing | where:"title",p %}
-    {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
-    {% endfor %}
-</div>
