@@ -4,6 +4,7 @@ title:  "Mathematica"
 categories:
     - coding
 tags:
+    - computing
     - coding
 header: no
 breadcrumb: true
