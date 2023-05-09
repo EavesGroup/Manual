@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-fullwidth
 show_meta: false
 title: "Useful Background Theory"
 subheadline: "How to be a Theorist"
@@ -15,7 +15,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Electronic Structure Theory<div id="dropdown-est" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Electronic Structure Theory<div id="dropdown-EST" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.EST %}
@@ -37,7 +37,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Equilibrium Statistical Mechanics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Equilibrium Statistical Mechanics<div id="dropdown-EQSM" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.EQStatMech %}
@@ -59,7 +59,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Non-Equilibrium Statistical Mechanics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Non-Equilibrium Statistical Mechanics<div id="dropdown-NEQSM" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.NEQStatMech %}
@@ -81,7 +81,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Quantum Dynamics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Quantum Dynamics<div id="dropdown-quantumDynamics" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.quantum-dynamics %}
@@ -126,11 +126,11 @@ function changeDropdown(id) {
   if (x.innerText === "〉") {
     x.innerText = "﹀";
     x.style.fontSize = (fontSize+7)+'px';
-    x.style.margin = "0px 0px 0px 10px";
+    x.style.margin = "0px 0px 0px 30px";
   } else {
   	x.innerHTML = "〉";
     x.style.fontSize = style;
-    x.style.margin = "-2px 0px 0px 10px";
+    x.style.margin = "-2px 0px 0px 30px";
   }
 }
 </script>
