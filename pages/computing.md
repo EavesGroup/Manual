@@ -25,6 +25,7 @@ permalink: "/computing/"
 {% assign sorted_titles = titles | sort_natural %}
 
 <div>
+<br>
     {% for p in sorted_titles %}
     {% assign matched_post = site.tags.programs | where:"title",p %}
     {% assign post = matched_post[0] %}
@@ -46,6 +47,7 @@ permalink: "/computing/"
 {% assign sorted_titles = titles | sort_natural %}
 
 <div>
+<br>
     {% for p in sorted_titles %}
     {% assign matched_post = site.tags.coding | where:"title",p %}
     {% assign post = matched_post[0] %}

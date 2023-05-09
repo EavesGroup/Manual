@@ -15,7 +15,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Electronic Structure Theory<div id="dropdown-est" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Electronic Structure Theory<div id="dropdown-est" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.EST %}
@@ -24,6 +24,7 @@ permalink: "/theory/"
 {% assign sorted_titles = titles | sort_natural %}
 
 <div>
+<br>
     {% for p in sorted_titles %}
     {% assign matched_post = site.tags.EST | where:"title",p %}
     {% assign post = matched_post[0] %}
@@ -36,7 +37,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Equilibrium Statistical Mechanics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Equilibrium Statistical Mechanics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.EQStatMech %}
@@ -45,6 +46,7 @@ permalink: "/theory/"
 {% assign sorted_titles = titles | sort_natural %}
 
 <div>
+<br>
     {% for p in sorted_titles %}
     {% assign matched_post = site.tags.EQStatMech | where:"title",p %}
     {% assign post = matched_post[0] %}
@@ -57,7 +59,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Non-Equilibrium Statistical Mechanics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Non-Equilibrium Statistical Mechanics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.NEQStatMech %}
@@ -66,6 +68,7 @@ permalink: "/theory/"
 {% assign sorted_titles = titles | sort_natural %}
 
 <div>
+<br>
     {% for p in sorted_titles %}
     {% assign matched_post = site.tags.NEQStatMech | where:"title",p %}
     {% assign post = matched_post[0] %}
@@ -78,7 +81,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Quantum Dynamics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Quantum Dynamics<div id="dropdown-esm" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.quantum-dynamics %}
@@ -87,6 +90,7 @@ permalink: "/theory/"
 {% assign sorted_titles = titles | sort_natural %}
 
 <div>
+<br>
     {% for p in sorted_titles %}
     {% assign matched_post = site.tags.quantum-dynamics | where:"title",p %}
     {% assign post = matched_post[0] %}
