@@ -90,9 +90,11 @@ function changeDropdown(id) {
   if (x.innerText === "〉") {
     x.innerText = "﹀";
     x.style.fontSize = (fontSize+7)+'px';
+    x.style.margin = "0px 0px 0px 10px";
   } else {
   	x.innerHTML = "〉";
     x.style.fontSize = style;
+    x.style.margin = "-2px 0px 0px 10px";
   }
 }
 </script>
