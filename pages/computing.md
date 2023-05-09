@@ -8,11 +8,11 @@ header:
 permalink: "/computing/"
 ---
 
-## [Software]("/programs/")
+## [Software]({{ site.url }}{{ site.baseurl }}/programs/)
 
 <details>
 
-<summary><h2 style="float:left; color:white; margin: -35px 0px 0px 0px">Software<div id="dropdown-software" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Software<div id="dropdown-software" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.programs %}
@@ -29,11 +29,11 @@ permalink: "/computing/"
 </div>
 </details>
 
-## [Coding]("/coding/")
+## [Coding]({{ site.url }}{{ site.baseurl }}/coding/)
 
 <details>
 
-<summary><h2 style="float:left; color:white; margin: -35px 0px 0px 0px">Coding<div id="dropdown-software" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
+<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Coding<div id="dropdown-coding" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 10px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.coding %}
