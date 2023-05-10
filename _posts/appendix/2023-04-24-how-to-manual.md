@@ -7,7 +7,7 @@ tags:
     - appendix
 header: no
 breadcrumb: true
-author: sinalewis
+authors: sinalewis
 ---
 
 The best way to learn the layout and file structure of this manual is to explore it for yourself. However, this page is a good starting point as it will attempt to highlight the most important features. The following information can be broken up into 3 primary categories: the structure of your basic page, more complicated category pages, and the overarching file structure. There are many files that don't fit neatly into any one category and I will mention the most important ones and their function at the end. A lot of the functionality can be found in the [documentation](https://phlow.github.io/feeling-responsive/documentation/) of the person (Phlow) who created the template (Feeling Responsive) that I (Sina) just pulled from.
