@@ -27,7 +27,7 @@ format: page-fullwidth
 			{% if page.author %}
 			<div class="row">
 				<div class="small-12 columns">
-					<p class="text-left caption"> {{ page.author.name }}</p>
+					<p class="text-left caption"> {{ site.data.authors[page.author] }}</p>
 				</div>
 			</div>
 			{% elsif page.authors %}
