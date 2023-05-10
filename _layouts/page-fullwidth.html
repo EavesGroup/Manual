@@ -25,26 +25,26 @@ format: page-fullwidth
 			</header>
 			<!-- CANT NEST IF STATEMENTS IN LIQUID -->
 			{% if page.author %}
-			{% assign authors = site.data.authors[page.author] %}
-			<!-- {% elsif page.authors %} -->
-			<!-- {% assign authors = "" | split:"" %}
+			{% assign authorList = site.data.authors[page.author] %}
+			{% elsif page.authors %}
+			{% assign authors = "" | split:"" %}
 			{% for au in page.authors %}
-			{% assign authors = authors | push: au[0] %}
-			{% endfor %} -->
+			{% assign authorList = authorList | push: au[0] %}
+			{% endfor %}
 			{% endif %}
 
-			{% for author in authors %}
+			{% for a in authorList %}
 			<div class="row">
 				<div class="small-12 columns">
 					<p class="text-left caption">
-						{% if author.email and author.siterole %}
-						<a href="mailto:{{ author.email }}">{{ author.name }} - {{ author.siterole }}</a>
-						{% elsif author.email %}
-						<a href="mailto:{{ author.email }}">{{ author.name }}</a>
-						{% elsif author.siterole %}
-						{{ author.name }} - {{ author.siterole }}
+						{% if a.email and a.siterole %}
+						<a href="mailto:{{ a.email }}">{{ a.name }} - {{ a.siterole }}</a>
+						{% elsif a.email %}
+						<a href="mailto:{{ a.email }}">{{ a.name }}</a>
+						{% elsif a.siterole %}
+						{{ a.name }} - {{ a.siterole }}
 						{% else %}
-						{{ author.name }}
+						{{ a.name }}
 						{% endif %}
 					</p>
 				</div>
