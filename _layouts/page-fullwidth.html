@@ -27,7 +27,7 @@ format: page-fullwidth
 			<!-- CANT NEST IF STATEMENTS IN LIQUID -->
 			{% assign authorList = "" | split: "" %}
 			{% for au in page.authors %}
-			{% assign authorList = authorList | push: au[0] %}
+			{% assign authorList = authorList | push: au %}
 			{% endfor %}
 
 			{% for auth in authorList %}
