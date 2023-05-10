@@ -30,7 +30,8 @@ format: page-fullwidth
 			{% assign authorList = authorList | push: au[0] %}
 			{% endfor %}
 
-			{% for a in authorList %}
+			{% for auth in authorList %}
+			{% assign a = site.data.authors[auth] %}
 			<div class="row">
 				<div class="small-12 columns">
 					<p class="text-left caption">
