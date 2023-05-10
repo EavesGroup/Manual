@@ -28,7 +28,17 @@ format: page-fullwidth
 			{% assign author = site.data.authors[page.author] %}
 			<div class="row">
 				<div class="small-12 columns">
-					<p class="text-left caption">{{ author.name }} </p>
+					<p class="text-left caption">
+						{% if author.email and author.siterole %}
+						<a href="mailto:{{ author.email }}">{{ author.name }} - {{ author.siterole }}</a>
+						{% elsif author.email %}
+						<a href="mailto:{{ author.email }}">{{ author.name }}</a>
+						{% elsif %}
+						{{ author.name }} - {{ author.siterole }}
+						{% else %}
+						{{ author.name }}
+						{% endif %}
+					</p>
 				</div>
 			</div>
 			{% elsif page.authors %}
