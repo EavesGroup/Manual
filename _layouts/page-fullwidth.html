@@ -29,7 +29,7 @@ format: page-fullwidth
 			{% elsif page.authors %}
 			{% for au in site.data.authors[page.authors] %}
 			<p>Test entry {{ au }}</p>
-			{$ endfor %}
+			{% endfor %}
 			{% endif %}
 
 			{% if page.teaser %}
