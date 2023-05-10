@@ -11,7 +11,7 @@ tags:
     - setup
 header: no
 breadcrumb: true
-author:
+authors:
     - sinalewis
     - korismyser
 ---
