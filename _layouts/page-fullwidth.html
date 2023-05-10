@@ -25,9 +25,10 @@ format: page-fullwidth
 			</header>
 
 			{% if page.author %}
+			{% assign author = site.data.authors[page.author] %}
 			<div class="row">
 				<div class="small-12 columns">
-					<p class="text-left caption"> {{ page.author.name }}</p>
+					<p class="text-left caption"> {{ author.name }}</p>
 				</div>
 			</div>
 			{% elsif page.authors %}
