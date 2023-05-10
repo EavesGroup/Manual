@@ -33,9 +33,10 @@ format: page-fullwidth
 			</div>
 			{% elsif page.authors %}
 			{% for au in page.authors %}
+			{% assign author = site.data.authors[au] %}
 			<div class="row">
 				<div class="small-12 columns">
-					<p class="text-left caption"> {{ au.name }}</p>
+					<p class="text-left caption"> {{ author.name }}</p>
 				</div>
 			</div>
 			{% endfor %}
