@@ -23,11 +23,13 @@ format: page-fullwidth
 				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
 				<h1>{{ page.title }}</h1>
 			</header>
+
 			<!-- CANT NEST IF STATEMENTS IN LIQUID -->
+			{% assign authorList = "" | split: "" %}
+
 			{% if page.author %}
-			{% assign authorList = site.data.authors[page.author] %}
+			{% assign authorList = authorList | push: page.author %}
 			{% elsif page.authors %}
-			{% assign authors = "" | split:"" %}
 			{% for au in page.authors %}
 			{% assign authorList = authorList | push: au[0] %}
 			{% endfor %}
