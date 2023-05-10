@@ -26,11 +26,11 @@ format: page-fullwidth
 			<!-- CANT NEST IF STATEMENTS IN LIQUID -->
 			{% if page.author %}
 			{% assign authors = site.data.authors[page.author] %}
-			{% elsif page.authors %}
-			{% assign authors = "" | split:"" %}
+			<!-- {% elsif page.authors %} -->
+			<!-- {% assign authors = "" | split:"" %}
 			{% for au in page.authors %}
 			{% assign authors = authors | push: au[0] %}
-			{% endfor %}
+			{% endfor %} -->
 			{% endif %}
 
 			{% for author in authors %}
