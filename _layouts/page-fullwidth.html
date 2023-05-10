@@ -25,12 +25,7 @@ format: page-fullwidth
 			</header>
 
 			<!-- CANT NEST IF STATEMENTS IN LIQUID -->
-			{% assign authorList = "" | split: "" %}
-			{% for au in page.authors %}
-			{% assign authorList = authorList | push: au %}
-			{% endfor %}
-
-			{% for auth in authorList %}
+			{% for auth in page.authors %}
 			{% assign a = site.data.authors[auth] %}
 			<div class="row">
 				<div class="small-12 columns">
