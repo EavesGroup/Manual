@@ -29,11 +29,11 @@ Categories and tags are important for how the webpage is structured. As discusse
 The header is a banner that stretches across the top of the page. Most pages use "header: no", so that the first thing on the page is the title and then the content. Landing category pages, such as VASP or coding, have a specified title and image for the header. The creator of the template has example of [most type of headers](https://phlow.github.io/feeling-responsive/design/no-header/) that you would want to create.
 
 ### Breadcrumb(s)
-Breadcrumbs are a way to help the user navigate the site. Setting the tag "breadcrumb: true" creates the grey banner at the top of the page that, on the [setting up Julia]({{ site.url }}{{ site.baseurl }}/coding/julia/julia_setup) page for example, reads "START / CODING / JULIA / SETTING UP JULIA". This then allows the user to start from a page and work their way back up the hierarchy of files. Breadcrumbs rely on the categories listed on the page, and their order. If the order is incorrect to how the files are structured, the links will be broken. In the 'setting up Julia' page example, the coding category comes first followed by Julia. If you swap the order of these categories, the links will not be setup correctly as you can see in the [example]({{ site.url }}{{ site.baseurl }}/archive/ex_julia_setup) I created.
+Breadcrumbs are a way to help the user navigate the site. Setting the tag "breadcrumb: true" creates the grey banner at the top of the page that, on the [setting up Julia]({{ site.url }}{{ site.baseurl }}/coding/julia/julia_setup) page for example, reads "START / CODING / JULIA / SETTING UP JULIA". This then allows the user to start from a page and work their way back up the hierarchy of files. Breadcrumbs rely on the categories listed on the page, and their order. If the order is incorrect to how the files are structured, the links will be broken. In the 'setting up Julia' page example, the coding category comes first followed by Julia. If you swap the order of these categories, the links will not be setup correctly.
 IMPORTANT: make sure that the key is breadcrumb not breadcrumbs.
 
 ### Author
-If you create a webpage and want to take ownership for the content, or just allow for someone to contact you if they have questions, you can add the "author" tag to the YAML. This tag requires you to create a short profile in the file "_author/authors.yml".
+If you create a webpage and want to take ownership for the content, or just allow for someone to contact you if they have questions, you can add the "author" tag to the YAML. This tag requires you to create a short profile in the file "_author/authors.yml". Your name is required, but email and siterole are optional.
 
 
 ## Category Pages
