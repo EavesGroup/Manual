@@ -27,9 +27,11 @@ format: page-fullwidth
 			{% if page.author %}
 			<p>Test entry author</p>
 			{% elsif page.authors %}
+			{% for au in page.authors %}
 			<p>Test entry authors</p>
+			{$ endfor %}
 			{% endif %}
-			
+
 			{% if page.teaser %}
 			<p class="teaser">
 				{{ page.teaser }}
