@@ -7,14 +7,16 @@
 # Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
 sinalewis: # replace this with your info
   name: "Sina Lewis"
-  siterole: "webmaster, developer, and graduate student"
+  siterole: "Research Assistant and Webmaster"
   email: sina.lewis@colorado.edu
 # you can add more authors here
 
 natalielemessurier:
   name: "Natalie LeMessurier"
+  siterole: "Research Assistant"
   email: natalie.lemessurier@colorado.edu
 
 alexstaat:
   name: "Alexander Staat"
+  siterole: "Research Assistant"
   email: alex.staat@colorado.edu
