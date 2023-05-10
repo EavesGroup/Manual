@@ -15,26 +15,25 @@ format: page-fullwidth
 </div><!-- /.row -->
 {% endif %}
 
-{% for au in page.author %}
-<div class="row">
-	<div class="small-12 columns">
-		{% if au.email and au.siterole %}
-		<p><a href="mailto:{{ au.email }}">{{ au.name }} - {{ au.siterole }}</a></p>
-		{% elsif au.siterole %}
-		<p>{{ au.name }}- {{ au.siterole }}</p>
-		{% elsif au.email %}
-		<p><a href="mailto:{{ au.email }}">{{ au.name }}</a></p>
-		{% else %}
-		<p>{{ au.name }}</p>
-		{% endif %}
-	</div>
-</div>
-{% endfor %}
-
 
 <div class="row t30">
 	<div class="medium-12 columns">
 		<article>
+			{% for au in site.data.authors[page.author] %}
+			<div class="row">
+				<div class="small-12 columns">
+					{% if au.email and au.siterole %}
+					<p><a href="mailto:{{ au.email }}">{{ au.name }} - {{ au.siterole }}</a></p>
+					{% elsif au.siterole %}
+					<p>{{ au.name }}- {{ au.siterole }}</p>
+					{% elsif au.email %}
+					<p><a href="mailto:{{ au.email }}">{{ au.name }}</a></p>
+					{% else %}
+					<p>{{ au.name }}</p>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
 			<header>
 				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
 				<h1>{{ page.title }}</h1>
