@@ -19,13 +19,14 @@ format: page-fullwidth
 <div class="row t30">
 	<div class="medium-12 columns">
 		<article>
-			{% for au in site.data.authors[page.author] %}
+			{% assign authors = site.data.authors[page.author] %}
+			{% for au in authors %}
 			<div class="row">
 				<div class="small-12 columns">
 					{% if au.email and au.siterole %}
 					<p><a href="mailto:{{ au.email }}">{{ au.name }} - {{ au.siterole }}</a></p>
 					{% elsif au.siterole %}
-					<p>{{ au.name }}- {{ au.siterole }}</p>
+					<p>{{ au.name }} - {{ au.siterole }}</p>
 					{% elsif au.email %}
 					<p><a href="mailto:{{ au.email }}">{{ au.name }}</a></p>
 					{% else %}
@@ -34,6 +35,7 @@ format: page-fullwidth
 				</div>
 			</div>
 			{% endfor %}
+			
 			<header>
 				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
 				<h1>{{ page.title }}</h1>
