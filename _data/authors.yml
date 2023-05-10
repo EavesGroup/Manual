@@ -5,11 +5,10 @@
 # 3. Change default post/page authors in config.yml
 #
 # Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
-sinalewis: # replace this with your info
+sinalewis:
   name: "Sina Lewis"
   siterole: "Research Assistant and Webmaster"
   email: sina.lewis@colorado.edu
-# you can add more authors here
 
 natalielemessurier:
   name: "Natalie LeMessurier"
@@ -20,3 +19,8 @@ alexstaat:
   name: "Alexander Staat"
   siterole: "Research Assistant"
   email: alex.staat@colorado.edu
+
+korismyser:
+  name: "Kori Smyser"
+  siterole: "Alumni"
+  email: kori.smyser@colorado.edu
