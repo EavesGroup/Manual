@@ -25,10 +25,18 @@ format: page-fullwidth
 			</header>
 
 			{% if page.author %}
-			<p>Test entry author</p>
+			<div class="row">
+				<div class="small-12 columns">
+					<p class="text-left caption"> {{ page.author.name }}</p>
+				</div>
+			</div>
 			{% elsif page.authors %}
 			{% for au in page.authors %}
-			<p>Test entry authors}</p>
+			<div class="row">
+				<div class="small-12 columns">
+					<p class="text-left caption"> {{ au.name }}</p>
+				</div>
+			</div>
 			{% endfor %}
 			{% endif %}
 
