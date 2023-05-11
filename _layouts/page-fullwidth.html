@@ -30,9 +30,12 @@ format: page-fullwidth
 					<p class="text-left caption">
 						{% for auth in page.authors %}
 						{% assign a = site.data.authors[auth] %}
-						{% if forloop.first %}Author{% endif %}{% if forloop.length > 1 %}s{% endif %}{% if
-						forloop.first %}:{% endif %}
-						{% if forloop.index > 1 %}
+						{% if forloop.first and forloop.length == 1 %}
+						Author:
+						{% elsif forloop.first and forloop.length > 1%}
+						Authors:
+						{% endif %}
+						{% if forloop.length > 2 and forloop.index > 1 %}
 						,
 						{% endif %}
 						{% if forloop.last %}
