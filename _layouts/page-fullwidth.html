@@ -30,12 +30,15 @@ format: page-fullwidth
 			<div class="row">
 				<div class="small-12 columns">
 					<p class="text-left caption">
-						{% if a.email and a.siterole %}
-						<a href="mailto:{{ a.email }}">{{ a.name }} - {{ a.siterole }}</a>
-						{% elsif a.email %}
+						Author{% if forloop.length > 1%}s{% endif %}:
+						{% if forloop.index > 1 %}
+						,
+						{% endif %}
+						{% if forloop.last %}
+						and
+						{% endif %}
+						{% if a.email %}
 						<a href="mailto:{{ a.email }}">{{ a.name }}</a>
-						{% elsif a.siterole %}
-						{{ a.name }} - {{ a.siterole }}
 						{% else %}
 						{{ a.name }}
 						{% endif %}
