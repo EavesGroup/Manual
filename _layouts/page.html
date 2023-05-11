@@ -3,12 +3,14 @@ layout: default
 format: post
 ---
 <div class="row t30">
-	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}">
+	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "
+		left" %} medium-push-4{% endif %}">
 		<article itemscope itemtype="http://schema.org/Article">
 			<header>
 				{% if page.image.title %}
 				<figure>
-					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}" itemprop="image">
+					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}"
+						itemprop="image">
 
 					{% if page.image.caption_url and page.image.caption %}
 					<figcaption class="text-right">
@@ -28,6 +30,33 @@ format: post
 				</div>
 			</header>
 
+			<!-- CANT NEST IF STATEMENTS IN LIQUID -->
+			<div class="row">
+				<div class="small-12 columns">
+					<p class="text-left caption">
+						{% for auth in page.authors %}
+						{% assign a = site.data.authors[auth] %}
+						{% if forloop.first and forloop.length == 1 %}
+						Author:
+						{% elsif forloop.first and forloop.length > 1%}
+						Authors:
+						{% endif %}
+						{% if forloop.length > 2 and forloop.index > 1 %}
+						,
+						{% endif %}
+						{% if forloop.last %}
+						and
+						{% endif %}
+						{% if a.email %}
+						<a href="mailto:{{ a.email }}">{{ a.name }}</a>
+						{% else %}
+						{{ a.name }}
+						{% endif %}
+
+						{% endfor %}
+					</p>
+				</div>
+			</div>
 
 			{% if page.teaser %}
 			<p class="teaser" itemprop="description">
@@ -36,7 +65,7 @@ format: post
 			{% endif %}
 
 			<div itemprop="articleSection">
-			{{ content }}
+				{{ content }}
 			</div>
 
 			{% if page.show_meta == true %}
