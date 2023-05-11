@@ -44,7 +44,7 @@ format: post
 						{% if forloop.length > 2 and forloop.index > 1 %}
 						,
 						{% endif %}
-						{% if forloop.last %}
+						{% if forloop.last and forloop.length > 1 %}
 						and
 						{% endif %}
 						{% if a.email %}
