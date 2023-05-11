@@ -25,12 +25,13 @@ format: page-fullwidth
 			</header>
 
 			<!-- CANT NEST IF STATEMENTS IN LIQUID -->
-			{% for auth in page.authors %}
-			{% assign a = site.data.authors[auth] %}
 			<div class="row">
 				<div class="small-12 columns">
 					<p class="text-left caption">
-						Author{% if forloop.length > 1%}s{% endif %}:
+						{% for auth in page.authors %}
+						{% assign a = site.data.authors[auth] %}
+						{% if forloop.first %}Author{% endif %}{% if forloop.length > 1 %}s{% endif %}{% if
+						forloop.first %}:{% endif %}
 						{% if forloop.index > 1 %}
 						,
 						{% endif %}
