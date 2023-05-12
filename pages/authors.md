@@ -5,6 +5,18 @@ title: "People"
 header: no
 ---
 
+{% for author in site.data.authors %}
+    {% assign person = author %}
+    <div>
+    {% if person.email %}
+    <h4><a href="mailto:{{ person.email }}">{{ person.name }}</a></h4>
+    {% else %}
+        <h4>{{ person.name }}</h4>
+    {% endif %}
+    </div>
+{% endfor %}
+
+<!-- 
 {% assign authors = "" | split: "" %}
 {% for a in site.data.authors %}
     {% assign lastFirst = a.name | split: " " | reverse %}
@@ -16,7 +28,7 @@ header: no
     {% assign firstLast = author | split: " " | reverse %}
     {% assign matched_author = site.data.authors | where:"name",firstLast %}
     {% assign person = matched_author[0] %}
-    <!-- do something with the author -->
+    
     <div>
     {% if person.email %}
     <h4><a href="mailto:{{ person.email }}">{{ person.name }}</a></h4>
@@ -24,4 +36,4 @@ header: no
         <h4>{{ person.name }}</h4>
     {% endif %}
     </div>
-{% endfor %}
+{% endfor %} -->
