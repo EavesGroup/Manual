@@ -18,9 +18,9 @@ header: no
     <!-- do something with the author -->
     <div>
     {% if matched_author.email %}
-    <h4><a href="mailto:{{ matched_author.email }}">{{ author }}</a></h4>
+    <h4><a href="mailto:{{ matched_author.email }}">{{ matched_author.name }}</a></h4>
     {% else %}
-        <h4>{{ author }}</h4>
+        <h4>{{ matched_author.name }}</h4>
         {% endif %}
     </div>
 {% endfor %}
