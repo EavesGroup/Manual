@@ -15,12 +15,13 @@ header: no
 {% for author in sorted_authors %}
     {% assign firstLast = author | split: " " | reverse %}
     {% assign matched_author = site.data.authors | where:"name",firstLast %}
+    {% assign person = matched_author[0] %}
     <!-- do something with the author -->
     <div>
-    {% if matched_author.email %}
-    <h4><a href="mailto:{{ matched_author.email }}">{{ matched_author.name }}</a></h4>
+    {% if person.email %}
+    <h4><a href="mailto:{{ person.email }}">{{ person.name }}</a></h4>
     {% else %}
-        <h4>{{ matched_author.name }}</h4>
-        {% endif %}
+        <h4>{{ person.name }}</h4>
+    {% endif %}
     </div>
 {% endfor %}
