@@ -44,15 +44,22 @@ The header is a banner that stretches across the top of the page. Most pages use
 Breadcrumbs are a way to help the user navigate the site. Setting the tag "breadcrumb: true" creates the grey banner at the top of the page that, on the [setting up Julia]({{ site.url }}{{ site.baseurl }}/coding/julia/julia_setup) page for example, reads "START / CODING / JULIA / SETTING UP JULIA". This then allows the user to start from a page and work their way back up the hierarchy of files. Breadcrumbs rely on the categories listed on the page, and their order. If the order is incorrect to how the files are structured, the links will be broken. In the 'setting up Julia' page example, the coding category comes first followed by Julia. If you swap the order of these categories, the links will not be setup correctly.
 IMPORTANT: make sure that the key is breadcrumb not breadcrumbs.
 
-### Author
-If you create a webpage and want to take ownership for the content, or just allow for someone to contact you if they have questions, you can add the "author" tag to the YAML. This tag requires you to create a short profile in the file "_author/authors.yml". Your name is required, but email and siterole are optional.
+### Authors
+If you create a webpage and want to take ownership for the content, or just allow for someone to contact you if they have questions, you can add the "authors" tag to the YAML. Note that it is plural even if there is only one author, and there can be multiple authors. This tag requires you to create a short profile in the file "_author/authors.yml". Your name is required, but email, siterole, and other options are optional. When creating your author profile, pick reference tag that is used internally to refer to all information you supply on the following lines. This doesn't have to have the form 'firstnamelastname', but it is easy to remember. This reference tag is what you will add to a post underneath the "authors" tag in the YAML, but your name is what will be displayed. When the page renders, your name will be hyperlinked to your section of the 'people' page that will list any other information you supply (email, bio, ...).
 
 
 ## Category Pages
 
-### 
+Category pages form the basis of the webpage's organization by allowing us to separate information onto different pages, but still keeping similar information together. For example, VASP is software program with lots of things you can say about it. You can talk about how it's installed on different systems, how to run it to achieve different results, and how things can go wrong when using it. To avoid cluttering up one long page with all of these topics, they've been given their own pages that then show up on the VASP category page. The [below section](#underlying-file-structure) will deal with how the files that create these pages are structured among the other files. The subsections in this section will talk about how they work. 
 
-## Overarching File Structure
+# The following is a work-in-progress
+
+
+### Top-level Categories
+
+### Sub-categories
+
+## Underlying File Structure
 
 ### File Names
 

@@ -5,6 +5,11 @@
 # 3. Change default post/page authors in config.yml
 #
 # Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
+joeleaves:
+  name: "Joel D. Eaves"
+  siterole: "Principal Investigator"
+  email: joel.eaves@colorado.edu
+
 sinalewis:
   name: "Sina G. Lewis"
   siterole: "Research Assistant and Webmaster"
