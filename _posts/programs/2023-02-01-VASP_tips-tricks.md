@@ -11,6 +11,9 @@ tags:
     - misc
 header: no
 breadcrumb: true
+authors:
+    - sinalewis
+    - peytoncline
 ---
 {% include mathjax.html %}
 

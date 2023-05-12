@@ -11,7 +11,8 @@ tags:
     - usefulPkgs
 header: no
 breadcrumb: true
-author: sinalewis
+authors:
+    - sinalewis
 ---
 
 `Revise.jl` is a useful package that allows you to restart the Julia REPL less often. As the [GitHub README](https://github.com/timholy/Revise.jl) states,
