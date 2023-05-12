@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "Setting up Julia"
 teaser: ""
 categories:
@@ -45,7 +44,7 @@ After you have Julia available on your device you can theoretically begin to sta
 
 ## Starting a New Project
 
-Julia uses modules 
+Julia uses modules ...
 
 ### Using a Template
 
