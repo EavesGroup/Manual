@@ -6,7 +6,7 @@ header: no
 ---
 
 {% for author in site.data.authors %}
-    {% assign person = author %}
+    {% assign person = author[0] %}
     <div>
     {% if person.email %}
     <h4><a href="mailto:{{ person.email }}">{{ person.name }}</a></h4>
