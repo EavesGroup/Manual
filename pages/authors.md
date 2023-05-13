@@ -5,17 +5,15 @@ title: "People"
 header: no
 ---
 
+<div>
 {% for author in site.data.authors %}
-    <div class="row">
-    <div class="small-12 column">
     {% if author.email %}
     <h4><a href="mailto:{{ author.email }}">{{ author.name }}</a></h4>
     {% else %}
         <h4>{{ author.name }}</h4>
     {% endif %}
-    </div>
-    </div>
 {% endfor %}
+</div>
 
 <!-- 
 {% assign authors = "" | split: "" %}
