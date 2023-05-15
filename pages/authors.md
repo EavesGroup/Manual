@@ -12,6 +12,7 @@ header: no
     {% else %}
         <h4>{{ author.name }}</h4>
     {% endif %}
+    <p>{{ author }}</p>
 {% endfor %}
 </div>
 
