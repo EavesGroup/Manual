@@ -27,7 +27,8 @@ format: page-fullwidth
 			<div class="row">
 				<div class="small-12 columns">
 					{% for auth in site.data.authors %}
-					{% assign author = site.data.authors[auth[0]] %}
+					{%- assign authorTag = auth[0] -%}
+					{%- assign author = site.data.authors[authorTag] -%}
 					<h4>{{ author.name }}</h4>
 					{% endfor %}
 				</div>
