@@ -25,17 +25,10 @@ format: page-fullwidth
 			</header>
 
 			<div class="row">
-				<div class="small-12 columns">
+				<div class="small-12 columns">{% for auth in site.data.authors %}
 					<p class="text-left caption">
-						{% for auth in site.data.authors %}
-						{%- assign a = site.data.authors[auth] -%}
-						{% if a.email %}
-						<a href="mailto:{{ a.email }}">{{ a.name }}</a>
-						{% else %}
-						{{ a.name }}
-						{% endif %}
-						{% endfor %}
-					</p>
+						{{ auth }}
+					</p>{% endfor %}
 				</div>
 			</div>
 		</article>
