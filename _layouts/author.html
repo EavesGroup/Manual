@@ -30,15 +30,15 @@ format: page-fullwidth
 			{%- assign authorCollection = "" | split: "" -%}
 			{% for a in site.data.authors %}
 			{%- assign authorName = a[1].name -%}
-			<p>{{ authorName }}</p>
-			{% assign authorCollection = authorCollection | push: authorName %}
+			{%- assign reverseName = authorName | split: "" | reverse | join: " " -%}
+			<p>{{ reverseName }}</p>
+			{% assign authorCollection = authorCollection | push: reverseName %}
 			{% endfor %}
 
 			<div class="row t30">
 				<div class="small-12 columns">
 					{% for auth in site.data.authors %}
-					{%- assign authorTag = auth[0] -%}
-					{%- assign author = site.data.authors[authorTag] -%}
+					{%- assign author = auth[1] -%}
 					<h3 style="margin-bottom: 10px">{{ author.name | upcase }}</h3>
 					{% if author.siterole %}
 					<h4 style="color:gray; margin: 0 0 0 0">{{ author.siterole | upcase }}</h4>
