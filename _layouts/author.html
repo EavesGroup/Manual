@@ -30,7 +30,7 @@ format: page-fullwidth
 			{%- assign authorCollection = "" | split: "" -%}
 			{% for a in site.data.authors %}
 			{%- assign authorName = a[1].name -%}
-			{%- assign reverseName = authorName | split: "" | reverse | join: " " -%}
+			{%- assign reverseName = authorName | split: " " | reverse | join: " " -%}
 			<p>{{ reverseName }}</p>
 			{% assign authorCollection = authorCollection | push: reverseName %}
 			{% endfor %}
