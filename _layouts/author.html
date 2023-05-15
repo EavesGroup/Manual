@@ -29,6 +29,10 @@ format: page-fullwidth
 					<p class="text-left caption">
 						{{ auth }}
 					</p>{% endfor %}
+					{%- assign a = auth[0] -%}
+					<p class="text-left caption">
+						{{ a }}
+					</p>
 				</div>
 			</div>
 		</article>
