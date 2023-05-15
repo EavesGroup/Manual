@@ -6,7 +6,7 @@ header: no
 ---
 
 {% for author in site.data.authors %}
-{{ author.name[0]
+{{ author.name }}
 {% endfor %}
 
 <!-- 
