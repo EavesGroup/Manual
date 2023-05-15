@@ -25,18 +25,11 @@ format: page-fullwidth
 			</header>
 
 			<div class="row">
-				<div class="small-12 columns">{% for auth in site.data.authors %}
-					<p class="text-left caption">
-						{{ auth }}
-					</p>
-					{%- assign a = auth[0] -%}
-					{%- assign newauthor = site.data.authors[a] -%}
-					<p class="text-left caption">
-						{{ a }}
-					</p>
-					<p class="text-left caption">
-						{{ newauthor.name }}
-					</p>{% endfor %}
+				<div class="small-12 columns">
+					{% for auth in site.data.authors %}
+					{% assign author = site.data.authors[auth[0]] %}
+					<h4>{{ author.name }}</h4>
+					{% endfor %}
 				</div>
 			</div>
 		</article>
