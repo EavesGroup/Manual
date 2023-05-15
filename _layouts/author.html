@@ -26,15 +26,18 @@ format: page-fullwidth
 
 			{{ content }}
 
-			<!-- get author last name -->
+			<!-- sort authors by last name -->
 			{%- assign authorCollection = "" | split: "" -%}
 			{% for a in site.data.authors %}
 			{%- assign authorName = a[1].name -%}
 			{%- assign reverseName = authorName | split: " " | reverse | join: " " -%}
 			{% assign authorCollection = authorCollection | push: reverseName %}
 			{% endfor %}
+			{% assign sorted_authorCollection = authorCollection | sort_natural %}
 
-			{% for auth in authorCollection %}
+			<!-- Retrieve alphabetically sorted authorTags -->
+			{%- assign authorCollection = "" | split: "" -%}
+			{% for auth in sorted_authorCollection %}
 			{%- assign firstLast = auth | split: " " | reverse | join: " " -%}
 			{% for a in site.data.authors %}
 			{% if a[1].name == firstLast %}
@@ -42,14 +45,13 @@ format: page-fullwidth
 			{% break %}
 			{% endif %}
 			{% endfor %}
-			<p>{{ matched_author }}</p>
+			{% assign authorCollection = authorCollection | push: matched_author %}
 			{% endfor %}
 
 			<div class="row t30">
 				<div class="small-12 columns">
 					{% for auth in authorCollection %}
-					{%- assign matched_author = site.data.authors | where:"name",auth -%}
-					{%- assign author = matched_author[1] -%}
+					{%- assign author = site.data.authors[auth] -%}
 					<h3 style="margin-bottom: 10px">{{ author.name | upcase }}</h3>
 					{% if author.siterole %}
 					<h4 style="color:gray; margin: 0 0 0 0">{{ author.siterole | upcase }}</h4>
