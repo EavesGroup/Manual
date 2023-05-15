@@ -26,6 +26,14 @@ format: page-fullwidth
 
 			{{ content }}
 
+			<!-- get author last name -->
+			{%- assign authorCollection = "" | split: "" -%}
+			{% for a in site.data.authors %}
+			{%- assign authorName = a[1].name -%}
+			<p>{{ authorName }}</p>
+			{% assign authorCollection = authorCollection | push: authorName %}
+			{% endfor %}
+
 			<div class="row t30">
 				<div class="small-12 columns">
 					{% for auth in site.data.authors %}
