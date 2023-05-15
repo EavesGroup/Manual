@@ -29,7 +29,7 @@ format: page-fullwidth
 				<div class="small-12 columns">
 					<p class="text-left caption">
 						{% for auth in page.authors %}
-						{% assign a = site.data.authors[auth] %}
+						{%- assign a = site.data.authors[auth] -%}
 						{% if forloop.first and forloop.length == 1 %}
 						Author:
 						{% elsif forloop.first and forloop.length > 1%}
