@@ -28,11 +28,11 @@ format: page-fullwidth
 				<div class="small-12 columns">{% for auth in site.data.authors %}
 					<p class="text-left caption">
 						{{ auth }}
-					</p>{% endfor %}
+					</p>
 					{%- assign a = auth[0] -%}
 					<p class="text-left caption">
 						{{ a }}
-					</p>
+					</p>{% endfor %}
 				</div>
 			</div>
 		</article>
