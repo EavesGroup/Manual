@@ -36,7 +36,12 @@ format: page-fullwidth
 
 			{% for auth in authorCollection %}
 			{%- assign firstLast = auth | split: " " | reverse | join: " " -%}
-			{%- assign matched_author = site.data.authors | where:"name",firstLast -%}
+			{% for a in site.data.authors %}
+			{% if a[1].name == firstLast %}
+			{%- assign matched_author = a[0] -%}
+			{% break %}
+			{% endif %}
+			{% endfor %}
 			<p>{{ matched_author }}</p>
 			{% endfor %}
 
@@ -58,8 +63,9 @@ format: page-fullwidth
 
 					{% assign links = author.alts %}
 					{% if links.CU %}
+					<a href="{{ links.CU }}">CU Eaves Group</a>
 					{% endif %}
-					{% if links.googleScholar %}
+					{% if links.googleScholar %}<a href="{{ links.googleScholar }}">Google Scholar</a>
 					{% endif %}
 
 					<hr>
