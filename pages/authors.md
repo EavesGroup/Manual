@@ -1,14 +1,9 @@
 ---
-layout: page-fullwidth
+layout: author
 permalink: /people/
 title: "People"
 header: no
 ---
-
-{% for author in site.data.authors %}
-{{ author.name }}
-{% endfor %}
-
 <!-- 
 {% assign authors = "" | split: "" %}
 {% for a in site.data.authors %}
