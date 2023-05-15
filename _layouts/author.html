@@ -35,6 +35,7 @@ format: page-fullwidth
 			{% endfor %}
 
 			{% for auth in authorCollection %}
+			{%- assign firstLast = auth | split: " " | reverse | join: " " -%}
 			{%- assign matched_author = site.data.authors | where:"name",auth -%}
 			{{ matched_author }}
 			{% endfor %}
