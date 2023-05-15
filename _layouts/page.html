@@ -47,8 +47,8 @@ format: post
 						{% if forloop.last and forloop.length > 1 %}
 						and
 						{% endif %}
-						{%- assign nameID = a.name | split: " " | join: "-" -%}
-						<a href="{{ site.url }}{{ site.baseurl }}/#{{ nameID }}">{{ a.name }}</a>
+						{%- assign nameID = a.name | split: " " | join: "-" | downcase -%}
+						<a href="{{ site.url }}{{ site.baseurl }}/people/#{{ nameID }}">{{ a.name }}</a>
 
 						{% endfor %}
 					</p>

@@ -52,7 +52,8 @@ format: page-fullwidth
 				<div class="small-12 columns">
 					{% for auth in authorCollection %}
 					{%- assign author = site.data.authors[auth] -%}
-					<h3 style="margin-bottom: 10px">{{ author.name | upcase }}</h3>
+					{%- assign nameID = author.name | split: " " | join: "-" | downcase -%}
+					<h3 style="margin-bottom: 10px" id="{{ nameID }}">{{ author.name | upcase }}</h3>
 					{% if author.siterole %}
 					<h4 style="color:gray; margin: 0 0 0 0">{{ author.siterole | upcase }}</h4>
 					{% endif %}
