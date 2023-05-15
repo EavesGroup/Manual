@@ -30,8 +30,12 @@ format: page-fullwidth
 						{{ auth }}
 					</p>
 					{%- assign a = auth[0] -%}
+					{%- assign newauthor = site.data.authors[a] -%}
 					<p class="text-left caption">
 						{{ a }}
+					</p>
+					<p class="text-left caption">
+						{{ newauthor.name }}
 					</p>{% endfor %}
 				</div>
 			</div>
