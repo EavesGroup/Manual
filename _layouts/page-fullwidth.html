@@ -41,11 +41,8 @@ format: page-fullwidth
 						{% if forloop.last and forloop.length > 1 %}
 						and
 						{% endif %}
-						{% if a.email %}
-						<a href="mailto:{{ a.email }}">{{ a.name }}</a>
-						{% else %}
-						{{ a.name }}
-						{% endif %}
+						{%- assign nameID = a.name | split: " " | join: "-" -%}
+						<a href="{{ site.url }}{{ site.baseurl }}/#{{ nameID }}">{{ a.name }}</a>
 
 						{% endfor %}
 					</p>
