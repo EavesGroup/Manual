@@ -31,14 +31,19 @@ format: page-fullwidth
 			{% for a in site.data.authors %}
 			{%- assign authorName = a[1].name -%}
 			{%- assign reverseName = authorName | split: " " | reverse | join: " " -%}
-			<p>{{ reverseName }}</p>
 			{% assign authorCollection = authorCollection | push: reverseName %}
+			{% endfor %}
+
+			{% for auth in authorCollection %}
+			{%- assign matched_author = site.data.authors | where:"name",auth -%}
+			{{ matched_author }}
 			{% endfor %}
 
 			<div class="row t30">
 				<div class="small-12 columns">
-					{% for auth in site.data.authors %}
-					{%- assign author = auth[1] -%}
+					{% for auth in authorCollection %}
+					{%- assign matched_author = site.data.authors | where:"name",auth -%}
+					{%- assign author = matched_author[1] -%}
 					<h3 style="margin-bottom: 10px">{{ author.name | upcase }}</h3>
 					{% if author.siterole %}
 					<h4 style="color:gray; margin: 0 0 0 0">{{ author.siterole | upcase }}</h4>
@@ -49,6 +54,13 @@ format: page-fullwidth
 					{% if author.bio %}
 					<p>{{ author.bio }}</p>
 					{% endif %}
+
+					{% assign links = author.alts %}
+					{% if links.CU %}
+					{% endif %}
+					{% if links.googleScholar %}
+					{% endif %}
+
 					<hr>
 					{% endfor %}
 				</div>
