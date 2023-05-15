@@ -31,9 +31,9 @@ format: page-fullwidth
 					{% for auth in site.data.authors %}
 					{%- assign authorTag = auth[0] -%}
 					{%- assign author = site.data.authors[authorTag] -%}
-					<h3>{{ author.name }}</h3>
+					<h3>{{ author.name | upcase }}</h3>
 					{% if author.siterole %}
-					<h3 style="color:gray">{{ author.siterole }}</h3>
+					<h3 style="color:gray">{{ author.siterole | upcase }}</h3>
 					{% endif %}
 					{% if author.email %}
 					<p class="caption">Email: <a href="mailto:{{ author.email }}">{{ author.email }}</a></p>
