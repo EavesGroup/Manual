@@ -24,20 +24,23 @@ format: page-fullwidth
 				<h1>{{ page.title }}</h1>
 			</header>
 
+			{{ content }}
+
 			<div class="row t30">
 				<div class="small-12 columns">
 					{% for auth in site.data.authors %}
 					{%- assign authorTag = auth[0] -%}
 					{%- assign author = site.data.authors[authorTag] -%}
-					<h4>{{ author.name }}</h4>
-					<div>
-						{% if author.siterole %}
-						<p>Role: {{ author.siterole }}</p>
-						{% endif %}
-						{% if author.email %}
-						<p class="caption">Email: <a href="mailto:{{ author.email }}">{{ author.email }}</a></p>
-						{% endif %}
-					</div>
+					<h3>{{ author.name }}</h3>
+					{% if author.siterole %}
+					<h3 style="color:gray">{{ author.siterole }}</h3>
+					{% endif %}
+					{% if author.email %}
+					<p class="caption">Email: <a href="mailto:{{ author.email }}">{{ author.email }}</a></p>
+					{% endif %}
+					{% if author.bio %}
+					<p>{{ author.bio }}</p>
+					{% endif %}
 					{% endfor %}
 				</div>
 			</div>
