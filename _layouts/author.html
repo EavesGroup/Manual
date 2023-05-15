@@ -33,7 +33,7 @@ format: page-fullwidth
 					{%- assign author = site.data.authors[authorTag] -%}
 					<h3>{{ author.name | upcase }}</h3>
 					{% if author.siterole %}
-					<h3 style="color:gray">{{ author.siterole | upcase }}</h3>
+					<h4 style="color:gray; margin: 10 0 0 0">{{ author.siterole | upcase }}</h4>
 					{% endif %}
 					{% if author.email %}
 					<p class="caption">Email: <a href="mailto:{{ author.email }}">{{ author.email }}</a></p>
@@ -41,6 +41,7 @@ format: page-fullwidth
 					{% if author.bio %}
 					<p>{{ author.bio }}</p>
 					{% endif %}
+					<hr>
 					{% endfor %}
 				</div>
 			</div>
