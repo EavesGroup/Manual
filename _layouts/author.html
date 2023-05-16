@@ -31,9 +31,9 @@ format: page-fullwidth
 			{% for a in site.data.authors %}
 			{%- assign authorName = a[1].name -%}
 			{%- assign reverseName = authorName | split: " " | reverse | join: " " -%}
-			{% assign authorCollection = authorCollection | push: reverseName %}
+			{%- assign authorCollection = authorCollection | push: reverseName -%}
 			{% endfor %}
-			{% assign sorted_authorCollection = authorCollection | sort_natural %}
+			{%- assign sorted_authorCollection = authorCollection | sort_natural -%}
 
 			<!-- Retrieve alphabetically sorted authorTags -->
 			{%- assign authorCollection = "" | split: "" -%}
@@ -45,7 +45,7 @@ format: page-fullwidth
 			{% break %}
 			{% endif %}
 			{% endfor %}
-			{% assign authorCollection = authorCollection | push: matched_author %}
+			{%- assign authorCollection = authorCollection | push: matched_author -%}
 			{% endfor %}
 
 			{% for auth in authorCollection %}
@@ -62,7 +62,7 @@ format: page-fullwidth
 					{% endif %}
 				</div>
 				<div class="small-4 columns" style="float:right">
-					{% assign links = author.alts %}
+					{%- assign links = author.alts -%}
 					{% if links.CU %}
 					<p style="float:right"><a href="{{ links.CU }}"><img src="{{ site.urlimg }}Boulder_onlyLogo.jpg"
 								alt="CU Eaves Group Page" width="50"></a></p></br>
