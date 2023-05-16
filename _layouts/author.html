@@ -48,9 +48,9 @@ format: page-fullwidth
 			{% assign authorCollection = authorCollection | push: matched_author %}
 			{% endfor %}
 
+			{% for auth in authorCollection %}
 			<div class="row t30">
 				<div class="small-8 columns">
-					{% for auth in authorCollection %}
 					{%- assign author = site.data.authors[auth] -%}
 					{%- assign nameID = author.name | split: " " | join: "-" | downcase -%}
 					<h3 style="margin-bottom: 10px" id="{{ nameID }}">{{ author.name | upcase }}</h3>
@@ -81,7 +81,6 @@ format: page-fullwidth
 
 			<hr>
 			{% endfor %}
-	</div>
-	</article>
-</div><!-- /.medium-12.columns -->
+		</article>
+	</div><!-- /.medium-12.columns -->
 </div><!-- /.row -->
