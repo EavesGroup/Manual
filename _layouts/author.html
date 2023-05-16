@@ -64,10 +64,12 @@ format: page-fullwidth
 				<div class="small-4 columns" style="float:right">
 					{% assign links = author.alts %}
 					{% if links.CU %}
-					<p style="float:right"><a href="{{ links.CU }}">CU Eaves Group</a></p>
+					<p style="float:right"><a href="{{ links.CU }}"><img src="{{ site.urlimg }}Boulder_onlyLogo.jpg"
+								alt="CU Eaves Group Page" width="100"></a></p>
 					{% endif %}
 					{% if links.googleScholar %}
-					<p style="float:right"><a href="{{ links.googleScholar }}">Google Scholar</a></p>
+					<p style="float:right"><a href="{{ links.googleScholar }}"><img
+								src="{{ site.urlimg }}google_scholar_icon.png" alt="Google Scholar" width="100"></a></p>
 					{% endif %}
 				</div>
 			</div>
