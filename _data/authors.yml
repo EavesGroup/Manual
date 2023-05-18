@@ -28,12 +28,16 @@ natalielemessurier:
   name: "Natalie LeMessurier"
   siterole: "Research Assistant"
   email: natalie.lemessurier@colorado.edu
+  alts:
+    CU: "https://www.colorado.edu/lab/eavesgroup/natalie-lemessurier"
 
 alexstaat:
   name: "Alexander Staat"
   siterole: "Research Assistant"
   email: alex.staat@colorado.edu
   bio: "Alex is a current graduate student in the Eaves group. He joined the group in 2019 after receiving his B.S. in Physics and Chemistry at U.C. Davis. A large portion of the LAMMPS information on this site is his contribution."
+  alts:
+    CU: "https://www.colorado.edu/lab/eavesgroup/alex-j-staat"
 
 korismyser:
   name: "Kori E. Smyser"
@@ -41,6 +45,7 @@ korismyser:
   bio: "Kori was a graduate student in the Eaves group. She joined the group in 2017 and was awarded her Ph.D. in Chemical Physics in 2022. After graduating she joined Sandeep Sharma for a postdoc. Much of the information about Julia in this Manual is from a master class she taught in 2020 when Joel first wanted everyone to learn the language."
   alts:
     CU: "https://www.colorado.edu/lab/eavesgroup/kori-e-smyser"
+    googleScholar: "https://scholar.google.com/citations?user=ZZD9e9wAAAAJ&hl=en&oi=ao"
 
 peytoncline:
   name: "R. Peyton Cline"
@@ -48,3 +53,4 @@ peytoncline:
   bio: "Peyton was a graduate student in the Eaves group starting in 2015. He was awarded his Ph.D. in Chemical Physics in 2020 and then stuck around as a postdoc until 2022. He moved on to a position at the National Renewable Energy Laboratory (NREL). A large portion of the information about VASP in this Manual originated from a master class he taught in 2022 before he left for NREL."
   alts:
     CU: "https://www.colorado.edu/lab/eavesgroup/r-peyton-cline"
+    googleScholar: "https://scholar.google.com/citations?user=WANDo9QAAAAJ&hl=en&oi=ao"
