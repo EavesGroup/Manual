@@ -52,10 +52,38 @@ If you create a webpage and want to take ownership for the content, or just allo
 
 Category pages form the basis of the webpage's organization by allowing us to separate information onto different pages, but still keeping similar information together. For example, VASP is software program with lots of things you can say about it. You can talk about how it's installed on different systems, how to run it to achieve different results, and how things can go wrong when using it. To avoid cluttering up one long page with all of these topics, they've been given their own pages that then show up on the VASP category page. The [below section](#underlying-file-structure) will deal with how the files that create these pages are structured among the other files. The subsections in this section will talk about how they work. 
 
-# The following is a work-in-progress
-
 
 ### Top-level Categories
+
+Top-level categories include basically all the pages that can be accessed via the top navigation bar. These categories serve to organize all sub-categories and pages into hopefully useful, but sufficiently broad, groups. This organization is achieved entirely through *categories and tags*, which makes them very important!
+
+If you open any top-level category file, you will see that the majority of the text is Liquid, a templating language. The documentation for Liquid and Kramdown (the markdown renderer for Jekyll) are linked [below](#templating). However, they aren't the most useful. I will go through the common chunk of code found on these top-level category pages
+
+```{r, attr.source='.numberLines'}
+{% assign titles = "" | split: "" %}
+{% for post in site.tags.coding %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div>
+    {% for p in sorted_titles %}
+    {% assign matched_post = site.tags.coding | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    {% endfor %}
+</div>
+```
+
+The first section of code exists to allow us to sort the posts alphabetically. The first line creates an empty array 'titles' that we can fill with post titles. The for loop syntax is similar to coding languages like Python or Julia. We iterate over the collection 'site.tags.coding' and 'post' is the variable for the current element in the collection.
+
+Jekyll makes it easy to access many collections of posts with this '.' notation. "site.xxx" accesses elements that are available to the whole site. We can replace 'xxx' with tags as in this example, or categories as can be found on other pages. 'site.data' allows us to access information within the '_data' folder, such as with 'site.data.authors' in the author layout. So we see that 'site.tags.coding' retrieves the collection of all posts on the site with the tag 'coding'. 
+
+The vertical bar (pipe) allows us to chain commands together and they should be read left to right. In conjunction with an 'assign' statement they can be a little weird. Line 3 can be read "add the title associated with the current post to the array titles and overwrite titles with this new array". Similarily, line 5 is can be read "sort the elements of titles (ignoring upper/lowercase) and then assign the result to the variable 'sorted_titles'".
+
+We now have an alphabetical array of posts that have the 'coding' tag and we want to print them to the page. We temporarily switch back to HTML syntax on line 7 to create a div for the posts and then start to loop through our sorted page titles. Because we need the URL associated with the post, we need to find the post object that has the same title. We do this by using the pipe syntax again to pick out the elements in the collection 'site.tags.coding' where the title matches. Due to weirdness with how the collections work, we need to grab the 0th index of this element (line 10). We can then switch back to our HTML to make a 4th level header style link. We obtain the URL using site elements (site.url and site.baseurl defined in the _config.yml) and post elements. We use the double curly brackets to access Liquid variables within the HTML.
+
+By replacing 'coding' with other tags, we generate most of the top-level category pages. Sometimes there is surrounding supplemental HTML that changes the look a little bit, but this chunk of code forms the basis.
 
 ### Sub-categories
 
@@ -72,5 +100,5 @@ Category pages form the basis of the webpage's organization by allowing us to se
 #### Kramdown {:}
 [Example](https://kramdown.gettalong.org/converter/html.html#toc)
 
-#### Liquid {{}}
+#### Liquid {% raw %}{{}} {% endraw %}
 [Example](https://jekyllrb.com/docs/liquid/)
