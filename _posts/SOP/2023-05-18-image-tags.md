@@ -12,3 +12,7 @@ authors:
     - sinalewis
 ---
 
+{% assign i = 1%}
+{% unless i > 8%}
+<img class="t60" src="{{ site.urlimg }}/image-tags/teams_tag-files_example-0{{ i }}.png" caption="">
+{% endunless %}
