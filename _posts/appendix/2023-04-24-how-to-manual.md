@@ -87,7 +87,11 @@ By replacing 'coding' with other tags, we generate most of the top-level categor
 
 ### Sub-categories
 
+Like the top-level category pages, sub-category pages strongly depend on tags to generate their content. However, they use a short bit of Kramdown and an include statement instead of Liquid. The Kramdown "{: .t60}" creates a space of about 60 pixels between the title and the following posts. The "include" line basically inserts the contents of the file "_includes/list-posts" with the optional tag.
+
 ## Underlying File Structure
+
+
 
 ### File Names
 
