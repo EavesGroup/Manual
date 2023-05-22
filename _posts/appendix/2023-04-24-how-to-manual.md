@@ -59,7 +59,7 @@ Top-level categories include basically all the pages that can be accessed via th
 
 If you open any top-level category file, you will see that the majority of the text is Liquid, a templating language. The documentation for Liquid and Kramdown (the markdown renderer for Jekyll) are linked [below](#templating). However, they aren't the most useful. I will go through the common chunk of code found on these top-level category pages
 
-```{r, attr.source='.numberLines'}
+```
 {% assign titles = "" | split: "" %}
 {% for post in site.tags.coding %}
     {% assign titles = titles | push: post.title %}
