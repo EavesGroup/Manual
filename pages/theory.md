@@ -8,6 +8,8 @@ header:
 permalink: "/theory/"
 ---
 
+{% include accordian_script.html %}
+
 <small markdown="1">[Down to alphabetical list](#all)</small>
 {: .text-right }
 
@@ -280,22 +282,3 @@ permalink: "/theory/"
     {% endfor %}
     </div>
 </div>
-
-
-<script>
-function changeDropdown(id) {
-  var x = document.getElementById(id);
-  var el = document.getElementById('exHeader');
-  var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
-  var fontSize = parseFloat(style); 
-  if (x.innerText === "〉") {
-    x.innerText = "﹀";
-    x.style.fontSize = (fontSize+7)+'px';
-    x.style.margin = "0px 0px 0px 30px";
-  } else {
-  	x.innerHTML = "〉";
-    x.style.fontSize = style;
-    x.style.margin = "-2px 0px 0px 30px";
-  }
-}
-</script>
