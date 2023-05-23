@@ -18,21 +18,22 @@ permalink: "/theory/"
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Classical Mechanics<div id="dropdown-classmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% for category in site.categories %}
-{% assign subcategory = category[0] | split: "_" %}
+{% assign c = category[0] %}
+{% assign subcategory = c | split: "_" %}
 {% if subcategory[0] == "CM" and subcategory[1] %}
-{% assign cat-name = subcategory | slice: 2,20 | join: " " %}
+{% assign cat-name = subcategory | slice: 1,20 | join: " " %}
 {{ cat-name }}
 {% assign titles = "" | split: "" %}
-{% for post in site.categories[category] %}
+{% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
 
-<h3><a href="{{ site.url }}{{ site.baseurl }}/CM/{{ subcategory }}">{{ cat-name }}</a></h3>
+<h3><a href="{{ site.url }}{{ site.baseurl }}/CM/{{ c }}">{{ cat-name }}</a></h3>
 <div>
 <br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.categories[subcategory] | where:"title",p %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
