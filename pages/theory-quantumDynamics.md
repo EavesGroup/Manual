@@ -4,7 +4,7 @@ show_meta: false
 title:  "Quantum Dynamics"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/quantumDynamics/"
+permalink: "/quantumdynamics/"
 ---
 
 {% assign titles = "" | split: "" %}
