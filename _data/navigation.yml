@@ -46,14 +46,14 @@
   url: "/theory/"
   side: left
   dropdown:
-    - title: "Electronic Structure Theory"
-      url: "/est/"
-    - title: "Equilibrium Stat. Mech."
-      url: "/esm/"
-    - title: "Non-Equilibrium Stat. Mech."
-      url: "/nesm/"
-    - title: "Quantum Dynamics"
-      url: "/quantumDynamics/"
+    - title: "Classical Mechanics"
+      url: "/classmech/"
+    - title: "Math Methods"
+      url: "/mathmethods/"
+    - title: "Quantum Mechanics"
+      url: "/quantummech/"
+    - title: "Statistical Mechanics"
+      url: "/statmech/"
 
 - title: Appendix
   url: "/appendix/"
