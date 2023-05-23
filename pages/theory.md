@@ -210,9 +210,9 @@ permalink: "/theory/"
 {% for c in cats %}
 {% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
 
-<hr>
 <h4><a href="{{ site.url }}{{ site.baseurl }}/theory/sm/{{ c }}">{{ cat-name }}</a></h4>
 
+<hr>
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
