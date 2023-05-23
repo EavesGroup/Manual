@@ -9,7 +9,7 @@ permalink: "/theory/mm/"
 
 {% assign titles = "" | split: "" %}
 {% for post in site.categories.MM %}
-    {% unless post.tags.page %}
+    {% unless post.tags[page] %}
     {% assign titles = titles | push: post.title %}
     {% endunless %}
 {% endfor %}
