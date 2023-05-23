@@ -11,7 +11,7 @@ permalink: "/theory/"
 <small markdown="1">[Down to alphabetical list](#all)</small>
 {: .text-right }
 
-## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/CM/)
+## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/cm/)
 
 <details>
 
@@ -33,7 +33,8 @@ permalink: "/theory/"
 {% for c in cats %}
 {% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
 
-<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/CM/{{ c }}">{{ cat-name }}</a></h4>
+<hr>
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/cm/{{ c }}">{{ cat-name }}</a></h4>
 
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
@@ -63,121 +64,187 @@ permalink: "/theory/"
     {% endfor %}
     </div>
 </div>
-<hr>
 
 {% endfor %}
 
 
 </details>
 
-## [Math Methods]({{ site.url }}{{ site.baseurl }}/theory/MM/)
+## [Math Methods]({{ site.url }}{{ site.baseurl }}/theory/mm/)
 
 <details>
 
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Math Methods<div id="dropdown-mathmethods" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
+{% assign cats = "" | split: "" %}
+
+{% for category in site.categories %}
+
+{% assign c = category[0] %}
+{% assign subcategory = c | split: "_" %}
+
+{% if subcategory[0] == "MM" and subcategory[1] %}
+ {% assign cats = cats | push: c %}
+{% endif %}
+{% endfor %}
+
+
+{% for c in cats %}
+{% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
+
+<hr>
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ c }}">{{ cat-name }}</a></h4>
+
 {% assign titles = "" | split: "" %}
-{% for post in site.tags.MM %}
+{% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
 
-<div>
-<br>
+<div class="row t30">
+<div class="small-6 columns">
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.MM | where:"title",p %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
     {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
     {% endfor %}
+    </div>
+    <div class="small-6 columns">
+    {% for p in sorted_titles %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 0 %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
+    {% endfor %}
+    </div>
 </div>
+
+{% endfor %}
+
+
 </details>
 
-## [Quantum Mechanics]({{ site.url }}{{ site.baseurl }}/theory/QM/)
+## [Quantum Mechanics]({{ site.url }}{{ site.baseurl }}/theory/qm/)
 
 <details>
 
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Quantum Mechanics<div id="dropdown-quantummech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
-<div class="row">
-<div class="small-6 columns">
-<h3>Statics</h3>
-    {% assign titles = "" | split: "" %}
-{% for post in site.tags.static-QM %}
+{% assign cats = "" | split: "" %}
+
+{% for category in site.categories %}
+
+{% assign c = category[0] %}
+{% assign subcategory = c | split: "_" %}
+
+{% if subcategory[0] == "QM" and subcategory[1] %}
+ {% assign cats = cats | push: c %}
+{% endif %}
+{% endfor %}
+
+
+{% for c in cats %}
+{% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
+
+<hr>
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/qm/{{ c }}">{{ cat-name }}</a></h4>
+
+{% assign titles = "" | split: "" %}
+{% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
 
-<div>
-<br>
-    {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.static-QM | where:"title",p %}
-    {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
-    {% endfor %}
-</div>
-</div>
+<div class="row t30">
 <div class="small-6 columns">
-    <h3>Dynamics</h3>
-     {% assign titles = "" | split: "" %}
-    {% for post in site.tags.dynamic-QM %}
-    {% assign titles = titles | push: post.title %}
-    {% endfor %}
-    {% assign sorted_titles = titles | sort_natural %}
-
-<div>
-<br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.dynamic-QM | where:"title",p %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
     {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
     {% endfor %}
+    </div>
+    <div class="small-6 columns">
+    {% for p in sorted_titles %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 0 %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
+    {% endfor %}
+    </div>
 </div>
-</div>
-</div>
+
+{% endfor %}
+
+
 </details>
 
-## [Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/SM/)
+## [Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/sm/)
 
 <details>
 
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Statistical Mechanics<div id="dropdown-statmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
-<div class="row">
+{% assign cats = "" | split: "" %}
+
+{% for category in site.categories %}
+
+{% assign c = category[0] %}
+{% assign subcategory = c | split: "_" %}
+
+{% if subcategory[0] == "SM" and subcategory[1] %}
+ {% assign cats = cats | push: c %}
+{% endif %}
+{% endfor %}
+
+
+{% for c in cats %}
+{% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
+
+<hr>
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/sm/{{ c }}">{{ cat-name }}</a></h4>
+
+{% assign titles = "" | split: "" %}
+{% for post in site.categories[c] %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div class="row t30">
 <div class="small-6 columns">
-<h3>Equilibrium</h3>
-    {% assign titles = "" | split: "" %}
-{% for post in site.tags.EQ-SM %}
-    {% assign titles = titles | push: post.title %}
-{% endfor %}
-{% assign sorted_titles = titles | sort_natural %}
-
-<div>
-<br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.EQ-SM | where:"title",p %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
     {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
     {% endfor %}
-</div>
-</div>
+    </div>
     <div class="small-6 columns">
-<h3>Non-Equilibrium</h3>
-     {% assign titles = "" | split: "" %}
-{% for post in site.tags.NEQ-SM %}
-    {% assign titles = titles | push: post.title %}
-{% endfor %}
-{% assign sorted_titles = titles | sort_natural %}
-
-<div>
-<br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.NEQ-SM | where:"title",p %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 0 %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
     {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
     {% endfor %}
+    </div>
 </div>
-</div>
-</div>
+
+{% endfor %}
+
+
 </details>
 
 ## All

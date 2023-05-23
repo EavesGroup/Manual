@@ -47,13 +47,13 @@
   side: left
   dropdown:
     - title: "Classical Mechanics"
-      url: "/theory/CM/"
+      url: "/theory/cm/"
     - title: "Math Methods"
-      url: "/theory/MM/"
+      url: "/theory/mm/"
     - title: "Quantum Mechanics"
-      url: "/theory/QM/"
+      url: "/theory/qm/"
     - title: "Statistical Mechanics"
-      url: "/theory/SM/"
+      url: "/theory/sm/"
 
 - title: Appendix
   url: "/appendix/"
