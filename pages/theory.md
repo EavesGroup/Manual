@@ -11,22 +11,20 @@ permalink: "/theory/"
 <small markdown="1">[Down to alphabetical list](#all)</small>
 {: .text-right }
 
-{% assign categories = site.categories %}
-
 ## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/CM/)
 
 <details>
 
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Classical Mechanics<div id="dropdown-classmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
-{% for category in categories %}
+{% for category in site.categories %}
 {% assign subcategory = category | split: "_" %}
 
 {% if subcategory[0] == "CM" %}
-{% assign cat-name = subcategory | shift | join: " " %}
+{% assign cat-name = subcategory | slice: 2,20 | join: " " %}
 
 {% assign titles = "" | split: "" %}
-{% for post in site.categories[subcategory] %}
+{% for post in site.categories[category] %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
