@@ -42,6 +42,7 @@ permalink: "/theory/"
 
 {% endif %}
 {% endfor %}
+</details>
 
 ## [Math Methods]({{ site.url }}{{ site.baseurl }}/theory/MM/)
 
