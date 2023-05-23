@@ -33,9 +33,9 @@ permalink: "/theory/"
 {% for c in cats %}
 {% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
 
+{% assign name = c | downcase %}
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ name }}">{{ cat-name }}</a></h4>
 <hr>
-<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/cm/{{ c }}">{{ cat-name }}</a></h4>
-
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -92,9 +92,9 @@ permalink: "/theory/"
 {% for c in cats %}
 {% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
 
+{% assign name = c | downcase %}
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ name }}">{{ cat-name }}</a></h4>
 <hr>
-<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ c }}">{{ cat-name }}</a></h4>
-
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -151,9 +151,9 @@ permalink: "/theory/"
 {% for c in cats %}
 {% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
 
+{% assign name = c | downcase %}
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ name }}">{{ cat-name }}</a></h4>
 <hr>
-<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/qm/{{ c }}">{{ cat-name }}</a></h4>
-
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -210,8 +210,8 @@ permalink: "/theory/"
 {% for c in cats %}
 {% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
 
-<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/sm/{{ c }}">{{ cat-name }}</a></h4>
-
+{% assign name = c | downcase %}
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ name }}">{{ cat-name }}</a></h4>
 <hr>
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
