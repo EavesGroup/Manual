@@ -55,6 +55,29 @@ permalink: "/theory/"
 </div>
 </details>
 
+
+## [Math Methods]({{ site.url }}{{ site.baseurl }}/mathmethods/)
+
+<details>
+
+<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Math Methods<div id="dropdown-NEQSM" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+
+{% assign titles = "" | split: "" %}
+{% for post in site.tags.mathMethods %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div>
+<br>
+    {% for p in sorted_titles %}
+    {% assign matched_post = site.tags.mathMethods | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    {% endfor %}
+</div>
+</details>
+
 ## [Non-Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/nesm/)
 
 <details>
@@ -77,7 +100,7 @@ permalink: "/theory/"
 </div>
 </details>
 
-## [Quantum Dynamics]({{ site.url }}{{ site.baseurl }}/quantumDynamics/)
+## [Quantum Dynamics]({{ site.url }}{{ site.baseurl }}/quantumdynamics/)
 
 <details>
 
