@@ -17,31 +17,56 @@ permalink: "/theory/"
 
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Classical Mechanics<div id="dropdown-classmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
+{% assign cats = "" | split: "" %}
+
 {% for category in site.categories %}
+
 {% assign c = category[0] %}
 {% assign subcategory = c | split: "_" %}
+
 {% if subcategory[0] == "CM" and subcategory[1] %}
-{% assign cat-name = subcategory | slice: 1,20 | join: " " %}
-{{ cat-name }}
+ {% assign cats = cats | push: c %}
+{% endif %}
+{% endfor %}
+
+
+{% for c in cats %}
+{% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
+
+<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/CM/{{ c }}">{{ cat-name }}</a></h4>
+
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
-
-<h3><a href="{{ site.url }}{{ site.baseurl }}/CM/{{ c }}">{{ cat-name }}</a></h3>
-<div>
-<br>
+<div class="row">
+<div class="small-6 columns">
     {% for p in sorted_titles %}
-    {% assign matched_post = site.categories[c] | where:"title",p %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+    {% assign matched_post = site.tags.theory | where:"title",p %}
     {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
     {% endfor %}
+    </div>
+    <div class="small-6 columns">
+    {% for p in sorted_titles %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 0 %}
+    {% assign matched_post = site.tags.theory | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
+    {% endfor %}
+    </div>
 </div>
 
 
-{% endif %}
 {% endfor %}
+
+
 </details>
 
 ## [Math Methods]({{ site.url }}{{ site.baseurl }}/theory/MM/)
