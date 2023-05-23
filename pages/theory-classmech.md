@@ -4,7 +4,7 @@ show_meta: false
 title:  "Classical Mechanics"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/CM/"
+permalink: "/theory/CM/"
 ---
 
 {% assign titles = "" | split: "" %}
