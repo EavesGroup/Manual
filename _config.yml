@@ -48,7 +48,8 @@ logo: "logo.png"
 plugins:
   - jekyll-asciidoc
   - jekyll-gist
-#  - jekyll-paginate
+  - jekyll-liquify
+  - jekyll-paginate
 
 #       ____              _             __  _
 #      / __ \____ _____ _(_)___  ____ _/ /_(_)___  ____
@@ -62,7 +63,7 @@ plugins:
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown: kramdown
-permalink: /{% for category in post.categories %}{{ category }}/{% endfor %}:title/
+permalink: /"{% for category in post.categories %}{{ category }}/{% endfor %}":title/
 highlight: rouge
 excerpt_separator: "<!--more-->"
 include: [".htaccess"]
