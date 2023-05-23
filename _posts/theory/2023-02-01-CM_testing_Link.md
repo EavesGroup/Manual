@@ -1,10 +1,9 @@
 ---
 layout: page-fullwidth
-title:  "DMFT"
+title:  "Test"
 categories:
     - theory
     - CM
-    - CM_testing_Link
 tags:
     - theory
 header: no

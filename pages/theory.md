@@ -45,7 +45,7 @@ permalink: "/theory/"
 {% endif %}
 {% endfor %}
 
-## [Math Methods]({{ site.url }}{{ site.baseurl }}/mathmethods/)
+## [Math Methods]({{ site.url }}{{ site.baseurl }}/MM/)
 
 <details>
 
@@ -67,7 +67,7 @@ permalink: "/theory/"
 </div>
 </details>
 
-## [Quantum Mechanics]({{ site.url }}{{ site.baseurl }}/quantummech/)
+## [Quantum Mechanics]({{ site.url }}{{ site.baseurl }}/QM/)
 
 <details>
 
@@ -110,7 +110,7 @@ permalink: "/theory/"
 </div>
 </details>
 
-## [Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/statmech/)
+## [Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/SM/)
 
 <details>
 
