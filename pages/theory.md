@@ -13,7 +13,7 @@ permalink: "/theory/"
 
 {% assign categories = site.categories %}
 
-## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/CM/)
+## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/CM/)
 
 <details>
 
@@ -45,7 +45,7 @@ permalink: "/theory/"
 {% endif %}
 {% endfor %}
 
-## [Math Methods]({{ site.url }}{{ site.baseurl }}/MM/)
+## [Math Methods]({{ site.url }}{{ site.baseurl }}/theory/MM/)
 
 <details>
 
@@ -67,7 +67,7 @@ permalink: "/theory/"
 </div>
 </details>
 
-## [Quantum Mechanics]({{ site.url }}{{ site.baseurl }}/QM/)
+## [Quantum Mechanics]({{ site.url }}{{ site.baseurl }}/theory/QM/)
 
 <details>
 
@@ -110,7 +110,7 @@ permalink: "/theory/"
 </div>
 </details>
 
-## [Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/SM/)
+## [Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/theory/SM/)
 
 <details>
 
