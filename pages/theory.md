@@ -18,7 +18,7 @@ permalink: "/theory/"
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Classical Mechanics<div id="dropdown-classmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% for category in site.categories %}
-{% assign subcategory = category | split: "_" %}
+{% assign subcategory = category[0] | split: "_" %}
 {{ subcategory }}
 {% if subcategory[0] == "CM" and subcategory[1] %}
 {% assign cat-name = subcategory | slice: 2,20 | join: " " %}
