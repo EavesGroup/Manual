@@ -22,20 +22,20 @@ permalink: "/theory/"
 {% for category in categories %}
 {% assign subcategory = category | split: "_" %}
 
-{% if category[0] == "CM" %}
-{% assign cat-name = category | shift | join: " " %}
+{% if subcategory[0] == "CM" %}
+{% assign cat-name = subcategory | shift | join: " " %}
 
 {% assign titles = "" | split: "" %}
-{% for post in site.categories[category] %}
+{% for post in site.categories[subcategory] %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
 
-<h3><a href="{{ site.url }}{{ site.baseurl }}/CM/{{ category }}">{{ cat-name }}</a></h3>
+<h3><a href="{{ site.url }}{{ site.baseurl }}/CM/{{ subcategory }}">{{ cat-name }}</a></h3>
 <div>
 <br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.categories[category] | where:"title",p %}
+    {% assign matched_post = site.categories[subcategory] | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
