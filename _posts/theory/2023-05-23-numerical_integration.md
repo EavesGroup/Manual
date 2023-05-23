@@ -7,6 +7,8 @@ categories:
     - MM_Integral_Transforms
 tags:
     - theory
+    - page
+    - math-method
 header: no
 breadcrumb: true
 ---
