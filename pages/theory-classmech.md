@@ -1,10 +1,10 @@
 ---
 layout: page
 show_meta: false
-title:  "Math Methods"
+title:  "Classical Mechanics"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/mathmethods/"
+permalink: "/CM/"
 ---
 
 {% assign titles = "" | split: "" %}

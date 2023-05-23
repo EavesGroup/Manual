@@ -11,27 +11,39 @@ permalink: "/theory/"
 <small markdown="1">[Down to alphabetical list](#all)</small>
 {: .text-right }
 
-## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/classmech/)
+{% assign categories = site.categories %}
+
+## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/CM/)
 
 <details>
 
 <summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Classical Mechanics<div id="dropdown-classmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
+{% for category in categories %}
+{% assign subcategory = category | split: "_" %}
+
+{% if category[0] == "CM" %}
+{% assign cat-name = category | shift | join: " " %}
+
 {% assign titles = "" | split: "" %}
-{% for post in site.tags.CM %}
+{% for post in site.categories[category] %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
 
+<h3><a href="{{ site.url }}{{ site.baseurl }}/CM/{{ category }}">{{ cat-name }}</a></h3>
 <div>
 <br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.CM | where:"title",p %}
+    {% assign matched_post = site.categories[category] | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
-</details>
+
+
+{% endif %}
+{% endfor %}
 
 ## [Math Methods]({{ site.url }}{{ site.baseurl }}/mathmethods/)
 
