@@ -19,7 +19,6 @@ permalink: "/theory/"
 
 {% for category in site.categories %}
 {% assign subcategory = category[0] | split: "_" %}
-{{ subcategory }}
 {% if subcategory[0] == "CM" and subcategory[1] %}
 {% assign cat-name = subcategory | slice: 2,20 | join: " " %}
 {{ cat-name }}
@@ -89,13 +88,14 @@ permalink: "/theory/"
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
-    <div class="small-6 columns">
-<h3>Dynamics</h3>
+</div>
+<div class="small-6 columns">
+    <h3>Dynamics</h3>
      {% assign titles = "" | split: "" %}
-{% for post in site.tags.dynamic-QM %}
+    {% for post in site.tags.dynamic-QM %}
     {% assign titles = titles | push: post.title %}
-{% endfor %}
-{% assign sorted_titles = titles | sort_natural %}
+    {% endfor %}
+    {% assign sorted_titles = titles | sort_natural %}
 
 <div>
 <br>
@@ -131,6 +131,7 @@ permalink: "/theory/"
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
+</div>
 </div>
     <div class="small-6 columns">
 <h3>Non-Equilibrium</h3>
