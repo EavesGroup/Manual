@@ -40,12 +40,13 @@ permalink: "/theory/"
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
+
 <div class="row">
 <div class="small-6 columns">
     {% for p in sorted_titles %}
     {% assign loopindex = forloop.index | modulo: 2 %}
     {% if loopindex == 1 %}
-    {% assign matched_post = site.tags.theory | where:"title",p %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
     {% assign post = matched_post[0] %}
     <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     {% endif %}
@@ -55,7 +56,7 @@ permalink: "/theory/"
     {% for p in sorted_titles %}
     {% assign loopindex = forloop.index | modulo: 2 %}
     {% if loopindex == 0 %}
-    {% assign matched_post = site.tags.theory | where:"title",p %}
+    {% assign matched_post = site.categories[c] | where:"title",p %}
     {% assign post = matched_post[0] %}
     <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     {% endif %}
