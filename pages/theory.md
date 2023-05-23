@@ -19,10 +19,10 @@ permalink: "/theory/"
 
 {% for category in site.categories %}
 {% assign subcategory = category | split: "_" %}
-
-{% if subcategory[0] == "CM" %}
+{{ subcategory }}
+{% if subcategory[0] == "CM" and subcategory[1] %}
 {% assign cat-name = subcategory | slice: 2,20 | join: " " %}
-
+{{ cat-name }}
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[category] %}
     {% assign titles = titles | push: post.title %}
