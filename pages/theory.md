@@ -41,7 +41,7 @@ permalink: "/theory/"
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
 
-<div class="row">
+<div class="row t30">
 <div class="small-6 columns">
     {% for p in sorted_titles %}
     {% assign loopindex = forloop.index | modulo: 2 %}
