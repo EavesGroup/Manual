@@ -11,14 +11,14 @@ permalink: "/theory/"
 <small markdown="1">[Down to alphabetical list](#all)</small>
 {: .text-right }
 
-## [Electronic Structure Theory]({{ site.url }}{{ site.baseurl }}/est/)
+## [Classical Mechanics]({{ site.url }}{{ site.baseurl }}/classmech/)
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Electronic Structure Theory<div id="dropdown-EST" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Classical Mechanics<div id="dropdown-classmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
-{% for post in site.tags.EST %}
+{% for post in site.tags.CM %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
@@ -26,44 +26,21 @@ permalink: "/theory/"
 <div>
 <br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.EST | where:"title",p %}
+    {% assign matched_post = site.tags.CM | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
 </details>
-
-## [Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/esm/)
-
-<details>
-
-<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Equilibrium Statistical Mechanics<div id="dropdown-EQSM" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
-
-{% assign titles = "" | split: "" %}
-{% for post in site.tags.EQStatMech %}
-    {% assign titles = titles | push: post.title %}
-{% endfor %}
-{% assign sorted_titles = titles | sort_natural %}
-
-<div>
-<br>
-    {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.EQStatMech | where:"title",p %}
-    {% assign post = matched_post[0] %}
-    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
-    {% endfor %}
-</div>
-</details>
-
 
 ## [Math Methods]({{ site.url }}{{ site.baseurl }}/mathmethods/)
 
 <details>
 
-<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Math Methods<div id="dropdown-NEQSM" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Math Methods<div id="dropdown-mathmethods" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign titles = "" | split: "" %}
-{% for post in site.tags.mathMethods %}
+{% for post in site.tags.MM %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
@@ -71,21 +48,24 @@ permalink: "/theory/"
 <div>
 <br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.mathMethods | where:"title",p %}
+    {% assign matched_post = site.tags.MM | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
 </details>
 
-## [Non-Equilibrium Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/nesm/)
+## [Quantum Mechanics]({{ site.url }}{{ site.baseurl }}/quantummech/)
 
 <details>
 
-<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Non-Equilibrium Statistical Mechanics<div id="dropdown-NEQSM" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Quantum Mechanics<div id="dropdown-quantummech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
-{% assign titles = "" | split: "" %}
-{% for post in site.tags.NEQStatMech %}
+<div class="row">
+<div class="small-6 columns">
+<h3>Statics</h3>
+    {% assign titles = "" | split: "" %}
+{% for post in site.tags.static-QM %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
@@ -93,21 +73,15 @@ permalink: "/theory/"
 <div>
 <br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.NEQStatMech | where:"title",p %}
+    {% assign matched_post = site.tags.static-QM | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
 </div>
-</details>
-
-## [Quantum Dynamics]({{ site.url }}{{ site.baseurl }}/quantumdynamics/)
-
-<details>
-
-<summary><h2 style="float:left; color:white; margin: -40px 0px 0px 0px">Quantum Dynamics<div id="dropdown-quantumDynamics" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
-
-{% assign titles = "" | split: "" %}
-{% for post in site.tags.quantum-dynamics %}
+    <div class="small-6 columns">
+<h3>Dynamics</h3>
+     {% assign titles = "" | split: "" %}
+{% for post in site.tags.dynamic-QM %}
     {% assign titles = titles | push: post.title %}
 {% endfor %}
 {% assign sorted_titles = titles | sort_natural %}
@@ -115,10 +89,55 @@ permalink: "/theory/"
 <div>
 <br>
     {% for p in sorted_titles %}
-    {% assign matched_post = site.tags.quantum-dynamics | where:"title",p %}
+    {% assign matched_post = site.tags.dynamic-QM | where:"title",p %}
     {% assign post = matched_post[0] %}
     <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
     {% endfor %}
+</div>
+</div>
+</div>
+</details>
+
+## [Statistical Mechanics]({{ site.url }}{{ site.baseurl }}/statmech/)
+
+<details>
+
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Statistical Mechanics<div id="dropdown-statmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+
+<div class="row">
+<div class="small-6 columns">
+<h3>Equilibrium</h3>
+    {% assign titles = "" | split: "" %}
+{% for post in site.tags.EQ-SM %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div>
+<br>
+    {% for p in sorted_titles %}
+    {% assign matched_post = site.tags.EQ-SM | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    {% endfor %}
+</div>
+    <div class="small-6 columns">
+<h3>Non-Equilibrium</h3>
+     {% assign titles = "" | split: "" %}
+{% for post in site.tags.NEQ-SM %}
+    {% assign titles = titles | push: post.title %}
+{% endfor %}
+{% assign sorted_titles = titles | sort_natural %}
+
+<div>
+<br>
+    {% for p in sorted_titles %}
+    {% assign matched_post = site.tags.NEQ-SM | where:"title",p %}
+    {% assign post = matched_post[0] %}
+    <h4><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    {% endfor %}
+</div>
+</div>
 </div>
 </details>
 

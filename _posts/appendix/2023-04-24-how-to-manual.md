@@ -24,6 +24,8 @@ authors:
 
 The best way to learn the layout and file structure of this manual is to explore it for yourself. However, this page is a good starting point as it will attempt to highlight the most important features. The following information can be broken up into 3 primary categories: the structure of your basic page, more complicated category pages, and the overarching file structure. There are many files that don't fit neatly into any one category and I will mention the most important ones and their function at the end. A lot of the functionality can be found in the [documentation](https://phlow.github.io/feeling-responsive/documentation/) of the person (Phlow) who created the template (Feeling Responsive) that I (Sina) just pulled from.
 
+
+
 ## Your Basic Page
 Every file starts with a short snippet of what is known as YAML (YAML Ain't Markup Language or Yet Another Markup Language. Yes, confusing I know). If you're familiar with JSON, YAML is pretty similar. If you aren't, just know that YAML consists of a series of key-value pairs. This section of YAML serves to set the look of the page and its relation to other content on the website. If you look through the files that make up the bulk of this webpage you will note 6 main keys appear on each one: layout, title, categories, tags, header, and breadcrumb. The following sections will describe some of the values that go with these pairs and their purpose.
 
@@ -33,6 +35,8 @@ Many fullwidth pages look fairly narrow because they have the table of contents 
 
 ### Title
 This tag is exactly what it says, a simple string (text enclosed in quotes) that supplies the title that appears at the top of the page. The title does not need to match the name of the file, but I frequently make them similar.
+
+NOTE: the variable 'page.title' returns the name of the FILE. For example, the file that generates this page is names "2023-04-24-how-to-manual.md" and page.title will return "how-to-manual".
 
 ### Categories and Tags
 Categories and tags are important for how the webpage is structured. As discussed in the [below section](#category-pages), pages are automatically included on certain landing pages based on their tag keys (i.e. coding, theory, Julia, LAMMPS...) and as mentioned in [the breadcrumb section](#breadcrumb) the listed categories and their order define what appears in the breadcrumb list. As discussed in the overarching [file structure](#file-location), I tend to sort files also based on their top level category; for example, all VASP related files are in the 'programs' category. Listed categories and tags also end up at the bottom of the page. 
