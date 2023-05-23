@@ -62,7 +62,7 @@ permalink: "/theory/"
     {% endfor %}
     </div>
 </div>
-
+<hr>
 
 {% endfor %}
 
