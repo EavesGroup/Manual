@@ -63,7 +63,7 @@ plugins:
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown: kramdown
-permalink: /"{% for category in post.categories %}{{ category }}/{% endfor %}":title/
+permalink: /{{ page.categories }}/:title/
 highlight: rouge
 excerpt_separator: "<!--more-->"
 include: [".htaccess"]
