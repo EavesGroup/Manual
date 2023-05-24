@@ -37,7 +37,7 @@ permalink: "/theory/"
 
 {% assign name = c | downcase %}
 <h4><a href="{{ site.url }}{{ site.baseurl }}/theory/cm/{{ name }}">{{ cat-name }}</a></h4>
-<hr>
+<hr style="margin: 5px">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -96,7 +96,7 @@ permalink: "/theory/"
 
 {% assign name = c | downcase %}
 <h4><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ name }}">{{ cat-name }}</a></h4>
-<hr>
+<hr style="margin: 5px">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -155,7 +155,7 @@ permalink: "/theory/"
 
 {% assign name = c | downcase %}
 <h4><a href="{{ site.url }}{{ site.baseurl }}/theory/qm/{{ name }}">{{ cat-name }}</a></h4>
-<hr>
+<hr style="margin: 5px">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
