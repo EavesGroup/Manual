@@ -5,8 +5,11 @@
 
 <display>
 
-  <summary>{{ title }}<div id="dropdown" onClick="changeDropdown(this.id)"
-      style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div>
+  <summary>
+    <p id="exHeader" style="color:gray,font-weight: bold">{{ title }}
+    <div id="dropdown" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉
+    </div>
+    </p>
   </summary>
 
   {{ contents }}
