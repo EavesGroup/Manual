@@ -1,5 +1,3 @@
-{% include accordian_script.html %}
-
 {% assign title = include.title %}
 {% assign contents = include.contents %}
 <hr style="margin:5px">
@@ -11,7 +9,25 @@
     </div>
     </p>
   </summary>
-  <br>
+  </br></br>
   {{ contents }}
 </details>
-<hr style="margin: -5px">
+<hr style="margin: -10px">
+
+<script>
+  function changeDropdown(id) {
+    var x = document.getElementById(id);
+    var el = document.getElementById('exHeader');
+    var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+    var fontSize = parseFloat(style);
+    if (x.innerText === "〉") {
+      x.innerText = "﹀";
+      x.style.fontSize = (fontSize + 7) + 'px';
+      x.style.margin = "4px 0px 0px 5px";
+    } else {
+      x.innerHTML = "〉";
+      x.style.fontSize = style;
+      x.style.margin = "2px 0px 0px 5px";
+    }
+  }
+</script>
