@@ -157,11 +157,11 @@ chatGPT_play.png, Day in the Life of the Eaves Group:
 machine_learning_xkcd.png, Machine Learning as told by xkcd:
 phd092421s.gif, PhD Comics:
 IMG_20230524_113752.png, We end the article by ceasing to write. For how else could this article be over if we didn't first stop? -- Alex:
-IMG_20230524_113823.png, xkcd on a physicist first encountering a new subject:
-IMG_20230524_113828.png, Edit by Alex of xkcd comic:
-IMG_20230524_113906.png, Is my method just Redfield?:
-IMG_20230524_114044.png, The cycle of research:
-IMG_20230524_114056.png, The evolution of programming; machine language > C > Julia.
+IMG_20230524_113823.png, xkcd comic on a physicist first encountering a new subject:
+IMG_20230524_113828.jpg, Edit by Alex of xkcd comic:
+IMG_20230524_113906.jpg, Is my method just Redfield?:
+IMG_20230524_114044.jpg, The cycle of research:
+IMG_20230524_114056.jpg, The evolution of programming; machine language > C > Julia.
 {% endcapture %}
 
 {% assign imgData = imgData | split: ":" %}
