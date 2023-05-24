@@ -164,10 +164,10 @@ IMG_20230524_114044.jpg, The cycle of research:
 IMG_20230524_114056.jpg, The evolution of programming; machine language > C > Julia.
 {% endcapture %}
 
-{% assign imgData = imgData | split: ":" %}
+{% assign imgData = imgData | split: ":" | reverse %}
 
 <div class="row">
-{% for entry in imgData limit:3 reversed%}
+{% for entry in imgData limit:3 %}
 {% capture total_img %}{% increment img_num %}{% endcapture %}
 {% assign img = entry | split: ", " | first | strip %}
 {% assign caption = entry | split: ", " | last %}
