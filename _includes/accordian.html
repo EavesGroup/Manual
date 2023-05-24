@@ -2,11 +2,11 @@
 
 {% assign title = include.title %}
 {% assign contents = include.contents %}
-
+<hr style="margin:5px">
 <details>
 
   <summary>
-    <p id="exHeader" style="color:gray;font-weight:bold">{{ title }}
+    <p id="exHeader" style="float:left; color:gray;font-weight:bold">{{ title }}
     <div id="dropdown" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 0px">〉
     </div>
     </p>
@@ -14,3 +14,4 @@
 
   {{ contents }}
 </details>
+<hr style="margin:5px">
