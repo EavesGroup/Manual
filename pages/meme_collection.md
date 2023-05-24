@@ -149,13 +149,19 @@ img.hover-shadow {
 </style>
 
 <!-- increment num_imgs for each added file -->
-{% assign num_imgs = 4 %}
+{% assign num_imgs = 9 %}
 <!-- add image filename and caption, one per line with the line ended by a colon -->
 {% capture imgData %}
 chatGPT_dealership.png, The Eaves Group Dealership as told by ChatGPT:
 chatGPT_play.png, Day in the Life of the Eaves Group:
 machine_learning_xkcd.png, Machine Learning as told by xkcd:
-phd092421s.gif, PhD Comics
+phd092421s.gif, PhD Comics:
+IMG_20230524_113752.png, We end the article by ceasing to write. For how else could this article be over if we didn't first stop? -- Alex:
+IMG_20230524_113823.png, xkcd on a physicist first encountering a new subject:
+IMG_20230524_113828.png, Edit by Alex of xkcd comic:
+IMG_20230524_113906.png, Is my method just Redfield?:
+IMG_20230524_114044.png, The cycle of research:
+IMG_20230524_114056.png, The evolution of programming; machine language > C > Julia.
 {% endcapture %}
 
 {% assign imgData = imgData | split: ":" %}
@@ -170,6 +176,15 @@ phd092421s.gif, PhD Comics
 </div>
 
 <!-- Copy this section for every additional image over a multiple of 3 -->
+<div class="row">
+{% for entry in imgData limit:3 offset: continue %}
+{% capture total_img %}{% increment img_num %}{% endcapture %}
+{% assign img = entry | split: ", " | first  | strip %}
+{% assign caption = entry | split: ", " | last %}
+<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}" caption="{{ caption }}"></div>
+{% endfor %}
+</div>
+
 <div class="row">
 {% for entry in imgData limit:3 offset: continue %}
 {% capture total_img %}{% increment img_num %}{% endcapture %}
