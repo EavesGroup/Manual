@@ -175,8 +175,23 @@ H_{SB}^I(t) = \sum_k S_k(t) \otimes B_k(t),
 \end{equation}
 $$
 
-where we are employing a shorthand of explicit time-dependence to denote that $$S_k$$ and $$B_k$$ are in the interaction picture. By taking advantage of the fact that system and both operators commute and that the purely system operators can be pulled out of the trace over the bath we obtain
+where we are employing a shorthand of explicit time-dependence to denote that $$S_k$$ and $$B_k$$ are in the interaction picture. Utilizing the following facts
+
+1. System and bath operators commute,
+2. Cyclic invariance of the trace,
+3. $$B_k(t) = U_B^\dagger(t)B_k(0)U_B(t)$$,
+4. $$[\rho_B,U_0] = 0$$,
+
+and defining the time correlation function $$C_{k,l}(t) = \text{Tr}_B\{\rho_B B_k(t)B_l(0)\}$$, we obtain
 
 $$
 \begin{equation}
-\text{Tr}_B\{\mathcal{L}^I_{SB}(t)\mathcal{L}^I_{SB}(t')\rho_B\sigma^I(t-t')\} = -\sum
+\frac{d}{dt}\sigma^I(t) = -\int_0^t d\tau \sum_{k,l}\left(C_{k,l}(\tau)\left[S_k(t),S_l(t-\tau)\sigma^I(\tau)\right] - C_{k,l}^*(\tau)\left[S_l(t),\sigma^I(\tau)S_k(t-\tau)\right]\right)
+\end{equation}\label{eq:timeNonLocalRedfield}
+$$
+
+### Markov Approximation
+
+A factor that makes Eq. \eqref{eq:timeNonLocalRedfield} difficult to solve is the non-local time dependence--$$\sigma(t)$$ depends on $$\sigma(t' < t)$$ through the factor of $$\sigma(\tau)$$ in the integrand. However, $$C_{k,l}(\tau)$$ tends to have a typical correlation time $$\tau_B$$. For $$\tau \ll \tau_B$$ the bath has largely 'forgotten' its interactions with the system and the correlation is approximately zero. If $$\tau_B$$ is much smaller than the timescale of changes that we are interested, we can make the replacement $$\sigma^I(\tau) \rightarrow \sigma^(t)$$ and change our upper integration bound to infinity.
+
+### Return of the Schrödinger Picture and the Secular Approximation
