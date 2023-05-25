@@ -99,7 +99,7 @@ Frequently we do not care about the dynamics of the entire density matrix. For e
 
 $$
 \begin{align}
-P \cdot &= \rho_B \text{Tr}_B\{\cdot\},\\
+P \;\cdot &= \rho_B \text{Tr}_B\{\cdot\},\\
 Q &= 1-P
 \end{align}
 $$
@@ -205,7 +205,7 @@ $$
 \end{align}
 $$
 
-where and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat{\sigma}_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
+where $$H_S |\eta〉 = \epsilon_\eta |\eta〉$$ and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat{\sigma}_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
 
 $$
 \begin{align}
@@ -222,7 +222,7 @@ R_{abcd} = \Lambda^+_{dbac}+\Lambda^-_{dbac} - \sum_{l}(\delta_{bd}\Lambda^+_{al
 \end{equation}
 $$
 
-The secular approximation, also sometimes called the rotating wave approximation, allows us to discard terms that oscillate rapidly within the timescale of our time-correlations (i.e. we discard terms where $$|\omega_{\eta\nu} - \omega_{\alpha\beta}|$$ is not much less than $$\tau_B$$). And we end up with a form that most would recognize as Redfield
+The secular approximation, also sometimes called the rotating wave approximation, allows us to discard terms that oscillate rapidly within the timescale of our time-correlations (i.e. we discard terms where $$\lvert \omega_{\eta\nu} - \omega_{\alpha\beta}\rvert$$ is not much less than $$\tau_B$$). And we end up with a form that most would recognize as Redfield
 
 $$
 \begin{equation}
