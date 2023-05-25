@@ -205,7 +205,9 @@ $$
 \end{align}
 $$
 
-where $$H_S |\eta〉 = \epsilon_\eta |\eta〉$$ and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat{\sigma}_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
+<p>
+where $$H_S |\eta\rangle = \epsilon_\eta |\eta\rangle$$ and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat{\sigma}_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
+</p>
 
 $$
 \begin{align}
