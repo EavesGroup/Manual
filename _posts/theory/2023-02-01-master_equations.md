@@ -165,7 +165,7 @@ $$
 $$
 
 
-### Assume the Perturbation is Separable
+### Assume $$H_{SB}$$ is Separable
 
 To proceed and make further approximations, it is useful to assume that $$V = H_{SB}$$ can be written as a sum of terms that are separable into bath and system operators
 
@@ -192,7 +192,7 @@ $$
 
 ### Markov Approximation
 
-A factor that makes Eq. \eqref{eq:timeNonLocalRedfield} difficult to solve is the non-local time dependence--$$\sigma(t)$$ depends on $$\sigma(t' < t)$$ through the factor of $$\sigma(\tau)$$ in the integrand. However, $$C_{k,l}(\tau)$$ tends to have a typical correlation time $$\tau_B$$. For $$\tau \ll \tau_B$$ the bath has largely 'forgotten' its interactions with the system and the correlation is approximately zero. If $$\tau_B$$ is much smaller than the timescale of changes that we are interested, we can make the replacement $$\sigma^I(\tau) \rightarrow \sigma^(t)$$ and change our upper integration bound to infinity.
+A factor that makes Eq. \eqref{eq:timeNonLocalRedfield} difficult to solve is the non-local time dependence--$$\sigma(t)$$ depends on $$\sigma(t' < t)$$ through the factor of $$\sigma(\tau)$$ in the integrand. However, $$C_{k,l}(\tau)$$ tends to have a typical correlation time $$\tau_B$$. For $$\tau \ll \tau_B$$ the bath has largely 'forgotten' its interactions with the system and the correlation is approximately zero. If $$\tau_B$$ is much smaller than the timescale of changes that we are interested, we can make the replacement $$\sigma^I(\tau) \rightarrow \sigma^I(t)$$ and change our upper integration bound to infinity.
 
 ### Return of the Schrödinger Picture and the Secular Approximation
 
