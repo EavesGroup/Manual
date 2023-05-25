@@ -109,7 +109,7 @@ where $$\text{Tr}_B$$ denotes a trace over bath states and $$\rho_B = e^{-\beta 
 {% capture c %}
 {% raw %}
 <ol>
-<li> Confirm that this projection operator returns a reduced density matrix \(\sigma = \text{Tr}_B\{\rho(t)\}\) where the bath degrees of freedom have been traced out. <i>Hint:</i> Define a basis set \(|a,\alpha\rangle\) where \(a\) denotes bath states and \(alpha\) denotes system states. </li>
+<li> Confirm that this projection operator returns a reduced density matrix \(\sigma = \text{Tr}_B\{\rho(t)\}\) where the bath degrees of freedom have been traced out. <i>Hint:</i> Define a basis set \(|a,\alpha\rangle\) where \(a\) denotes bath states and \(\alpha\) denotes system states. </li>
 <li> Confirm that \(P^2 = P\). </li>
 </ol>
 {% endraw %}
