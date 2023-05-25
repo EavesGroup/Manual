@@ -115,8 +115,10 @@ where $$\text{Tr}_B$$ denotes a trace over bath states and $$\rho_B = e^{-\beta 
 
 {% capture c %}
 {% raw %}
-1. Confirm that this projection operator returns a reduced density matrix $$\sigma = \text{Tr}_B\{\rho(t)\}$$ where the bath degrees of freedom have been traced out. *Hint:* Define a basis set $$|a,\alpha\rangle$$ where $$a$$ denotes bath states and $$\alpha$$ denotes system states.
-2. Confirm that $$P^2 = P$$.
+<ul>
+<li> Confirm that this projection operator returns a reduced density matrix $\sigma = \text{Tr}_B\{\rho(t)\}$ where the bath degrees of freedom have been traced out. <i>Hint:</i> Define a basis set $$|a,\alpha\rangle$$ where $$a$$ denotes bath states and $$\alpha$$ denotes system states. </li>
+<li> Confirm that $$P^2 = P$$. </li>
+</ul>
 {% endraw %}
 {% endcapture %}
 
@@ -145,7 +147,7 @@ This equation can be used to eliminate $$Q$$ from Eq. \eqref{eq:PonLiouville} an
 
 1. $$P\mathcal{L}P = 0$$ as can be shown using the cyclic invariance of the trace
 2. Assume the initial density matrix is separable into a bath and system part $$\rho(0) = \rho_B\sigma(0)$$. This approximation is sometimes known as the Born Approximation.
-3. Assume that the system-bath interaction is small and keep only up to 2nd order in $$\lambda$$. This allows us to expand any exponentials in a Taylor series and keep only terms less than $$\mathcal{O}(\lambda^3)$$. Because $$\lambda$$ is only used to keep track of perturbation order, we now set $$\lambda=1$$.
+3. Assume that the system-bath interaction is small and keep only up to 2nd order in $$\lambda$$. This allows us to expand any exponentials in a Taylor series and keep only terms that are $$\mathcal{O}(\lambda^2)$$ or less. Because $$\lambda$$ is only used to keep track of perturbation order, we now set $$\lambda=1$$.
 
 The resulting equation is
 
@@ -165,3 +167,16 @@ $$
 
 ### Assume $$H_{SB}$$ is Seperable
 
+To proceed and make further approximations, it is useful to assume that $$H_{SB}$$ can be written as a sum of terms that are separable into bath and system operators
+
+$$
+\begin{equation}
+H_{SB}^I(t) = \sum_k S_k(t) \otimes B_k(t),
+\end{equation}
+$$
+
+where we are employing a shorthand of explicit time-dependence to denote that $$S_k$$ and $$B_k$$ are in the interaction picture. By taking advantage of the fact that system and both operators commute and that the purely system operators can be pulled out of the trace over the bath we obtain
+
+$$
+\begin{equation}
+\text{Tr}_B\{\mathcal{L}^I_{SB}(t)\mathcal{L}^I_{SB}(t')\rho_B\sigma^I(t-t')\} = -\sum
