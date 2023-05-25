@@ -106,16 +106,18 @@ This density matrix $$\rho^I(t)$$ is still the full density matrix for the syste
 
 $$
 \begin{align}
-P \cdot &= \rho_B \Tr_B\{\cdot\},\\
+P \cdot &= \rho_B \text{Tr}_B\{\cdot\},\\
 Q &= 1-P
 \end{align}
 $$
 
-where $$\Tr_B$$ denotes a trace over bath states and $$\rho_B = e^{-\beta H_B}/\mathcal{Z}_B$$ is the equilibrium bath operator--$$\mathcal{Z}_B = \Tr_B\{e^{-\beta H_B}\}$$. This definition of the projection operator ensures that $$P^2 = P$$. 
+where $$\text{Tr}_B$$ denotes a trace over bath states and $$\rho_B = e^{-\beta H_B}/\mathcal{Z}_B$$ is the equilibrium bath operator--$$\mathcal{Z}_B = \text{Tr}_B\{e^{-\beta H_B}\}$$. This definition of the projection operator ensures that $$P^2 = P$$. 
 
 {% capture c %}
-1. Confirm that this projection operator returns a reduced density matrix $\omega = \Tr_B\{\rho(t)\}$ where the bath degrees of freedom have been traced out. *Hint:* Define a basis set $$|a,\alpha\rangle$$ where $$a$$ denotes bath states and $$\alpha$$ denotes system states.
+{% raw %}
+1. Confirm that this projection operator returns a reduced density matrix $$\sigma = \text{Tr}_B\{\rho(t)\}$$ where the bath degrees of freedom have been traced out. *Hint:* Define a basis set $$|a,\alpha\rangle$$ where $$a$$ denotes bath states and $$\alpha$$ denotes system states.
 2. Confirm that $$P^2 = P$$.
+{% endraw %}
 {% endcapture %}
 
 {% include accordian.html title='Exercises' contents=c%}
@@ -139,7 +141,7 @@ $$
 
 {% include accordian.html title="Exercise" contents="Verify that this is the solution to Eq. \eqref{eq:QonLiouville}"%}
 
-This equation can be used to eliminate $$Q$$ from Eq. \eqref{PonLiouville} and obtain the [Nakajima-Zwanzig equation](https://en.wikipedia.org/wiki/Nakajima%E2%80%93Zwanzig_equation). We can then make a series of simplifications and approximations to obtain a nice and compact expression for the reduced density matrix. These simplifications and approximations are
+This equation can be used to eliminate $$Q$$ from Eq. \eqref{eq:PonLiouville} and obtain the [Nakajima-Zwanzig equation](https://en.wikipedia.org/wiki/Nakajima%E2%80%93Zwanzig_equation). We can then make a series of simplifications and approximations to obtain a nice and compact expression for the reduced density matrix. These simplifications and approximations are
 
 1. $$P\mathcal{L}P = 0$$ as can be shown using the cyclic invariance of the trace
 2. Assume the initial density matrix is separable into a bath and system part $$\rho(0) = \rho_B\sigma(0)$$. This approximation is sometimes known as the Born Approximation.
@@ -153,10 +155,13 @@ $$
 \end{equation}
 $$
 
-or rewriting in terms of the reduced density matrix $$\omega^I(t) = \Tr_B\{\rho^I(t)\}$$
+or rewriting in terms of the reduced density matrix $$\sigma^I(t) = \text{Tr}_B\{\rho^I(t)\}$$
 
 $$
 \begin{equation}
-\frac{d\omega^I(t)}{dt} = \int_0^t dt' \Tr_B\{\mathcal{L}^I_{SB}(t)\mathcal{L}^I_{SB}(t')\rho_B\sigma^I(t-t')\}.
+\frac{d\sigma^I(t)}{dt} = \int_0^t dt' \text{Tr}_B\{\mathcal{L}^I_{SB}(t)\mathcal{L}^I_{SB}(t')\rho_B\sigma^I(t-t')\}.
 \end{equation}
 $$
+
+### Assume $$H_{SB}$$ is Seperable
+
