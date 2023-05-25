@@ -12,7 +12,7 @@ tags:
 header: no
 breadcrumb: true
 ---
-{% include toc.html %}
+{% include toc %}
 
 {% include mathjax.html %}
 
