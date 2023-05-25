@@ -93,7 +93,7 @@ $$
 
 {% include accordian.html title='Exercise' contents='Confirm for yourself that this is the correct expression for the Liouville equation in the interaction picture.' %}
 
-### Projection Operator
+### Projection Operators
 
 Frequently we do not care about the dynamics of the entire density matrix. For example, we may only want to know about how the population of the system evolves. We can narrow our focus to the part we care about by tracing out the rest of the system/bath. This effect is usually achieved through projection operators. As an example, if we wish to focus on solely the system dynamics we define our projection operator as
 
@@ -185,9 +185,9 @@ where we are employing a shorthand of explicit time-dependence to denote that $$
 and defining the time correlation function $$C_{k,l}(t) = \text{Tr}_B\{\rho_B B_k(t)B_l(0)\}$$, we obtain
 
 $$
-\begin{equation}
+\begin{equation}\label{eq:timeNonLocalRedfield}
 \frac{d}{dt}\sigma^I(t) = -\int_0^t d\tau \sum_{k,l}\left(C_{k,l}(\tau)\left[S_k(t),S_l(t-\tau)\sigma^I(\tau)\right] - C_{k,l}^*(\tau)\left[S_l(t),\sigma^I(\tau)S_k(t-\tau)\right]\right)
-\end{equation}\label{eq:timeNonLocalRedfield}
+\end{equation}
 $$
 
 ### Markov Approximation
