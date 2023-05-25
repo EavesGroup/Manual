@@ -53,8 +53,8 @@ $$
 $$
 
 The total density matrix \(\rho(t)\) contains information about the bath dynamics that are typically not of interest. Eq. \eqref{eq:quantumLiouville} is also difficult to solve. This chapter outlines various quantum master equations that take different approaches in approximating Eq. \eqref{eq:quantumLiouville} to learn about the dynamics of the system.
-</div>
-</div>
+
+
 ### The Interaction Picture
 
 Analysis of this equation is commonly easier in the interaction picture. For convenience, we begin by writing Eq.\eqref{eq:openQuantumH} as a dominant piece \(H_0\) and a perturbation \(V\)
