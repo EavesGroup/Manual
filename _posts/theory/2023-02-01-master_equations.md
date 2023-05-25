@@ -12,7 +12,17 @@ tags:
 header: no
 breadcrumb: true
 ---
-{% include toc %}
+<div class="row">
+<div class="medium-4 medium-push-8 columns" style="float:right" markdown="1">
+<div class="panel radius" markdown="1">
+**Table of Contents**
+{: #toc }
+* TOC
+{:toc}
+</div>
+</div><!-- /.medium-4.columns -->
+
+<div class="medium-8 medium-pull-4 columns" markdown="1">
 
 {% include mathjax.html %}
 
@@ -44,30 +54,23 @@ $$
 
 The total density matrix $$\rho(t)$$ contains information about the bath dynamics that are typically not of interest. Eq. \eqref{eq:quantumLiouville} is also difficult to solve. This chapter outlines various quantum master equations that take different approaches in approximating Eq. \eqref{eq:quantumLiouville} to learn about the dynamics of the system.
 
-
-## Redfield Equation
-
-The Redfield equation is one of the most common examples referenced when discussing quantum master equations. It is an approximate solution to Eq. \eqref{eq:quantumLiouville} that depends on weak coupling to the environment--small $$H_{SB}$$. The Redfield equation is also Markovian, meaning we assume that the probability of an event--population transfer for example--depends only on the current state of the system, not the history of the system. This section will derive the Redfield equation and outline where these approximations are important.
-
 ### The Interaction Picture
 
-We assume from the beginning that the system-bath coupling is weak. We can then write Eq.\eqref{eq:openQuantumH} as
+Analysis of this equation is commonly easier in the interaction picture. For convenience, we begin by writing Eq.\eqref{eq:openQuantumH} as a primary piece $$H_0$$ and a perturbation $$V$$
+
+$$
+\begin{equation}
+\mathcal{H} &= H_0 + \lambda V,
+\end{equation}
+$$
+
+The total time evolution operator that evolves our system from time zero to time $$t$$ is
 
 $$
 \begin{align}
-\mathcal{H} &= H_0 + \lambda V,\\
-H_0 &= H_S + H_B,\\
-V &= H_{SB}/\lambda.
-\end{align}
-$$
-
-The derivation is simplified in the interaction picture. The total time evolution operator is
-
-$$
-\begin{align}
-    U(t) &= e^{-i\mathcal{H}t} = U_{SB}(t)U_0(t),\\
-    U_{SB}(t) &= e_+^{-i\lambda\int_0^t d\tau V(\tau)},\\
-    U_0(t) &= e^{-i(H_S + H_B)t},
+    U(t) &= e^{-i\mathcal{H}t} = U_{V}(t)U_0(t),\\
+    U_{V}(t) &= e_+^{-i\lambda\int_0^t d\tau V(\tau)},\\
+    U_0(t) &= e^{-i(H_0)t},
 \end{align}
 $$
 
@@ -83,7 +86,7 @@ From this definition we rewrite the Liouville equation in the interaction pictur
 
 $$
 \begin{equation}\label{eq:liouvilleInteraction}
-    \frac{d}{dt}\rho^I(t) = -i\lambda[H_{SB}^I,\rho^I(t)]
+    \frac{d}{dt}\rho^I(t) = -i\lambda[H_{V}^I,\rho^I(t)]
 \end{equation}
 $$
 
@@ -153,6 +156,11 @@ $$
 \frac{d\sigma^I(t)}{dt} = \int_0^t dt' \text{Tr}_B\{\mathcal{L}^I_{SB}(t)\mathcal{L}^I_{SB}(t')\rho_B\sigma^I(t-t')\}.
 \end{equation}
 $$
+
+
+## Redfield Equation
+
+The Redfield equation is one of the most common examples referenced when discussing quantum master equations. It is an approximate solution to Eq. \eqref{eq:quantumLiouville} that depends on weak coupling to the environment--small $$H_{SB}$$. The Redfield equation is also Markovian, meaning we assume that the probability of an event--population transfer for example--depends only on the current state of the system, not the history of the system. This section will derive the Redfield equation and outline where these approximations are important.
 
 ### Assume $$H_{SB}$$ is Seperable
 
