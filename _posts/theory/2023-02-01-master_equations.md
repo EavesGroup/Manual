@@ -205,12 +205,12 @@ $$
 \end{align}
 $$
 
-where $$H_S |\eta\rangle = \epsilon_\eta |\eta\rangle$$ and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat{\sigma}_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
+where \(H_S |\eta\rangle = \epsilon_\eta |\eta\rangle\) and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat{\sigma}_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
 
 $$
 \begin{align}
-\Lambda^+_{abcd} &= \sum_{k,l} S_k^{ab}S_l^{cd} \int_0^\infinity d\tau C_{k,l}(\tau) e^{-i\omega_{cd}\tau},\\
-\Lambda^-_{abcd} &= \sum_{k,l} S_k^{ab}S_l^{cd} \int_0^\infinity d\tau C^*_{k,l}(\tau) e^{-i\omega_{ab}\tau},
+\Lambda^+_{abcd} &= \sum_{k,l} S_k^{ab}S_l^{cd} \int_0^\inf d\tau C_{k,l}(\tau) e^{-i\omega_{cd}\tau},\\
+\Lambda^-_{abcd} &= \sum_{k,l} S_k^{ab}S_l^{cd} \int_0^\inf d\tau C^*_{k,l}(\tau) e^{-i\omega_{ab}\tau},
 \end{align}
 $$
 
