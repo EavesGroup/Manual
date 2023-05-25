@@ -218,7 +218,7 @@ and the Redfield tensor like object
 
 $$
 \begin{equation}
-R_{abcd} &= \Lambda^+_{dbac}+\Lambda^-_{dbac} - \sum_{l}(\delta_{bd}\Lambda^+_{allc} + \delta_{ac}\Lambda^-_{dllb}).
+R_{abcd} = \Lambda^+_{dbac}+\Lambda^-_{dbac} - \sum_{l}(\delta_{bd}\Lambda^+_{allc} + \delta_{ac}\Lambda^-_{dllb}).
 \end{equation}
 $$
 
