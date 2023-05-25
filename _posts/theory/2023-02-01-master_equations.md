@@ -171,7 +171,7 @@ To proceed and make further approximations, it is useful to assume that $$V = H_
 
 $$
 \begin{equation}
-H_{SB}^I(t) = \sum_k S_k(t) \otimes B_k(t),
+\hat{H}_{SB}(t) = \sum_k S_k(t) \otimes B_k(t),
 \end{equation}
 $$
 
