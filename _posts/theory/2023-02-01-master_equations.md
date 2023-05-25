@@ -70,8 +70,8 @@ The total time evolution operator that evolves our system from time zero to time
 $$
 \begin{align}
     U(t) &= e^{-i\mathcal{H}t} = U_{V}(t)U_0(t),\\
-    U_{V}(t) &= e_+^{-i\lambda\int_0^t d\tau V(\tau)},\\
-    U_0(t) &= e^{-i(H_0)t},
+    U_{V}(t) &= e_\leftarrow^{-i\lambda\int_0^t d\tau V(\tau)},\\
+    U_0(t) &= e^{-iH_0t},
 \end{align}
 $$
 
@@ -129,12 +129,12 @@ $$
 where we have used the most important trick of inserting one in the form of $$P+Q$$ and $$P$$ and $$Q$$ are time-independent. We start by solving Eq. \eqref{eq:QonLiouville} exactly
 
 $$
-\begin{equation}
+\begin{equation}\label{eq:Qsolution}
 Q\rho^I(t) = e^{\lambda Q \mathcal{L}_{V}^I\,t}Q\rho^I(t) + \lambda\int_0^t dt' e^{\lambda Q \mathcal{L}_{V}^I\,t'}Q\mathcal{L}_{V}^IP\rho^I(t-t').
 \end{equation}
 $$
 
-{% include accordian.html title="Exercise" contents="Verify that this is the solution to Eq. \eqref{eq:QonLiouville}"%}
+{% include accordian.html title="Exercise" contents="Verify that Eq. \eqref{eq:Qsolution} is the solution to Eq. \eqref{eq:QonLiouville}"%}
 
 This equation can be used to eliminate $$Q$$ from Eq. \eqref{eq:PonLiouville} and obtain the [Nakajima-Zwanzig equation](https://en.wikipedia.org/wiki/Nakajima%E2%80%93Zwanzig_equation). Most master equations follow by starting with this equation and making a series of approximations.
 
