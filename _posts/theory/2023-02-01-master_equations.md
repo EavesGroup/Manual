@@ -56,7 +56,7 @@ The total density matrix $$\rho(t)$$ contains information about the bath dynamic
 
 ### The Interaction Picture
 
-Analysis of this equation is commonly easier in the interaction picture. For convenience, we begin by writing Eq.\eqref{eq:openQuantumH} as a primary piece $$H_0$$ and a perturbation $$V$$
+Analysis of this equation is commonly easier in the interaction picture. For convenience, we begin by writing Eq.\eqref{eq:openQuantumH} as a dominant piece $$H_0$$ and a perturbation $$V$$
 
 $$
 \begin{equation}
@@ -86,7 +86,7 @@ From this definition we rewrite the Liouville equation in the interaction pictur
 
 $$
 \begin{equation}\label{eq:liouvilleInteraction}
-    \frac{d}{dt}\rho^I(t) = -i\lambda[H_{V}^I,\rho^I(t)]
+    \frac{d}{dt}\rho^I(t) = -i\lambda[H_{V}^I,\rho^I(t)] = \mathcal{L}_V^I\rho^I(t)
 \end{equation}
 $$
 
@@ -94,7 +94,7 @@ $$
 
 ### Projection Operator
 
-This density matrix $$\rho^I(t)$$ is still the full density matrix for the system and bath. We would like to break the density matrix into a relevant system part and an irrelevant bath part. This can be accomplished using projection operators. We define our projection operator as
+Frequently we do not care about the dynamics of the entire density matrix. For example, we may only want to know about how the population of the system evolves. We can narrow our focus to the part we care about by tracing out the rest of the system/bath. This effect is usually achieved through projection operators. As an example, if we wish to focus on solely the system dynamics we define our projection operator as
 
 $$
 \begin{align}
@@ -120,8 +120,8 @@ With these definitions we obtain the following system of equations
 
 $$
 \begin{align}
-\frac{d}{dt}P\rho^I(t) = \lambda P\mathcal{L}^I_{SB}(t)(P+Q)\rho^I(t),\label{eq:PonLiouville}\\
-\frac{d}{dt}Q\rho^I(t) = \lambda Q\mathcal{L}^I_{SB}(t)(P+Q)\rho^I(t),\label{eq:QonLiouville}
+\frac{d}{dt}P\rho^I(t) = \lambda P\mathcal{L}^I_{V}(t)(P+Q)\rho^I(t),\label{eq:PonLiouville}\\
+\frac{d}{dt}Q\rho^I(t) = \lambda Q\mathcal{L}^I_{V}(t)(P+Q)\rho^I(t),\label{eq:QonLiouville}
 \end{align}
 $$
 
@@ -129,23 +129,29 @@ where we have used the most important trick of inserting one in the form of $$P+
 
 $$
 \begin{equation}
-Q\rho^I(t) = e^{\lambda Q \mathcal{L}_{SB}^I\,t}Q\rho^I(t) + \lambda\int_0^t dt' e^{\lambda Q \mathcal{L}_{SB}^I\,t'}Q\mathcal{L}_{SB}^IP\rho^I(t-t').
+Q\rho^I(t) = e^{\lambda Q \mathcal{L}_{V}^I\,t}Q\rho^I(t) + \lambda\int_0^t dt' e^{\lambda Q \mathcal{L}_{V}^I\,t'}Q\mathcal{L}_{V}^IP\rho^I(t-t').
 \end{equation}
 $$
 
 {% include accordian.html title="Exercise" contents="Verify that this is the solution to Eq. \eqref{eq:QonLiouville}"%}
 
-This equation can be used to eliminate $$Q$$ from Eq. \eqref{eq:PonLiouville} and obtain the [Nakajima-Zwanzig equation](https://en.wikipedia.org/wiki/Nakajima%E2%80%93Zwanzig_equation). We can then make a series of simplifications and approximations to obtain a nice and compact expression for the reduced density matrix. These simplifications and approximations are
+This equation can be used to eliminate $$Q$$ from Eq. \eqref{eq:PonLiouville} and obtain the [Nakajima-Zwanzig equation](https://en.wikipedia.org/wiki/Nakajima%E2%80%93Zwanzig_equation). Most master equations follow by starting with this equatuion and making a series of approximations.
+
+## Redfield Equation
+
+The Redfield equation is one of the most common examples referenced when discussing quantum master equations. It is also ill-defined, with everyone using slightly different simplifications and approximations in their definition In this section we will note the common simplifications and approximations.
+
+Beginning with the Nakajima-Zwanzig equation, we make the following simplifications and approximations
 
 1. $$P\mathcal{L}P = 0$$ as can be shown using the cyclic invariance of the trace
 2. Assume the initial density matrix is separable into a bath and system part $$\rho(0) = \rho_B\sigma(0)$$. This approximation is sometimes known as the Born Approximation.
-3. Assume that the system-bath interaction is small and keep only up to 2nd order in $$\lambda$$. This allows us to expand any exponentials in a Taylor series and keep only terms that are $$\mathcal{O}(\lambda^2)$$ or less. Because $$\lambda$$ is only used to keep track of perturbation order, we now set $$\lambda=1$$.
+3. Assume that the system-bath interaction is small and **keep only up to 2nd order in $$\lambda$$**. This allows us to expand any exponentials in a Taylor series and keep only terms that are $$\mathcal{O}(\lambda^2)$$ or less. Because $$\lambda$$ is only used to keep track of perturbation order, we now set $$\lambda=1$$.
 
 The resulting equation is
 
 $$
 \begin{equation}
-\frac{d}{dt}P\rho^I(t) = P \mathcal{L}_{SB}^I(t) \int_0^t dt' P \mathcal{L}_{SB}^I(t)\mathcal{L}_{SB}^I(t') P \rho(t-t'),
+\frac{d}{dt}P\rho^I(t) = P \mathcal{L}_{V}^I(t) \int_0^t dt' P \mathcal{L}_{V}^I(t)\mathcal{L}_{V}^I(t') P \rho(t-t'),
 \end{equation}
 $$
 
@@ -153,18 +159,14 @@ or rewriting in terms of the reduced density matrix $$\sigma^I(t) = \text{Tr}_B\
 
 $$
 \begin{equation}
-\frac{d\sigma^I(t)}{dt} = \int_0^t dt' \text{Tr}_B\{\mathcal{L}^I_{SB}(t)\mathcal{L}^I_{SB}(t')\rho_B\sigma^I(t-t')\}.
+\frac{d\sigma^I(t)}{dt} = \int_0^t dt' \text{Tr}_B\{\mathcal{L}^I_{V}(t)\mathcal{L}^I_{V}(t')\rho_B\sigma^I(t-t')\}.
 \end{equation}
 $$
 
 
-## Redfield Equation
+### Assume the Perturbation is Separable
 
-The Redfield equation is one of the most common examples referenced when discussing quantum master equations. It is an approximate solution to Eq. \eqref{eq:quantumLiouville} that depends on weak coupling to the environment--small $$H_{SB}$$. The Redfield equation is also Markovian, meaning we assume that the probability of an event--population transfer for example--depends only on the current state of the system, not the history of the system. This section will derive the Redfield equation and outline where these approximations are important.
-
-### Assume $$H_{SB}$$ is Seperable
-
-To proceed and make further approximations, it is useful to assume that $$H_{SB}$$ can be written as a sum of terms that are separable into bath and system operators
+To proceed and make further approximations, it is useful to assume that $$V = H_{SB}$$ can be written as a sum of terms that are separable into bath and system operators
 
 $$
 \begin{equation}
