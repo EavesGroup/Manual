@@ -27,59 +27,62 @@ include.categories
 {% assign tag = include.tag %}
 <ul class="side-nav">
 
-  {% if category == NULL and tag == NULL %}
+    {% if category == NULL and tag == NULL %}
 
-  {% assign titles = "" | split: "" %}
-  {% for post in site.posts %}
-  {% assign titles = titles | push: post.title %}
-  {% endfor %}
-  {% assign sorted_titles = titles | sort_natural %}
+    {% assign titles = "" | split: "" %}
+    {% for post in site.posts %}
+    {% assign titles = titles | push: post.title %}
+    {% endfor %}
+    {% assign sorted_titles = titles | sort_natural %}
 
-  {% for title in sorted_titles limit:include.entries offset:include.offset %}
-  {% assign matched_post = site.posts | where:"title", title %}
-  {% assign post = matched_post[0] %}
+    {% for title in sorted_titles limit:include.entries offset:include.offset %}
+    {% assign matched_post = site.posts | where:"title", title %}
+    {% assign post = matched_post[0] %}
 
-  <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}{{ post.subheadline }} &middot;
-      {% endif %}<strong>{{ post.title }}</strong></a></li>
-  {% endfor %}
-  <li class="text-right"><a href="{{ site.url }}{{ site.baseurl }}/blog/archive/"><strong>{{ site.data.language.more
-        }}</strong></a></li>
-
-
-  {% elsif category %}
-
-  {% assign titles = "" | split: "" %}
-  {% for post in site.categories.[category] %}
-  {% assign titles = titles | push: post.title %}
-  {% endfor %}
-  {% assign sorted_titles = titles | sort_natural %}
-
-  {% for title in sorted_titles limit:include.entries offset:include.offset %}
-  {% assign matched_post = site.categories.[category] | where:"title", title %}
-  {% assign post = matched_post[0] %}
-
-  <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}{{ post.subheadline }} &middot;
-      {% endif %}<strong>{{ post.title }}</strong></a></li>
-  {% endfor %}
-  <li class="text-right"><a href="{{ site.url }}{{ site.baseurl }}/blog/archive/"><strong>{{ site.data.language.more
-        }}</strong></a></li>
+    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}{{ post.subheadline }}
+            &middot;
+            {% endif %}<strong>{{ post.title }}</strong></a></li>
+    {% endfor %}
+    <!-- <li class="text-right"><a href="{{ site.url }}{{ site.baseurl }}/blog/archive/"><strong>{{ site.data.language.more
+        }}</strong></a></li> -->
 
 
-  {% elsif tag %}
+    {% elsif category %}
 
-  {% assign titles = "" | split: "" %}
-  {% for post in site.tags.[tag] %}
-  {% assign titles = titles | push: post.title %}
-  {% endfor %}
-  {% assign sorted_titles = titles | sort_natural %}
+    {% assign titles = "" | split: "" %}
+    {% for post in site.categories.[category] %}
+    {% assign titles = titles | push: post.title %}
+    {% endfor %}
+    {% assign sorted_titles = titles | sort_natural %}
 
-  {% for title in sorted_titles limit:include.entries %}
-  {% assign matched_post = site.tags.[tag] | where:"title", title %}
-  {% assign post = matched_post[0] %}
+    {% for title in sorted_titles limit:include.entries offset:include.offset %}
+    {% assign matched_post = site.categories.[category] | where:"title", title %}
+    {% assign post = matched_post[0] %}
 
-  <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}{{ post.subheadline }} &middot;
-      {% endif %}<strong>{{ post.title }}</strong></a></li>
-  {% endfor %}
+    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}{{ post.subheadline }}
+            &middot;
+            {% endif %}<strong>{{ post.title }}</strong></a></li>
+    {% endfor %}
+    <!-- <li class="text-right"><a href="{{ site.url }}{{ site.baseurl }}/blog/archive/"><strong>{{ site.data.language.more
+        }}</strong></a></li> -->
 
-  {% endif %}
+
+    {% elsif tag %}
+
+    {% assign titles = "" | split: "" %}
+    {% for post in site.tags.[tag] %}
+    {% assign titles = titles | push: post.title %}
+    {% endfor %}
+    {% assign sorted_titles = titles | sort_natural %}
+
+    {% for title in sorted_titles limit:include.entries %}
+    {% assign matched_post = site.tags.[tag] | where:"title", title %}
+    {% assign post = matched_post[0] %}
+
+    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}{{ post.subheadline }}
+            &middot;
+            {% endif %}<strong>{{ post.title }}</strong></a></li>
+    {% endfor %}
+
+    {% endif %}
 </ul>
