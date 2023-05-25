@@ -87,7 +87,7 @@ From this definition we rewrite the Liouville equation in the interaction pictur
 
 $$
 \begin{equation}\label{eq:liouvilleInteraction}
-    \frac{d}{dt}\hat\rho(t) = -i\lambda[\hat{H}_{V},\hat\rho(t)] = \hat\mathcal{L}_V\hat\rho(t)
+    \frac{d}{dt}\hat{\rho}(t) = -i\lambda[\hat{H}_{V},\hat{\rho}(t)] = \hat{\mathcal{L}}_V\hat{\rho}(t)
 \end{equation}
 $$
 
@@ -121,8 +121,8 @@ With these definitions we obtain the following system of equations
 
 $$
 \begin{align}
-\frac{d}{dt}P\hat\rho(t) = \lambda P\hat\mathcal{L}_V(t)(P+Q)\hat\rho(t),\label{eq:PonLiouville}\\
-\frac{d}{dt}Q\hat\rho(t) = \lambda Q\hat\mathcal{L}_V(t)(P+Q)\hat\rho(t),\label{eq:QonLiouville}
+\frac{d}{dt}P\hat{\rho}(t) = \lambda P\hat{\mathcal{L}}_V(t)(P+Q)\hat{\rho}(t),\label{eq:PonLiouville}\\
+\frac{d}{dt}Q\hat{\rho}(t) = \lambda Q\hat{\mathcal{L}}_V(t)(P+Q)\hat{\rho}(t),\label{eq:QonLiouville}
 \end{align}
 $$
 
@@ -130,7 +130,7 @@ where we have used the most important trick of inserting one in the form of $$P+
 
 $$
 \begin{equation}\label{eq:Qsolution}
-Q\hat\rho(t) = e^{\lambda Q \hat\mathcal{L}_V\,t}Q\hat\rho(t) + \lambda\int_0^t dt' e^{\lambda Q \hat\mathcal{L}_V\,t'}Q\hat\mathcal{L}_VP\hat\rho(t-t').
+Q\hat{\rho}(t) = e^{\lambda Q \hat{\mathcal{L}}_V\,t}Q\hat{\rho}(t) + \lambda\int_0^t dt' e^{\lambda Q \hat{\mathcal{L}}_V\,t'}Q\hat{\mathcal{L}}_VP\hat{\rho}(t-t').
 \end{equation}
 $$
 
@@ -152,15 +152,15 @@ The resulting equation is
 
 $$
 \begin{equation}
-\frac{d}{dt}P\hat\rho(t) = P \hat\mathcal{L}_V(t) \int_0^t dt' P \hat\mathcal{L}_V(t)\hat\mathcal{L}_V(t') P \rho(t-t'),
+\frac{d}{dt}P\hat{\rho}(t) = P \hat{\mathcal{L}}_V(t) \int_0^t dt' P \hat{\mathcal{L}}_V(t)\hat{\mathcal{L}}_V(t') P \rho(t-t'),
 \end{equation}
 $$
 
-or rewriting in terms of the reduced density matrix $$\hat\sigma(t) = \text{Tr}_B\{\hat\rho(t)\}$$
+or rewriting in terms of the reduced density matrix $$\hat{\sigma}(t) = \text{Tr}_B\{\hat{\rho}(t)\}$$
 
 $$
 \begin{equation}
-\frac{d\hat\sigma(t)}{dt} = \int_0^t dt' \text{Tr}_B\{\hat\mathcal{L}_V(t)\hat\mathcal{L}_V(t')\rho_B\hat\sigma(t-t')\}.
+\frac{d\hat{\sigma}(t)}{dt} = \int_0^t dt' \text{Tr}_B\{\hat{\mathcal{L}}_V(t)\hat{\mathcal{L}}_V(t')\rho_B\hat{\sigma}(t-t')\}.
 \end{equation}
 $$
 
@@ -186,13 +186,13 @@ and defining the time correlation function $$C_{k,l}(t) = \text{Tr}_B\{\rho_B B_
 
 $$
 \begin{equation}\label{eq:timeNonLocalRedfield}
-\frac{d}{dt}\hat\sigma(t) = -\int_0^t d\tau \sum_{k,l}\left(C_{k,l}(\tau)\left[S_k(t),S_l(t-\tau)\hat\sigma(\tau)\right] - C_{k,l}^*(\tau)\left[S_l(t),\hat\sigma(\tau)S_k(t-\tau)\right]\right)
+\frac{d}{dt}\hat{\sigma}(t) = -\int_0^t d\tau \sum_{k,l}\left(C_{k,l}(\tau)\left[S_k(t),S_l(t-\tau)\hat{\sigma}(\tau)\right] - C_{k,l}^*(\tau)\left[S_l(t),\hat{\sigma}(\tau)S_k(t-\tau)\right]\right)
 \end{equation}
 $$
 
 ### Markov Approximation
 
-A factor that makes Eq. \eqref{eq:timeNonLocalRedfield} difficult to solve is the non-local time dependence--$$\sigma(t)$$ depends on $$\sigma(t' < t)$$ through the factor of $$\sigma(\tau)$$ in the integrand. However, $$C_{k,l}(\tau)$$ tends to have a typical correlation time $$\tau_B$$. For $$\tau \ll \tau_B$$ the bath has largely 'forgotten' its interactions with the system and the correlation is approximately zero. If $$\tau_B$$ is much smaller than the timescale of changes that we are interested, we can make the replacement $$\hat\sigma(\tau) \rightarrow \hat\sigma(t)$$ and change our upper integration bound to infinity.
+A factor that makes Eq. \eqref{eq:timeNonLocalRedfield} difficult to solve is the non-local time dependence--$$\sigma(t)$$ depends on $$\sigma(t' < t)$$ through the factor of $$\sigma(\tau)$$ in the integrand. However, $$C_{k,l}(\tau)$$ tends to have a typical correlation time $$\tau_B$$. For $$\tau \ll \tau_B$$ the bath has largely 'forgotten' its interactions with the system and the correlation is approximately zero. If $$\tau_B$$ is much smaller than the timescale of changes that we are interested, we can make the replacement $$\hat{\sigma}(\tau) \rightarrow \hat{\sigma}(t)$$ and change our upper integration bound to infinity.
 
 ### Return of the Schrödinger Picture and the Secular Approximation
 
@@ -200,12 +200,12 @@ A matrix element of the reduced density matrix in the Schrödinger picture is gi
 
 $$
 \begin{align}
-\langle \eta | \frac{d}{dt} \sigma(t)| \nu \rangle &= \langle \eta | \frac{d}{dt}\left(U_0(t)\hat\sigma(t)U_0^\dagger(t)\right)|\nu\rangle,\\
-&= -i\omega_{\eta\nu}\sigma_{\eta\nu}(t) + e^{-i\omega_{\eta\nu}t}\frac{d}{dt}\hat\sigma_{nm}(t),
+\langle \eta | \frac{d}{dt} \sigma(t)| \nu \rangle &= \langle \eta | \frac{d}{dt}\left(U_0(t)\hat{\sigma}(t)U_0^\dagger(t)\right)|\nu\rangle,\\
+&= -i\omega_{\eta\nu}\sigma_{\eta\nu}(t) + e^{-i\omega_{\eta\nu}t}\frac{d}{dt}\hat{\sigma}_{nm}(t),
 \end{align}
 $$
 
-where $$H_S |\eta\rangle = \epsilon_\eta |\eta\rangle$$ and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat\sigma_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
+where $$H_S |\eta\rangle = \epsilon_\eta |\eta\rangle$$ and $$\omega_{\eta\nu} = \epsilon_\eta -\epsilon_\nu$$. Obtaining the matrix elements $$\frac{d}{dt}\hat{\sigma}_{nm}(t)$$ is a straightforward but tedious process. Along the way it can be useful to define
 
 $$
 \begin{align}
@@ -226,6 +226,6 @@ The secular approximation, also sometimes called the rotating wave approximation
 
 $$
 \begin{equation}
-\frac{d}{dt}\hat\sigma_{\eta\nu}(t) = \hat\sigma_{\eta\nu}(t)R_{\eta\nu\eta\nu} + \delta_{\eta\nu}\sum_{m\ne \eta}\hat\sigma_{mm}(t)R_{\eta\eta m m}.
+\frac{d}{dt}\hat{\sigma}_{\eta\nu}(t) = \hat{\sigma}_{\eta\nu}(t)R_{\eta\nu\eta\nu} + \delta_{\eta\nu}\sum_{m\ne \eta}\hat{\sigma}_{mm}(t)R_{\eta\eta m m}.
 \end{equation}
 $$
