@@ -1,8 +1,8 @@
 ---
 layout: page
 show_meta: false
-title: "Useful Coding Languages"
-subheadline: "Tips and Tricks for Coding in Julia and Mathematica"
+title: "Useful Coding Knowledge"
+subheadline: "Tips and Tricks for Coding in ..."
 header:
    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/coding/"
