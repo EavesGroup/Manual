@@ -1,3 +1,11 @@
+# Fork from Phlow's Feeling Responsive
+
+This repository creates an Eaves group research manual webpage using Github Pages. The initial design of the webpage was done by Phlow, with many edits by SinaLewis to tailor it more towards a setup for a research group rather than a blog.
+
+Below is the original README content as written by Phlow.
+
+
+
 ## You like and use this theme? Then support me. Just [paypal.me/PhlowMedia](https://www.paypal.me/PhlowMedia) :)
 
 # Newsletter: Stay in Touch for Future Updates
