@@ -63,7 +63,7 @@ Start up Julia in a terminal. This can be a local terminal or within your IDE of
 ```
 Make sure that the package name used in the last step matches the repository name on GitHub.
 
-The last step is to connect the repository made on GitHub with the package just made locally. For this I use GitKraken, a desktop app for using Git. The process in GitKraken is to first open the local repository. It will be located at `~/.julia/dev`. Then, simply push the package to GitHub, and you're done!
+The last step is to connect the repository made on GitHub with the package just made locally. If you use Visual Studio Code, you need to first open the local repository. This folder will be located at `~/.julia/dev`, unless you changed the template. Then, publish and sync the package on your source control tab.
 
 ## Components of Julia
 
