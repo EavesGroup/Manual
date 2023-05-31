@@ -1,11 +1,11 @@
 ---
 layout: page-fullwidth
-title:  "Plotting for Papers"
+title:  "New Students Start Here"
 categories:
     - sop
 tags:
     - sop
-    - plotting
+    - new-student
 header: no
 breadcrumb: true
 ---
