@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "Random Useful Commands to Add as an Alias"
 teaser: ""
 categories:

@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "VASP Misc. Tips and Tricks"
 teaser: ""
 categories:

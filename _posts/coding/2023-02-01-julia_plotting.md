@@ -1,6 +1,5 @@
 ---
 layout: page
-subheadline:  ""
 title:  "Plotting in Julia"
 teaser: ""
 categories:

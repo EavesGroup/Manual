@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "Common Calculations in VASP"
 teaser: ""
 categories:

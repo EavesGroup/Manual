@@ -1,6 +1,5 @@
 ---
 layout: page
-subheadline:  ""
 title:  "Revise"
 teaser: ""
 categories:

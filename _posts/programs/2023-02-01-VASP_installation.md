@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "Installing VASP"
 teaser: ""
 categories:

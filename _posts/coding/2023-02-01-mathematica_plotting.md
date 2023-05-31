@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "Plotting in Mathematica"
 teaser: "The struggle to make decent plots in Mathematica is definitely one of the main reasons to avoid the program. However, using the following tips will help you generate presentation worthy, if not paper worthy, figures in no time."
 categories:

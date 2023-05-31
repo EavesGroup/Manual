@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "VASP Output Files"
 teaser: "VASP has numerous output files that it can generate. Highlighted here are the ones that are the most common and useful."
 categories:

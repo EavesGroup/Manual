@@ -1,6 +1,5 @@
 ---
 layout: page-fullwidth
-subheadline:  ""
 title:  "Using Julia on a Supercomputer"
 teaser: ""
 categories:
