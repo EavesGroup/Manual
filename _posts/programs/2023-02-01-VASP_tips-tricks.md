@@ -31,7 +31,7 @@ authors:
 This chapter will collect various tips and tricks about VASP that don't fit neatly into any of the other chapters. If a particular section becomes long enough it may become it's own chapter.
 
 ### Psuedopotentials
-While perusing the PBE psuedopotential folder you may notice that there are GW versions of some of the psuedopotentials. Peyton has found that the PBE and PBE_GW potentials are the same if you don't do a GW step. However, one might provide better/faster convergence than the other. If you are having trouble with one potential it can be valuable to test the other.
+While perusing the PBE psuedopotential folder you may notice that there are GW versions of some psuedopotentials. Peyton has found that the PBE and PBE_GW potentials are the same if you don't do a GW step. However, one might provide better/faster convergence than the other. If you are having trouble with one potential it can be valuable to test the other.
 
 ### Convergence
 

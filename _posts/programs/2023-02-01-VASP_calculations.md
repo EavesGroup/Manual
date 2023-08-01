@@ -28,7 +28,35 @@ authors:
 
 <div class="medium-8 medium-pull-4 columns" markdown="1">
 
-### Surfaces
+### Geometry Optimization
+
+#### Surfaces
+
+**Useful Tags**
+- selective dynamics (in the POSCAR)
+- IDIPOL
+
+Building and optimizing a surface is rather straightforward, but requires some careful testing to ensure that you are balancing efficiency and accuracy.
+
+Any surface build should start with a well-converged bulk unit cell. Some tips and tricks on this procedure are detailed [here]({{ site.baseurl }}/programs/vasp/VASP_tips-tricks/#convergence). After you have your bulk system, create a supercell and cut along the desired facet. From here you need to test if you have enough of a unit cell in the xy-plane, or direction of the plane of your surface, enough thickness in the z-direction, and enough vacuum.
+
+The testing procedure for this cell volume and vacuum size is similar to when testing for the energy cutoff and k-point grid values. Keeping the other parameters fixed, gradually change one parameter and see how the energy changes (e.g. increase the unit cell thickness and check the energy/atom). Because we want to simulate the surface of a larger bulk material, *selective dynamics* is a useful tag. This tag allows us to freeze one or more layers of our surface in our converged bulk geometry. Because of the vacuum in the unit cell, we also need to include the IDIPOL=3 tag. The option 3 only includes corrections in the z-direction (the direction with vacuum). Note that there is also a tag LDIPOL. While IDIPOL is used for slab calculations, LDIPOL is important for charged molecules as well as molecules and slabs with a net dipole moment (see the [next section](#molecules-on-surfaces)).
+
+[See for reference]({{ site.urlfile }}examplesVASP/POSCAR_Si_surface.vasp) the Si(111) surface where the inner 2 layers have been frozen at bulk geometry.
+
+
+#### Molecules on Surfaces
+
+**Useful Tags**
+- selective dynamics (in the POSCAR)
+- NSW
+- IDIPOL
+- LDIPOL (in the last convergence step)
+
+If you want a molecule on a surface, it is best to start as advised in the [last section](#surfaces) unless you are lucky and someone hands you a slab that they have already tested. In either case, once you have a good slab you need to add your molecule and then optimize the geometry.
+
+Sometimes optimizing a molecule on a surface can be tricky, especially if it is in a very bad starting configuration. To speed up this optimization, start with a low force convergence and only allow the molecule atoms to move and only in the z-direction. After this step is complete, allow the molecule to move in all directions with a higher force cutoff. Finally, allow the molecule and surface atoms to move in all directions, potentially with the LDIPOL tag turned on. In all of these steps, be sure to have NSW set to some non-zero value, otherwise, nothing will happen.
+
 
 ### Density of States
 
