@@ -21,7 +21,7 @@ breadcrumb: true
 
 <div class="medium-8 medium-pull-4 columns" markdown="1">
 
-A collection of past Eaves group PhD graduates and their theses.  
+A collection of past Eaves group PhD graduates and their theses. If you are writing your own thesis (congrats!), here is a [word]( {{site.urlfile}}phd_theses/thesis_diss_example_2020.docx ) and [LaTeX]( {{site.urlfile}}phd_theses/ThesisFilePkg.zip ) template that follows the [graduate school specifications](https://www.colorado.edu/graduateschool/academics/thesis-dissertation-submission/specifications-preparation-masters-theses-doctoral) as of 2023.
 
 ## Kori E. Smyser (2017-2022)
 
