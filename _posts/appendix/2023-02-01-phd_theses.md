@@ -25,7 +25,7 @@ A collection of past Eaves group PhD graduates and their theses. If you are writ
 
 ## Kori E. Smyser (2017-2022)
 
-<a class="theses" href="{{ site.urlfile }}phd_theses/Koir_E_Smyser.pdf">Spin Exciton Dynamics in Singlet Fission: The JDE Model</a>
+<a class="theses" href="{{ site.urlfile }}phd_theses/Kori_E_Smyser.pdf">Spin Exciton Dynamics in Singlet Fission: The JDE Model</a>
 
 ## R. Peyton Cline (2015-2020)
 
