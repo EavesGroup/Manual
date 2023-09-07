@@ -41,14 +41,16 @@ GitHub is an online code hosting platform, perfect for version control and shari
 
 These words form the core of the lingo that you will frequently use when working with GitHub. To build familiarity with the usage of these words, we will work through a useful example using the LAMMPS code repository.
 
-Begin by creating/logging into your account on GitHub and navigating to the [LAMMPS code repository](https://github.com/lammps/lammps). We wish to use LAMMPS in a slightly edited form for our own research, so we will [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository to our own account. During this process, you can give the forked repo a different name and you should change the description to something that is more reflective of your version.
+Begin by creating/logging into your account on GitHub and navigating to the [LAMMPS code repository](https://github.com/lammps/lammps). We wish to use LAMMPS in a slightly edited form for our own research, so we will **[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repository to our own account. During this process, you can give the forked repo a different name and you should change the description to something that is more reflective of your version.
 
-Now that we have our own version of LAMMPS on GitHub, we need to copy the files to our local machine to install and run the program. It is also easier to make edits to any files on our local machine. This process of copying files is called [cloning](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+Now that we have our own version of LAMMPS on GitHub, we need to copy the files to our local machine to install and run the program. It is also easier to make edits to any files on our local machine. This process of copying files is called **[cloning](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)**. If you have installed VS Code as your IDE, you can clone a repo through the following steps: open a new VS Code window, start a new project by clicking "Clone Git Repository..." then "Clone from GitHub", VS Code will likely prompt you to sign in, and then you will find within the dropdown the project you wish to clone, in this case your version of LAMMPS. At this point, VS Code asks where you would like to save the files. This is fully up to you, but we recommend grouping it with similar folders possibly in your Documents folder. After confirming the location, VS Code will open the project workspace for you. 
+
+In your LAMMPS project workspace, make some edits to any files you wish. In order to make the local changes accessible on GitHub we need to **[commit]()** the changes and **[push]()** them to GitHub. Commits are how you will track the changes you have made to your code and should be made frequently. Pushes can be made less often as a way to backup your work external to your local computer. Your VS Code window should have some symbols on the left side, find the one labeled "Source Control" (CTRL-SHIFT-G on a Mac). From this window, you need to type a commit message. This message should briefly describe the changes you made in an informative way.
 
 
-
-### Interacting with Teams
 
 ### Getting Started with CURC
 
-### Code an Ising Model
+### Interacting with Teams
+
+### All Together Now!
