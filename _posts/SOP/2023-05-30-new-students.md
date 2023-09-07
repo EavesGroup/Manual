@@ -56,3 +56,7 @@ Congratulations! You have learned the basics of interacting with a Git repositor
 ### Interacting with Teams
 
 ### All Together Now!
+
+#### Numerical Integration with Monte Carlo
+
+#### The Ising Model
