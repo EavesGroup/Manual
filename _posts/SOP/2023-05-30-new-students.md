@@ -53,9 +53,17 @@ Congratulations! You have learned the basics of interacting with a Git repositor
 
 ### Getting Started with CURC
 
+As a statistical mechanics group, you will likely need to generate statistics at a much higher computational cost than your laptop can handle. CU Boulder's new high-performance computing, or HPC, cluster is called Alpine and is maintained by the CU Research Computing department **[(CURC)](https://www.colorado.edu/rc/)**. General accounts are available to all students using the detailed CURC **[documentation](https://curc.readthedocs.io/en/latest/index.html)**. You will also have access to our group allocation if you need expensive calculations right out of the gate.
+
+Take some time to look through CURC's documentation about "The Compute Environment." We will revisit some of these details soon.
+
 ### Interacting with Teams
 
+You might be reading this on our CHEM-Eaves Teams channel right now. This channel is the heart of our group management, and we use it to discuss scheduling, paperwork, notes, code, and data. Click **[here]({{site.baseurl}}/SOP/data)** for procedures on how to format your work accessibly.
+
 ### All Together Now!
+
+We recommend that you now take some time practicing these procedures with an example. We have provided a series of tasks that will require you to use Julia, VSCode, Github, Alpine, and Teams to complete.
 
 #### Numerical Integration with Monte Carlo
 
