@@ -40,7 +40,7 @@ The first step of coding in Julia in any other environment is to download the la
 
 ### Install Your IDE
 
-After you have Julia available on your device you can theoretically begin to start coding using your favorite text editor. However, an IDE can provide a nicer environment with functionality like autocomplete, code formatting, GitHub integration, etc. Currently (Jul. 2022), [VS Code](https://code.visualstudio.com/) is the officially supported IDE for Julia. Simply download and install VS Code, then add the Julia language extension. You should be able to use `SHIFT+ENTER` to run individual lines of code within a file. Or open a terminal (`CTRL+SHIFT+\``) and type Julia to open a REPL.
+After you have Julia available on your device you can theoretically begin to start coding using your favorite text editor. However, an IDE can provide a nicer environment with functionality like autocomplete, code formatting, GitHub integration, etc. Currently (Jul. 2022), [VS Code](https://code.visualstudio.com/) is the officially supported IDE for Julia. Simply download and install VS Code, then add the Julia language extension. You should be able to use `SHIFT+ENTER` to run individual lines of code within a file. Or open a terminal (`CTRL+SHIFT+\\\``) and type Julia to open a REPL.
 
 ## Starting a New Project
 
