@@ -40,19 +40,17 @@ The first step of coding in Julia in any other environment is to download the la
 
 ### Install Your IDE
 
-After you have Julia available on your device you can theoretically begin to start coding using your favorite text editor. However, an IDE can provide a nicer environment with functionality like autocomplete, code formatting, GitHub integration, etc. Currently (Jul. 2022) [VS Code](https://code.visualstudio.com/) is the officially supported IDE for Julia. Simply download and install VS Code, then add the Julia language extension. You should be able to use `SHIFT+ENTER` to run individual lines of code within a file. Or open a terminal (`CTRL+SHIFT+\``) and type Julia to open a REPL.
+After you have Julia available on your device you can theoretically begin to start coding using your favorite text editor. However, an IDE can provide a nicer environment with functionality like autocomplete, code formatting, GitHub integration, etc. Currently (Jul. 2022), [VS Code](https://code.visualstudio.com/) is the officially supported IDE for Julia. Simply download and install VS Code, then add the Julia language extension. You should be able to use `SHIFT+ENTER` to run individual lines of code within a file. Or open a terminal (`CTRL+SHIFT+\``) and type Julia to open a REPL.
 
 ## Starting a New Project
 
-Julia uses modules ...
-
 ### Using a Template
 
-Getting a new project started in Julia can be a little tricky if you want to use a template and upload it to GitHub. There are a few steps you want to make sure you do in the correct order, or you'll need to restart.
+Julia has a package called `PkgTemplates` that allows you to easily generate the initial file structure for a Julia project. Incorporating this new project with GitHub can sometimes be a little tricky to get right. There are a few steps you want to make sure you do in the correct order, or you'll need to restart.
 
 You can start by creating a new repository on GitHub. It's important to make sure the repository name ends `.jl`, or we won't be able to push the project that we made with the template. Don't initialize the repository with anything, the template will take care of that.
 
-Start up Julia in a terminal. This can be a local terminal or within your IDE of choice. Using the package manager, accessed by pressing the `]` key, add the package PkgTemplates. Back in the main environment, accessed by pressing backspace so that the line reads `julia>`, we want to tell Julia we want to use the package PkgTemplates. Once we do this we can assign a template object. For this step we need to either have a Git username set locally or pass it to the template initializer. We can then use the template object to create a template.  Altogether this looks like
+Start up Julia in a terminal. This can be a local terminal or within your IDE of choice like VS Code. Using the package manager, accessed by pressing the `]` key, add the package PkgTemplates. Back in the main environment, accessed by pressing backspace so that the line reads `julia>`, we want to tell Julia we want to use the package PkgTemplates. Once we do this we can assign a template object. For this step we need to either have a Git username set locally or pass it to the template initializer. We can then use the template object to create a template.  Altogether this looks like
 ```julia
     julia> ]
     pkg> add PkgTemplates
@@ -71,6 +69,8 @@ Julia is focused around a few different buildings blocks. Some of the most impor
 
 ### Packages
 
+A Julia package behaves similarly to libraries in other languages. A package contains a cohesive set of code and functions to achieve some goal, i.e. the `Random.jl` package is all about generating random numbers. By adding other packages to your package, they are included in your environment and you can use their functionality.
+
 ### Environments
 
 Julia environments keep track of the different packages and their versions that you have added to a project. Typically, you want to load the environment of the project that you are working on when you start up Julia. To facilitate this you can add the following block of code to your `.julia/config/startup.jl` file.
@@ -83,6 +83,8 @@ end
 ```
 
 ### Modules
+
+[Modules](https://docs.julialang.org/en/v1/manual/modules/) are subsections within a package. They can be used to define different namespaces.
 
 ## Learning Julia
 
