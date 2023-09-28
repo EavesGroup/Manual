@@ -11,4 +11,4 @@ breadcrumb: true
 ---
 
 
-{% include list-posts category='SM_MonteCarlo' %}
+{% include list-posts category='SM_Monte_Carlo' %}

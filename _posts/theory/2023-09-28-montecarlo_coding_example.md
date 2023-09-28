@@ -4,7 +4,7 @@ title:  "Ideal Gas MFPT with Monte Carlo"
 categories:
     - theory
     - SM
-    - SM_MonteCarlo
+    - SM_Monte_Carlo
 tags:
     - theory
     - monte-carlo
