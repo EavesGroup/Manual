@@ -63,24 +63,26 @@ You might be reading this on our CHEM-Eaves Teams channel right now. This channe
 
 ### All Together Now!
 
-We recommend that you now take some time practicing these procedures with an example. Completing this section will require you to use Julia, VSCode, Github, Alpine, and Teams. Each step is discussed in the context of a Monte Carlo sampling project, but we provide a list of other topics that might be more interesting immediately below. If you are comfortable with programming and the software our group uses, you should pick the topic that interests you most. If you are feeling unsure, consider sticking closely to the provided example.
+We recommend that you now take some time practicing these procedures with an example. Completing this section will require you to use Julia, VSCode, Github, Alpine, and Teams. Each step is discussed in the context of a Monte Carlo sampling project, but we provide a list of other topics that might be more interesting immediately below. If you are comfortable with programming and the software our group uses, you should pick the topic that interests you most. If you are feeling unsure, consider sticking closely to the provided example. Additional advice about coding and best practices with your code can be found on **[this page]({{site.baseurl}}/coding/coding_best_practices)** as well.
 
-Coding Exercise Topics:
+#### Coding Exercise Topics
 - Monte Carlo
-    - The Ideal Gas
+    - The Ideal Gas (provided example)
     - The Ising Model
+        - Magnetization
+        - Susceptibility
     - Optimization, e.g. Importance Sampling
 - Classical Molecular Dynamics
     - Lennard-Jones Fluids
+        - g(r)
+        - VCF
     - Water Models
 
-1. Create a project in Julia named `IdealGas.jl` and the companion repo using **[this manual page]()**.
-2. Code up the first example on the Monte Carlo page of the manual **[this page]()** as your guide. Sync this to your remote repository.
+#### Monte Carlo with an Ideal Gas
+
+1. Create a project in Julia named `IdealGas.jl` and the companion repo using **[this manual page]({{site.baseurl}}coding/julia/julia_setup/#starting-a-new-project)**.
+2. Code up the first example on the **[Monte Carlo page of the manual]()** as your guide. Sync this to your remote repository.
 3. Run the same code on Alpine.
 4. Generate something you can show in your weekly notes and at research roundtable. Place these documents on Teams.
 
 This series of exercises and tangents is designed to introduce you to one of the most popular tools in numerical statistical physics: Monte Carlo sampling. At the time of writing, this is a technique that every person in the group has used for research, which is a rare find considering the large spread of topics we tackle. While you perform analytical work, write code, and interact with the literature, we recommend keeping detailed notes of the progress you make and the resources you use in an Overleaf document. These notes should also contain your thoughts on how to make this "New Student" document more helpful or successful for future group members. In the beginning, this would be a good document to upload to the Teams for meetings.
-
-#### Numerical Integration with Monte Carlo
-
-#### The Ising Model
