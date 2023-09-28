@@ -65,24 +65,44 @@ You might be reading this on our CHEM-Eaves Teams channel right now. This channe
 
 We recommend that you now take some time practicing these procedures with an example. Completing this section will require you to use Julia, VSCode, Github, Alpine, and Teams. Each step is discussed in the context of a Monte Carlo sampling project, but we provide a list of other topics that might be more interesting immediately below. If you are comfortable with programming and the software our group uses, you should pick the topic that interests you most. If you are feeling unsure, consider sticking closely to the provided example. Additional advice about coding and best practices with your code can be found on **[this page]({{site.baseurl}}/coding/coding_best_practices)** as well.
 
+While you perform analytical work, write code, and interact with the literature, we recommend keeping detailed notes of the progress you make and the resources you use in an Overleaf document. These notes should also contain your thoughts on how to make this "New Student" document more helpful or successful for future group members. In the beginning, this would be a good document to upload to the Teams for meetings.
 #### Coding Exercise Topics
 - Monte Carlo
-    - The Ideal Gas (provided example)
+    - "Particle in a Box" (Provided Example)
+        - Survival Probability
     - The Ising Model
         - Magnetization
         - Susceptibility
-    - Optimization, e.g. Importance Sampling
+    - Markov Chain Monte Carlo for Random Walks
+        - Probability Distribution in Position
+        - Biased Walks in a Potential (Importance Sampling)
 - Classical Molecular Dynamics
-    - Lennard-Jones Fluids
-        - g(r)
-        - VCF
-    - Water Models
+    - Simple Liquids (LJ Fluid or Water Model)
+        - Radial Distribution Function
+        - Velocity Autocorrelation Function
+        - Mean Squared Displacement
 
-#### Monte Carlo with an Ideal Gas
+#### Monte Carlo with a Single Particle
 
-1. Create a project in Julia named `IdealGas.jl` and the companion repo using **[this manual page]({{site.baseurl}}coding/julia/julia_setup/#starting-a-new-project)**.
-2. Code up the first example on the **[Monte Carlo page of the manual]()** as your guide. Sync this to your remote repository.
-3. Run the same code on Alpine.
-4. Generate something you can show in your weekly notes and at research roundtable. Place these documents on Teams.
+This series of exercises and tangents is designed to introduce you to one of the most popular tools in numerical statistical physics: Monte Carlo sampling. At the time of writing, this is a technique that every person in the group has used for research, which is a rare find considering the large spread of topics we tackle.
 
-This series of exercises and tangents is designed to introduce you to one of the most popular tools in numerical statistical physics: Monte Carlo sampling. At the time of writing, this is a technique that every person in the group has used for research, which is a rare find considering the large spread of topics we tackle. While you perform analytical work, write code, and interact with the literature, we recommend keeping detailed notes of the progress you make and the resources you use in an Overleaf document. These notes should also contain your thoughts on how to make this "New Student" document more helpful or successful for future group members. In the beginning, this would be a good document to upload to the Teams for meetings.
+This example will consider the following question:
+
+Consider one point particle with constant total energy, E, somewhere in a cubic container of side length \(l\), experiencing elastic collisions with the container walls. If a circular hole of radius \(R < l/2\) is suddenly removed from the center of one of the cube faces, what is the probability that the particle is still inside the cube at time \(t\)? In other words, what is the survival probability, \(S(t)\) for our particle?
+
+To solve this problem:
+
+1. Create a project in Julia named `Ergodicity.jl` and the companion repo using **[this manual page]({{site.baseurl}}coding/julia/julia_setup/#starting-a-new-project)**.
+2. Settle on some variables without physical dimensions in order to perform this simulation on a computer.
+
+3. Now we wish to sample trajectories uniformly in phase space. The position coordinates can be handled by drawing three uniform random numbers on the interval \([0,1]\), but the momenta must lie on the surface of the sphere. We recommend for this problem that you draw three uniform random numbers on the interval \([-1,1]\), check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
+
+4. With a microstate selected, calculate when the trajectory crosses the opening. Draw some diagrams, revisit the reflected cube/trajectory unfolding trick, or brute force a system of modular equations.
+
+5. Repeat this sampling \(10^6\) times, and make a histogram of the first-passage-time distribution and survival probability. Plot the survival probability on a log-log scale. What do you observe?
+
+6. Is there a heuristic way to explain this result? As a guide, answer the following without extensive calculation. Particles within a shell of distances \(\frac{(p+\delta p) t}{m}\) will be able to reach the opening, with the shell thickness governed by the system energy. How does the number of particles within this shell roughly increase with time in our container? Assume the opening is a small hole for simplicity. Solve the differential equation for the number of particles and add the heuristic result to the plot.
+
+7. Sync this to your remote repository.
+8. Run the same code on Alpine.
+9. Generate something you can show in your weekly notes and at research roundtable. Place these documents on Teams.
