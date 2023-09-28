@@ -93,6 +93,7 @@ Consider one point particle with constant total energy, E, somewhere in a cubic 
 To solve this problem:
 
 1. Create a project in Julia named `Ergodicity.jl` and the companion repo using **[this manual page]({{site.baseurl}}coding/julia/julia_setup/#starting-a-new-project)**.
+
 2. Settle on some variables without physical dimensions in order to perform this simulation on a computer.
 
 3. Now we wish to sample trajectories uniformly in phase space. The position coordinates can be handled by drawing three uniform random numbers on the interval \([0,1]\), but the momenta must lie on the surface of the sphere. We recommend for this problem that you draw three uniform random numbers on the interval \([-1,1]\), check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
@@ -104,5 +105,7 @@ To solve this problem:
 6. Is there a heuristic way to explain this result? As a guide, answer the following without extensive calculation. Particles within a shell of distances \(\frac{(p+\delta p) t}{m}\) will be able to reach the opening, with the shell thickness governed by the system energy. How does the number of particles within this shell roughly increase with time in our container? Assume the opening is a small hole for simplicity. Solve the differential equation for the number of particles and add the heuristic result to the plot.
 
 7. Sync this to your remote repository.
+
 8. Run the same code on Alpine.
+
 9. Generate something you can show in your weekly notes and at research roundtable. Place these documents on Teams.
