@@ -1,14 +1,14 @@
 ---
 layout: page-fullwidth
-title:  "Monte Carlo"
+title:  "Dynamical Billiards"
 categories:
     - theory
-    - SM
+    - CM
 tags:
     - theory
+    - page
 header: no
 breadcrumb: true
 ---
 
 
-{% include list-posts category='SM_MonteCarlo' %}

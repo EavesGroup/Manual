@@ -1,6 +1,6 @@
 ---
 layout: page-fullwidth
-title:  "Monte Carlo"
+title:  "Ensembles"
 categories:
     - theory
     - SM
@@ -11,4 +11,4 @@ breadcrumb: true
 ---
 
 
-{% include list-posts category='SM_MonteCarlo' %}
+{% include list-posts category='SM_Ensembles' %}
