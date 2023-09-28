@@ -1,6 +1,6 @@
 ---
 layout: page-fullwidth
-title:  "Monte Carlo "
+title:  "Ideal Gas MFPT with Monte Carlo"
 categories:
     - theory
     - SM
