@@ -194,7 +194,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Statistical Mechanics<div id="dropdown-statmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 10px 0px 0px">Statistical Mechanics<div id="dropdown-statmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign cats = "" | split: "" %}
 

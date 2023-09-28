@@ -11,5 +11,4 @@ breadcrumb: true
 ---
 
 
-
 {% include list-posts category='QM_Dynamics' %}
