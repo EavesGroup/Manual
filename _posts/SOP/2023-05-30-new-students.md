@@ -21,6 +21,8 @@ breadcrumb: true
 
 <div class="medium-8 medium-pull-4 columns" markdown="1">
 
+{% include mathjax.html %}
+
 ### Set Up Your IDE
 
 If you do any coding during your time in the Eaves Research Group--and chances are high that you will--you need an IDE (integrated development environment). The preferred IDE is Visual Studio Code developed by Microsoft. Installation of VS Code is straightforward, just [download](https://code.visualstudio.com/download) the correct file for your system and follow the instructions. In addition to supporting most programming languages straight out of the box, VS Code is currently (2023) the official editor for Julia. See [this installation guide](https://www.julia-vscode.org/docs/dev/gettingstarted/) to prepare to use Julia in VS Code.
