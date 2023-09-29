@@ -90,7 +90,7 @@ This series of exercises and tangents is designed to introduce you to one of the
 
 This example will consider the following question:
 
-Consider one point particle with constant total energy, E, somewhere in a cubic container of side length $$l$$, experiencing elastic collisions with the container walls. If a circular hole of radius $$R < l/2$$ is suddenly removed from the center of one of the cube faces, what is the probability that the particle is still inside the cube at time $$t$$? In other words, what is the survival probability, $$S(t)$$ for our particle?
+Consider one point particle with constant total energy $$E$$ somewhere in a cubic container of side length $$l$$, experiencing elastic collisions with the container walls. If a circular hole of radius $$R < l/2$$ is suddenly removed from the center of one of the cube faces, what is the probability that the particle is still inside the cube at time $$t$$? In other words, what is the survival probability, $$S(t)$$ for our particle?
 
 To solve this problem:
 
