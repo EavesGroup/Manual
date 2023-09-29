@@ -37,7 +37,7 @@ permalink: "/theory/"
 
 {% assign name = c | downcase %}
 <h4 style="margin: 0.9em 0 -0.2em 0"><a href="{{ site.url }}{{ site.baseurl }}/theory/cm/{{ name }}">{{ cat-name }}</a></h4>
-<hr style="margin: 5px">
+<hr style="margin: 10px 0 -20px 0">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -96,7 +96,7 @@ permalink: "/theory/"
 
 {% assign name = c | downcase %}
 <h4 style="margin: 0.9em 0 -0.2em 0"><a href="{{ site.url }}{{ site.baseurl }}/theory/mm/{{ name }}">{{ cat-name }}</a></h4>
-<hr style="margin: 5px">
+<hr style="margin: 10px 0 -20px 0">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -155,7 +155,7 @@ permalink: "/theory/"
 
 {% assign name = c | downcase %}
 <h4 style="margin: 0.9em 0 -0.2em 0"><a href="{{ site.url }}{{ site.baseurl }}/theory/qm/{{ name }}">{{ cat-name }}</a></h4>
-<hr style="margin: 5px">
+<hr style="margin: 10px 0 -20px 0">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
@@ -215,7 +215,7 @@ permalink: "/theory/"
 {% assign name = c | downcase %}
 
 <h4 style="margin: 0.9em 0 -0.2em 0"><a href="{{ site.url }}{{ site.baseurl }}/theory/sm/{{ name }}">{{ cat-name }}</a></h4>
-<hr style="margin: 5px">
+<hr style="margin: 10px 0 -20px 0">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
     {% assign titles = titles | push: post.title %}
