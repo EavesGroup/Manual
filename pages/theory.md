@@ -194,7 +194,7 @@ permalink: "/theory/"
 
 <details>
 
-<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 10px 0px 0px">Statistical Mechanics<div id="dropdown-statmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
+<summary><h2 id="exHeader" style="float:left; color:white; margin: -40px 0px 0px 0px">Statistical Mechanics<div id="dropdown-statmech" onClick="changeDropdown(this.id)" style="color:gray; float:right; margin: -2px 0px 0px 30px">〉</div></h2></summary>
 
 {% assign cats = "" | split: "" %}
 
@@ -213,7 +213,8 @@ permalink: "/theory/"
 {% assign cat-name = c | split: "_" | slice: 1,20 | join: " " %}
 
 {% assign name = c | downcase %}
-<h4><a href="{{ site.url }}{{ site.baseurl }}/theory/sm/{{ name }}">{{ cat-name }}</a></h4>
+
+<h4 style="margin: 0.9em 0 -0.2em 0; text-align: left"><a href="{{ site.url }}{{ site.baseurl }}/theory/sm/{{ name }}">{{ cat-name }}</a></h4>
 <hr style="margin: 5px">
 {% assign titles = "" | split: "" %}
 {% for post in site.categories[c] %}
