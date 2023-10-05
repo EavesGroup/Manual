@@ -161,7 +161,9 @@ IMG_20230524_113823.png, xkcd comic on a physicist first encountering a new subj
 IMG_20230524_113828.jpg, Edit by Alex of xkcd comic:
 IMG_20230524_113906.jpg, Is my method just Redfield?:
 IMG_20230524_114044.jpg, The cycle of research:
-IMG_20230524_114056.jpg, The evolution of programming; machine language > C > Julia.
+IMG_20230524_114056.jpg, The evolution of programming; machine language > C > Julia.:
+consider_a_cow.jpg, Calculus as told by a cow.:
+telling_a_science_joke.jpg, 
 {% endcapture %}
 
 {% assign imgData = imgData | split: ":" | reverse %}
