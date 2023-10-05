@@ -1,6 +1,6 @@
 ---
 layout: page-fullwidth
-title:  "Ideal Gas MFPT with Monte Carlo"
+title:  "Markov Chain Monte Carlo"
 categories:
     - theory
     - SM
