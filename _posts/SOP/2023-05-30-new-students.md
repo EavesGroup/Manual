@@ -92,22 +92,26 @@ This example will consider the following question:
 
 Consider one point particle with constant total energy $$E$$ somewhere in a cubic container of side length $$l$$, experiencing elastic collisions with the container walls. If a circular hole of radius $$R < l/2$$ is suddenly removed from the center of one of the cube faces, what is the probability that the particle is still inside the cube at time $$t$$? In other words, what is the survival probability, $$S(t)$$ for our particle?
 
-To solve this problem:
+To solve this problem requires a combination of pen and paper work and simulation. The following steps provide a possible workflow:
 
-1. Create a project in Julia named `Ergodicity.jl` and the companion repo using **[this manual page]({{site.baseurl}}coding/julia/julia_setup/#starting-a-new-project)**.
+1. Read and complete the example on the [dynamical billiards]({{site.baseurl}}theory/cm/misc/dynamical_billiards) page.
 
-2. Settle on some variables without physical dimensions in order to perform this simulation on a computer.
+2. Settle on some variables without physical dimensions in order to perform this simulation on a computer (i.e. characteristic units).
 
-3. Now we wish to sample trajectories uniformly in phase space. The position coordinates can be handled by drawing three uniform random numbers on the interval $$[0,1]$$, but the momenta must lie on the surface of the sphere. We recommend for this problem that you draw three uniform random numbers on the interval $$[-1,1]$$, check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
+3. Create a project in Julia named `Ergodicity.jl` and the companion repo using **[this manual page]({{site.baseurl}}coding/julia/julia_setup/#starting-a-new-project)**.
 
-4. With a microstate selected, calculate when the trajectory crosses the opening. Draw some diagrams, revisit the reflected cube/trajectory unfolding trick, or brute force a system of modular equations.
+4. Simulating the average behavior of our particle in a box motivates us to [sample trajectories]({{site.baseurl}}theory/sm/sm_monte_carlo/markov_chain_montecarlo) uniformly in phase space.
+    1. The position coordinates can be handled by drawing three uniform random numbers in an interval defined by our characteristic length.
+    2. The momenta must lie on the surface of a sphere. Justify why. We recommend for this problem that you draw three uniform random numbers on a different interval, check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
 
-5. Repeat this sampling $$10^6$$ times, and make a histogram of the first-passage-time distribution and survival probability. Plot the survival probability on a log-log scale. What do you observe?
+5. With a microstate selected, calculate when the trajectory crosses the opening.
 
-6. Is there a heuristic way to explain this result? As a guide, answer the following without extensive calculation. Particles within a shell of distances $$\frac{(p+\delta p) t}{m}$$ will be able to reach the opening, with the shell thickness governed by the system energy. How does the number of particles within this shell roughly increase with time in our container? Assume the opening is a small hole for simplicity. Solve the differential equation for the number of particles and add the heuristic result to the plot.
+6. Repeat this sampling $$10^6$$ times, and make a histogram of the first-passage-time distribution and survival probability. Plot the survival probability on a log-log scale. What do you observe?
 
-7. Sync this to your remote repository.
+7. Is there a heuristic way to explain this result? As a guide, answer the following without extensive calculation. Particles within a shell of distances $$\frac{(p+\delta p) t}{m}$$ will be able to reach the opening, with the shell thickness governed by the system energy. How does the number of particles within this shell roughly increase with time in our container? Assume the opening is a small hole for simplicity. Solve the differential equation for the number of particles and add the heuristic result to the plot.
 
-8. Run the same code on Alpine.
+8. Sync your local Julia package to your remote repository.
 
-9. Generate something you can show in your weekly notes and at research roundtable. Place these documents on Teams.
+9. Run the same code on Alpine. Note, Monte Carlo is embarrassingly parallel. Take advantage of the computing resources on Alpine to increase the number of trajectories and compare run times.
+
+10. Generate something you can show in your weekly notes and at research roundtable. Place these documents in the appropriate place on Teams.
