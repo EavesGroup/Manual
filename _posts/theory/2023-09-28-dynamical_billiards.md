@@ -13,6 +13,8 @@ header: no
 breadcrumb: true
 ---
 
+{% include mathjax.html %}
+
 Our classical particle in a container is a dynamical system that mathematicians call a "dynamical billiard". Billiards can incorporate a wide variety of geometric, dissipative, and quantum effects which make them suitable models for optics, lasers, particle traps, and nanodevices. This question will discuss the utility of these billiards toward understanding fundamental statistical mechanics and the physical chemistry of particle escape.
 
 Let our container be a cube of side length, $$l$$. Centered on one of the faces is a circular punch-out of radius $$R < l/2$$. If this disk is suddenly removed, what is the probability that the particle is still inside the cube at time $$t$$? In the language of statisticians, what is the survival function, or survival probability, $$S(t)$$ for our particle?
@@ -20,8 +22,6 @@ Let our container be a cube of side length, $$l$$. Centered on one of the faces 
 Creating a hole for the particle to escape through has turned our system into an "open dynamical billiard", where once the orbit, or trajectory, terminates on the opening, we no longer consider its dynamics. One fairly recent application of this formalism to laser design studies how curvature of a mirrored cavity wall can maximize time spent by photons in the gain medium before passing through the beamsplitter.
 
 To answer our question, we need to propagate the microcanonical ensemble of this system in timesteps $$dt$$ and count how many trajectories cross the open boundary. The survival function is then the fraction of trajectories that have still not crossed the opening at $$t = ndt$$. An important related quantity to $$S(t)$$ is the rate at which the number of surviving trajectories changes, called the escape rate. Rephrase the problem as a dense gas of $$N$$ equal-energy particles, $$\rho = N/V$$, instead of a state density. We will see that the escape rate shares many similarities with the kinetic theory of effusion. However, this condition that every particle is constrained to the same energy will have interesting repercussions for the long-time dynamics of the system. 
-
-\medskip
 
 Billiards on orthotopes, or hyperrectangles, like our cube are one of two  well known geometries in which the dynamics are solved for all times, also known as an integrable system. The other one is the hyperellipsoids. The following steps will guide you through finding the solution for a particle trajectory given that you start at a specific point, $$\Gamma$$, in our six dimensional phase space.
 
