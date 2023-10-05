@@ -161,7 +161,9 @@ IMG_20230524_113823.png, xkcd comic on a physicist first encountering a new subj
 IMG_20230524_113828.jpg, Edit by Alex of xkcd comic:
 IMG_20230524_113906.jpg, Is my method just Redfield?:
 IMG_20230524_114044.jpg, The cycle of research:
-IMG_20230524_114056.jpg, The evolution of programming; machine language > C > Julia.
+IMG_20230524_114056.jpg, The evolution of programming; machine language > C > Julia.:
+consider_a_cow.jpg, Calculus as told by a cow.:
+telling_a_science_joke.jpg, 
 {% endcapture %}
 
 {% assign imgData = imgData | split: ":" | reverse %}
@@ -194,6 +196,14 @@ IMG_20230524_114056.jpg, The evolution of programming; machine language > C > Ju
 {% endfor %}
 </div>
 
+<div class="row">
+{% for entry in imgData limit:3 offset: continue %}
+{% capture total_img %}{% increment img_num %}{% endcapture %}
+{% assign img = entry | split: ", " | first  | strip %}
+{% assign caption = entry | split: ", " | last %}
+<div class="medium-4 columns"><img class="t60" style="width=100%" onclick="openModal();currentSlide({{ img_num }})" class="hover-shadow cursor" src="{{ site.urlimg }}memes/{{ img }}" caption="{{ caption }}"></div>
+{% endfor %}
+</div>
 
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
