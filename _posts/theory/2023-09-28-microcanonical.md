@@ -56,6 +56,6 @@ $$ S(t) = 1 - \int \int_0^t \delta(\Gamma(t') - B) p_{NVE}(\Gamma(t')) dt' d\Gam
 
 for $$B$$ the opening in the container in phase space coordinates. As you would find on the dynamical billiards page, $$\Gamma(t')$$ is the pair $$(\vec r(t'),\vec p(t'))$$ where the trajectories are periodic and piecewise functions while the boundary $$B$$ can be written as
 
-$$ B(x,y,z) = \theta\left(R^2 - \left(y-\frac{l}{2}\right)^2 + \left(z-\frac{l}{2}\right)^2 \right)\delta(x-l)$$
+$$ B(x,y,z) = \theta\left(R^2 - \left(y-\frac{l}{2}\right)^2 - \left(z-\frac{l}{2}\right)^2 \right)\delta(x-l)$$
 
 for the circular punch-out centered on the cube wall at $$x = l$$. This integral is formidable, and attempting to integrate our functions by discretizing each of the six phase space variables poses two immediate issues: (1) For an exceedingly poor grid spacing of 10 points along $$x,y,z$$ and $$p_x,p_y,p_z$$, we must evaluate this integral at $$10^6$$ points, and (2) we know from our energy condition that the momentum vector is constrained to lie on the surface of a sphere, which would mean even the "clever" choice to discretize the momentum integrals in spherical coordinates still creates a nonuniform density biased towards the sphere's poles. These numerical hiccups point to the use of [Monte Carlo simulation]({{site.url}}{{site.baseurl}}/theory/sm/monte-carlo).
