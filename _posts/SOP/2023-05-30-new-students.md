@@ -94,13 +94,13 @@ Consider one point particle with constant total energy $$E$$ somewhere in a cubi
 
 To solve this problem requires a combination of pen and paper work and simulation. The following steps provide a possible workflow:
 
-1. Read and complete the example on the **[dynamical billiards]({{site.baseurl}}theory/cm/misc/dynamical_billiards)** page.
+1. Read and complete the example on the [dynamical billiards]({{site.baseurl}}/theory/cm/cm_misc/dynamical_billiards) page.
 
 2. Settle on some variables without physical dimensions in order to perform this simulation on a computer (i.e. characteristic units).
 
-3. Create a project in Julia named `Ergodicity.jl` and the companion repo using **[this manual page]({{site.baseurl}}coding/julia/julia_setup/#starting-a-new-project)**.
+3. Create a project in Julia named `Ergodicity.jl` and the companion repo using **[this manual page]({{site.baseurl}}/coding/julia/julia_setup/#starting-a-new-project)**.
 
-4. Simulating the average behavior of our particle in a box motivates us to **[sample trajectories]({{site.baseurl}}theory/sm/sm_monte_carlo/markov_chain_montecarlo)** uniformly in phase space.
+4. Simulating the average behavior of our particle in a box motivates us to [sample trajectories]({{site.baseurl}}/theory/sm/sm_monte_carlo/markov_chain_montecarlo) uniformly in phase space.
     1. The position coordinates can be handled by drawing three uniform random numbers in an interval defined by our characteristic length.
     2. The momenta must lie on the surface of a sphere. Justify why. We recommend for this problem that you draw three uniform random numbers on a different interval, check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
 
