@@ -25,7 +25,7 @@ Billiards on hyperrectangles like our [cube]({{site.url}}{{site.baseurl}}/sop/ne
 
 (1) Write down the trajectory, $$\vec r(t)$$, ignoring the container walls for a particle starting at $$\vec r_0$$ with momentum $$\vec p$$.
 
-(2) Specular reflection requires that the angle of incidence to the surface normal, $$\hat n$$, equals the opposing angle of reflection. Show that this condition is captured by the Householder transformation matrix (the difference of the unit dyadic and surface normal dyadic), $${\bf R}_n = \mathbb{1} - \hat n \otimes \hat n $$, and that reflecting off the walls of a cube will keep this trajectory confined to eight specific momenta in phase space.
+(2) Specular reflection requires that the angle of incidence to the surface normal, $$\hat n$$, equals the opposing angle of reflection. Show that this condition is captured by the Householder transformation matrix (the difference of the unit dyadic and surface normal dyadic), $${\bf R}_n = \mathbb{1} - 2\hat n \otimes \hat n $$, and that reflecting off the walls of a cube will keep this trajectory confined to eight specific momenta in phase space.
 
 (3) Explain why the functional form of the coordinate trajectory should be $$2l$$-periodic along the cube axes. Then, instead of reflecting the particle, imagine that the particle continues through the wall to a reflected copy of the cube instead. The trajectory remains a straight line where now the particle coordinate is decreasing from $$l$$ along the reflected axis. Using this construction, write the final solution for the position of the particle after a time, $$t$$, starting from anywhere in phase space, $$\vec r(t; \Gamma)$$. As the function will be periodic, you will likely find the floor function or mod operation useful.
 
