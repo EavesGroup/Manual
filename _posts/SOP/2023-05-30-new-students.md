@@ -108,18 +108,11 @@ To solve this problem requires a combination of pen and paper work and simulatio
 
 6. Repeat this sampling $$10^6$$ times, and make a histogram of the first-passage-time distribution and survival probability. Plot the survival probability on a log-log scale. What do you observe?
 
-7. Instead of a non-interacting gas of equal-energy particles (see dynamical billiards for this
-reinterpretation of the single particle problem), consider an ideal gas with constant total energy.
-The particles in the gas can now have different momenta, as long as the sum of all kinetic energies
-equals the prescribed total.
-    1. In the single particle, ”equal-energy gas” case, uniform sampling of the particle momentum
-    required choosing points uniformly on a sphere. For this new system of N particles, what object’s
-    surface do we need to uniformly sample? If we attempt to use the same method as before, what
-    happens to the efficiency? Give an estimate for the probability of accepting a trial when there are
-    just 4 particles in the container.
-    2. Read and complete the example on the microcanonical ensemble page. Implement the new
-    sampling scheme and recalculate the escape rate. Now what do you observe on a log-log plot? As
-    a hint, the rate will have a noticeably different time dependence.
+The rest of these questions before syncing the Julia package are optional. But there is a lot of good insight here about why the exercise you just completed has the behavior it does.
+
+7. Read and complete the example on the microcanonical ensemble page. Implement the new
+sampling scheme and recalculate the escape rate. Now what do you observe on a log-log plot? As
+a hint, the rate will have a noticeably different time dependence.
 
 8. What has changed between our two examples which causes the escape rate to vary so signif-
 icantly? As a final task, we should model the numerical results analytically.

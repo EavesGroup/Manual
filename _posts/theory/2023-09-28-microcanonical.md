@@ -59,3 +59,15 @@ for $$B$$ the opening in the container in phase space coordinates. As you would 
 $$ B(x,y,z) = \theta\left(R^2 - \left(y-\frac{l}{2}\right)^2 - \left(z-\frac{l}{2}\right)^2 \right)\delta(x-l)$$
 
 for the circular punch-out centered on the cube wall at $$x = l$$. This integral is formidable, and attempting to integrate our functions by discretizing each of the six phase space variables poses two immediate issues: (1) For an exceedingly poor grid spacing of 10 points along $$x,y,z$$ and $$p_x,p_y,p_z$$, we must evaluate this integral at $$10^6$$ points, and (2) we know from our energy condition that the momentum vector is constrained to lie on the surface of a sphere, which would mean even the "clever" choice to discretize the momentum integrals in spherical coordinates still creates a nonuniform density biased towards the sphere's poles. These numerical hiccups point to the use of [Monte Carlo simulation]({{site.url}}{{site.baseurl}}/theory/sm/monte-carlo).
+
+Now, consider a gas of particles with no interatom forces but constant total energy.
+The particles have different momenta but the sum of all kinetic energies equals the prescribed total. In the single particle case, uniform sampling of the particle momentum
+requires choosing points uniformly on a sphere. These questions will explain how to efficiently do this sampling for our ideal gas. 
+
+(1) For this new system of N particles, what object’s surface do we need to uniformly sample? If we attempt to use the same method as before, what happens to the efficiency? Give an estimate for the probability of accepting a trial when there are just 4 particles in the container.
+
+(2) We can investigate the momentum distribution for the ith particle by writing \( E' =  E - p_i^2/2m \) which equals the sum of kinetic energies for all other particles. If the momenta are random variables (no matter what kind), then what is the distribution for \(E'\)? And consequently what is the distribution for \(p_i\)?
+
+(3) As a quick example, return to the single particle. By drawing random numbers from the distribution determined in the previous question for each momentum component \(p_x,p_y,p_z\), create a figure to show that the final distribution of points satisfies the energy constraint. We call this a rejection-free sampling technique as we no longer need to discard points outside of the sphere.
+
+Starting a system at the appropriate total energy is an important step in any molecular dynamics (MD) simulation, and rarely, the Maxwell-Boltzmann distribution is even an appropriate estimate for the system behavior. If the particles interact, you can choose the kinetic energy of every particle to be equal and you will have a very similar waiting time to come to equilibrium.
