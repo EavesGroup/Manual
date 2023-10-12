@@ -104,6 +104,7 @@ To solve this problem requires a combination of pen and paper work and simulatio
     1. The position coordinates can be handled by drawing three uniform random numbers in an interval defined by our characteristic length.
     2. The momenta must lie on the surface of a sphere. Justify why. We recommend for this problem that you draw three uniform random numbers on a different interval, check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
 
+
 5. With a microstate selected, calculate when the trajectory crosses the opening.
 
 6. Repeat this sampling $$10^6$$ times, and make a histogram of the first-passage-time distribution and survival probability. Plot the survival probability on a log-log scale. What do you observe?
@@ -124,6 +125,7 @@ icantly? As a final task, we should model the numerical results analytically.
     theory. One of the assumptions of the effusion derivation is that the escape rate result only holds
     for short times, whereas in our case, it holds for all times. Explain this.
     2. The Maxwell-Boltzmann estimate of particle motion will not hold for the all-equal-energy case (or for finding the escape rate of a single particle). Return to the single particle way of thinking. If the average momentum orthogonal to the punch-out  results in an exponential escape rate, how does the orientational distribution of momenta influence the total escape rate? Write the corresponding integral and analyze the behavior of the escape rate in the long time limit.
+
 
 8. Sync your local Julia package to your remote repository.
 
