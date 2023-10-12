@@ -108,7 +108,29 @@ To solve this problem requires a combination of pen and paper work and simulatio
 
 6. Repeat this sampling $$10^6$$ times, and make a histogram of the first-passage-time distribution and survival probability. Plot the survival probability on a log-log scale. What do you observe?
 
-7. Is there a heuristic way to explain this result? As a guide, answer the following without extensive calculation. Particles within a shell of distances $$\frac{(p+\delta p) t}{m}$$ will be able to reach the opening, with the shell thickness governed by the system energy. How does the number of particles within this shell roughly increase with time in our container? Assume the opening is a small hole for simplicity. Solve the differential equation for the number of particles and add the heuristic result to the plot.
+7. Instead of a non-interacting gas of equal-energy particles (see dynamical billiards for this
+reinterpretation of the single particle problem), consider an ideal gas with constant total energy.
+The particles in the gas can now have different momenta, as long as the sum of all kinetic energies
+equals the prescribed total.
+    1. In the single particle, ”equal-energy gas” case, uniform sampling of the particle momentum
+    required choosing points uniformly on a sphere. For this new system of N particles, what object’s
+    surface do we need to uniformly sample? If we attempt to use the same method as before, what
+    happens to the efficiency? Give an estimate for the probability of accepting a trial when there are
+    just 4 particles in the container.
+    2. Read and complete the example on the microcanonical ensemble page. Implement the new
+    sampling scheme and recalculate the escape rate. Now what do you observe on a log-log plot? As
+    a hint, the rate will have a noticeably different time dependence.
+
+8. What has changed between our two examples which causes the escape rate to vary so signif-
+icantly? As a final task, we should model the numerical results analytically.
+    1. In our ideal gas (constant total energy), the number of particles impacting the punch-out
+    should be proportional to the number of particles impacting the unit area on any of the walls. Do
+    you know why? Estimate how many collisions occur with one side of the cube in a short time
+    interval ∆t and use this expression to predict the escape rate. How does this depend on average
+    speed? This is exactly the same derivation that is used to predict the effusion of a gas with kinetic
+    theory. One of the assumptions of the effusion derivation is that the escape rate result only holds
+    for short times, whereas in our case, it holds for all times. Explain this.
+    2. The Maxwell-Boltzmann estimate of particle motion will not hold for the all-equal-energy case (or for finding the escape rate of a single particle). Return to the single particle way of thinking. If the average momentum orthogonal to the punch-out  results in an exponential escape rate, how does the orientational distribution of momenta influence the total escape rate? Write the corresponding integral and analyze the behavior of the escape rate in the long time limit.
 
 8. Sync your local Julia package to your remote repository.
 
