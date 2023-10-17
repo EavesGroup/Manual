@@ -52,7 +52,7 @@ $$ \Omega = \int \delta(H(\Gamma) - E) d\Gamma = 8\pi ml^3E. $$
 
 Then, our survival probability can be written as
 
-$$ S(t) = 1 - \int \int_0^t \delta(\gamma(t') - B) p_{NVE}(\Gamma(t')) dt' d\Gamma $$
+$$ S(t) = 1 - \int \int_0^t \delta(\gamma(t') - B) p_{NVE}(\gamma(t')) dt' d\Gamma $$
 
 for $$B$$ the opening in the container in phase space coordinates. As you would find on the dynamical billiards page, $$\Gamma(t')$$ is the pair $$(\vec r(t'),\vec p(t'))$$ where the trajectories are periodic and piecewise functions while the boundary $$B$$ can be written as
 
