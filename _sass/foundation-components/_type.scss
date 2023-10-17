@@ -4,13 +4,13 @@
 
 @import "global";
 
-$include-html-type-classes: $include-html-classes !default;
+$include-html-type-classes: $include-html-classes  !default;
 
 // We use these to control header font styles
-$header-font-family: $body-font-family !default;
-$header-font-weight: $font-weight-normal !default;
-$header-font-style: $font-weight-normal !default;
-$header-font-color: $jet !default;
+$header-font-family: $body-font-family  !default;
+$header-font-weight: $font-weight-normal  !default;
+$header-font-style: $font-weight-normal  !default;
+$header-font-color: $jet  !default;
 $header-line-height: 1.4 !default;
 $header-top-margin: .2rem !default;
 $header-bottom-margin: .5rem !default;
@@ -35,7 +35,7 @@ $h6-font-reduction: 0 !default;
 // These control how subheaders are styled.
 $subheader-line-height: 1.4 !default;
 $subheader-font-color: scale-color($header-font-color, $lightness: 35%) !default;
-$subheader-font-weight: $font-weight-normal !default;
+$subheader-font-weight: $font-weight-normal  !default;
 $subheader-top-margin: .2rem !default;
 $subheader-bottom-margin: .5rem !default;
 
@@ -45,7 +45,7 @@ $small-font-color: scale-color($header-font-color, $lightness: 35%) !default;
 
 // We use these to style paragraphs
 $paragraph-font-family: inherit !default;
-$paragraph-font-weight: $font-weight-normal !default;
+$paragraph-font-weight: $font-weight-normal  !default;
 $paragraph-font-size: 1rem !default;
 $paragraph-line-height: 1.6 !default;
 $paragraph-margin-bottom: rem-calc(20) !default;
@@ -55,9 +55,9 @@ $paragraph-aside-font-style: italic !default;
 $paragraph-text-rendering: optimizeLegibility !default;
 
 // We use these to style <code> tags
-$code-color: $oil !default;
-$code-font-family: $font-family-monospace !default;
-$code-font-weight: $font-weight-normal !default;
+$code-color: $oil  !default;
+$code-font-family: $font-family-monospace  !default;
+$code-font-weight: $font-weight-normal  !default;
 $code-background-color: scale-color($secondary-color, $lightness: 70%) !default;
 $code-border-size: 0px !default;
 $code-border-style: solid !default;
@@ -67,39 +67,39 @@ $code-padding: rem-calc(2) rem-calc(5) rem-calc(1) !default;
 // We use these to style anchors
 $anchor-text-decoration: none !default;
 $anchor-text-decoration-hover: none !default;
-$anchor-font-color: $primary-color !default;
+$anchor-font-color: $primary-color  !default;
 $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
 
 // We use these to style the <hr> element
 $hr-border-width: 1px !default;
 $hr-border-style: solid !default;
-$hr-border-color: $gainsboro !default;
+$hr-border-color: $gainsboro  !default;
 $hr-margin: rem-calc(20) !default;
 
 // We use these to style lists
-$list-font-family: $paragraph-font-family !default;
-$list-font-size: $paragraph-font-size !default;
-$list-line-height: $paragraph-line-height !default;
-$list-margin-bottom: $paragraph-margin-bottom !default;
+$list-font-family: $paragraph-font-family  !default;
+$list-font-size: $paragraph-font-size  !default;
+$list-line-height: $paragraph-line-height  !default;
+$list-margin-bottom: $paragraph-margin-bottom  !default;
 $list-style-position: outside !default;
 $list-side-margin: 1.1rem !default;
 $list-ordered-side-margin: 1.4rem !default;
 $list-side-margin-no-bullet: 0 !default;
 $list-nested-margin: rem-calc(20) !default;
-$definition-list-header-weight: $font-weight-bold !default;
+$definition-list-header-weight: $font-weight-bold  !default;
 $definition-list-header-margin-bottom: .3rem !default;
 $definition-list-margin-bottom: rem-calc(12) !default;
 
 // We use these to style blockquotes
 $blockquote-font-color: scale-color($header-font-color, $lightness: 35%) !default;
 $blockquote-padding: rem-calc(9 20 0 19) !default;
-$blockquote-border: 1px solid $gainsboro !default;
+$blockquote-border: 1px solid $gainsboro  !default;
 $blockquote-cite-font-size: rem-calc(13) !default;
 $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%) !default;
-$blockquote-cite-link-color: $blockquote-cite-font-color !default;
+$blockquote-cite-link-color: $blockquote-cite-font-color  !default;
 
 // Acronym styles
-$acronym-underline: 1px dotted $gainsboro !default;
+$acronym-underline: 1px dotted $gainsboro  !default;
 
 // We use these to control padding and margin
 $microformat-padding: rem-calc(10 12) !default;
@@ -108,25 +108,24 @@ $microformat-margin: rem-calc(0 0 20 0) !default;
 // We use these to control the border styles
 $microformat-border-width: 1px !default;
 $microformat-border-style: solid !default;
-$microformat-border-color: $gainsboro !default;
+$microformat-border-color: $gainsboro  !default;
 
 // We use these to control full name font styles
-$microformat-fullname-font-weight: $font-weight-bold !default;
+$microformat-fullname-font-weight: $font-weight-bold  !default;
 $microformat-fullname-font-size: rem-calc(15) !default;
 
 // We use this to control the summary font styles
-$microformat-summary-font-weight: $font-weight-bold !default;
+$microformat-summary-font-weight: $font-weight-bold  !default;
 
 // We use this to control abbr padding
 $microformat-abbr-padding: rem-calc(0 1) !default;
 
 // We use this to control abbr font styles
-$microformat-abbr-font-weight: $font-weight-bold !default;
+$microformat-abbr-font-weight: $font-weight-bold  !default;
 $microformat-abbr-font-decoration: none !default;
 
 // Text alignment class names
-$align-class-names:
-  small-only,
+$align-class-names: small-only,
   small,
   medium-only,
   medium,
@@ -138,8 +137,7 @@ $align-class-names:
   xxlarge;
 
 // Text alignment breakpoints
-$align-class-breakpoints:
-  $small-only,
+$align-class-breakpoints: $small-only,
   $small-up,
   $medium-only,
   $medium-up,
@@ -151,18 +149,40 @@ $align-class-breakpoints:
   $xxlarge-up;
 
 // Generates text align and justify classes
-@mixin align-classes{
-  .text-left    { text-align: left !important; }
-  .text-right   { text-align: right !important; }
-  .text-center  { text-align: center !important; }
-  .text-justify { text-align: justify !important; }
+@mixin align-classes {
+  .text-left {
+    text-align: left !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-justify {
+    text-align: justify !important;
+  }
 
   @for $i from 1 through length($align-class-names) {
     @media #{(nth($align-class-breakpoints, $i))} {
-      .#{(nth($align-class-names, $i))}-text-left { text-align: left !important; }
-      .#{(nth($align-class-names, $i))}-text-right   { text-align: right !important; }
-      .#{(nth($align-class-names, $i))}-text-center  { text-align: center !important; }
-      .#{(nth($align-class-names, $i))}-text-justify { text-align: justify !important; }
+      .#{(nth($align-class-names, $i))}-text-left {
+        text-align: left !important;
+      }
+
+      .#{(nth($align-class-names, $i))}-text-right {
+        text-align: right !important;
+      }
+
+      .#{(nth($align-class-names, $i))}-text-center {
+        text-align: center !important;
+      }
+
+      .#{(nth($align-class-names, $i))}-text-justify {
+        text-align: justify !important;
+      }
     }
   }
 }
@@ -184,6 +204,7 @@ $align-class-breakpoints:
   margin-top: $subheader-top-margin;
   margin-bottom: $subheader-bottom-margin;
 }
+
 @include exports("type") {
   @if $include-html-type-classes {
     // Responsive Text alignment
@@ -209,8 +230,8 @@ $align-class-breakpoints:
     blockquote,
     th,
     td {
-      margin:0;
-      padding:0;
+      margin: 0;
+      padding: 0;
     }
 
     /* Default Link Styles */
@@ -222,12 +243,15 @@ $align-class-breakpoints:
       &:hover,
       &:focus {
         color: $anchor-font-color-hover;
-        @if $anchor-text-decoration-hover != $anchor-text-decoration {
-        	text-decoration: $anchor-text-decoration-hover;
+
+        @if $anchor-text-decoration-hover  !=$anchor-text-decoration {
+          text-decoration: $anchor-text-decoration-hover;
         }
       }
 
-      img { border:none; }
+      img {
+        border: none;
+      }
     }
 
     /* Default paragraph styles */
@@ -239,7 +263,9 @@ $align-class-breakpoints:
       margin-bottom: $paragraph-margin-bottom;
       text-rendering: $paragraph-text-rendering;
 
-      &.lead { @include lead; }
+      &.lead {
+        @include lead;
+      }
 
       & aside {
         font-size: $paragraph-aside-font-size;
@@ -249,7 +275,12 @@ $align-class-breakpoints:
     }
 
     /* Default header styles */
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: $header-font-family;
       font-weight: $header-font-weight;
       font-style: $header-font-style;
@@ -266,14 +297,33 @@ $align-class-breakpoints:
       }
     }
 
-    h1 { font-size: $h1-font-size - $h1-font-reduction; }
-    h2 { font-size: $h2-font-size - $h2-font-reduction; }
-    h3 { font-size: $h3-font-size - $h3-font-reduction; }
-    h4 { font-size: $h4-font-size - $h4-font-reduction; }
-    h5 { font-size: $h5-font-size - $h5-font-reduction; }
-    h6 { font-size: $h6-font-size - $h6-font-reduction; }
+    h1 {
+      font-size: $h1-font-size - $h1-font-reduction;
+    }
 
-    .subheader { @include subheader; }
+    h2 {
+      font-size: $h2-font-size - $h2-font-reduction;
+    }
+
+    h3 {
+      font-size: $h3-font-size - $h3-font-reduction;
+    }
+
+    h4 {
+      font-size: $h4-font-size - $h4-font-reduction;
+    }
+
+    h5 {
+      font-size: $h5-font-size - $h5-font-reduction;
+    }
+
+    h6 {
+      font-size: $h6-font-size - $h6-font-reduction;
+    }
+
+    .subheader {
+      @include subheader;
+    }
 
     hr {
       border: $hr-border-style $hr-border-color;
@@ -325,13 +375,17 @@ $align-class-breakpoints:
 
     ul {
       margin-#{$default-float}: $list-side-margin;
+
       &.no-bullet {
         margin-#{$default-float}: $list-side-margin-no-bullet;
+
         li {
+
           ul,
           ol {
             margin-#{$default-float}: $list-nested-margin;
-            margin-bottom: 0;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
             list-style: none;
           }
         }
@@ -341,28 +395,49 @@ $align-class-breakpoints:
     /* Unordered Lists */
     ul {
       li {
+
         ul,
         ol {
           margin-#{$default-float}: $list-nested-margin;
-          margin-bottom: 0;
+          margin-bottom: 1rem;
+          margin-top: 0.5rem;
         }
       }
+
       &.square,
       &.circle,
       &.disc {
-        li ul { list-style: inherit; }
+        li ul {
+          list-style: inherit;
+        }
       }
 
-      &.square { list-style-type: square; margin-#{$default-float}: $list-side-margin;}
-      &.circle { list-style-type: circle; margin-#{$default-float}: $list-side-margin;}
-      &.disc { list-style-type: disc; margin-#{$default-float}: $list-side-margin;}
-      &.no-bullet { list-style: none; }
+      &.square {
+        list-style-type: square;
+        margin-#{$default-float}: $list-side-margin;
+      }
+
+      &.circle {
+        list-style-type: circle;
+        margin-#{$default-float}: $list-side-margin;
+      }
+
+      &.disc {
+        list-style-type: disc;
+        margin-#{$default-float}: $list-side-margin;
+      }
+
+      &.no-bullet {
+        list-style: none;
+      }
     }
 
     /* Ordered Lists */
     ol {
       margin-#{$default-float}: $list-ordered-side-margin;
+
       li {
+
         ul,
         ol {
           margin-#{$default-float}: $list-nested-margin;
@@ -377,7 +452,10 @@ $align-class-breakpoints:
         margin-bottom: $definition-list-header-margin-bottom;
         font-weight: $definition-list-header-weight;
       }
-      dd { margin-bottom: $definition-list-margin-bottom; }
+
+      dd {
+        margin-bottom: $definition-list-margin-bottom;
+      }
     }
 
     /* Abbreviations */
@@ -388,8 +466,10 @@ $align-class-breakpoints:
       color: $body-font-color;
       cursor: $cursor-help-value;
     }
+
     abbr {
       text-transform: none;
+
       &[title] {
         border-bottom: $acronym-underline;
       }
@@ -405,6 +485,7 @@ $align-class-breakpoints:
         display: block;
         font-size: $blockquote-cite-font-size;
         color: $blockquote-cite-font-color;
+
         &:before {
           content: "\2014 \0020";
         }
@@ -415,6 +496,7 @@ $align-class-breakpoints:
         }
       }
     }
+
     blockquote,
     blockquote p {
       line-height: $paragraph-line-height;
@@ -432,6 +514,7 @@ $align-class-breakpoints:
         margin: 0;
         display: block;
       }
+
       .fn {
         font-weight: $microformat-fullname-font-weight;
         font-size: $microformat-fullname-font-size;
@@ -439,7 +522,9 @@ $align-class-breakpoints:
     }
 
     .vevent {
-      .summary { font-weight: $microformat-summary-font-weight; }
+      .summary {
+        font-weight: $microformat-summary-font-weight;
+      }
 
       abbr {
         cursor: $cursor-default-value;
@@ -452,42 +537,82 @@ $align-class-breakpoints:
 
 
     @media #{$medium-up} {
-      h1,h2,h3,h4,h5,h6 { line-height: $header-line-height; }
-      h1 { font-size: $h1-font-size; }
-      h2 { font-size: $h2-font-size; }
-      h3 { font-size: $h3-font-size; }
-      h4 { font-size: $h4-font-size; }
-      h5 { font-size: $h5-font-size; }
-      h6 { font-size: $h6-font-size; }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: $header-line-height;
+      }
+
+      h1 {
+        font-size: $h1-font-size;
+      }
+
+      h2 {
+        font-size: $h2-font-size;
+      }
+
+      h3 {
+        font-size: $h3-font-size;
+      }
+
+      h4 {
+        font-size: $h4-font-size;
+      }
+
+      h5 {
+        font-size: $h5-font-size;
+      }
+
+      h6 {
+        font-size: $h6-font-size;
+      }
     }
 
     // Only include these styles if you want them.
     @if $include-print-styles {
+
       /*
        * Print styles.
        *
        * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
        * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
       */
-      .print-only { display: none !important; }
+      .print-only {
+        display: none !important;
+      }
+
       @media print {
         * {
           background: transparent !important;
-          color: $black !important; /* Black prints faster: h5bp.com/s */
+          color: $black  !important;
+          /* Black prints faster: h5bp.com/s */
           box-shadow: none !important;
           text-shadow: none !important;
         }
 
         a,
-        a:visited { text-decoration: underline;}
-        a[href]:after { content: " (" attr(href) ")"; }
+        a:visited {
+          text-decoration: underline;
+        }
 
-        abbr[title]:after { content: " (" attr(title) ")"; }
+        a[href]:after {
+          content: " (" attr(href) ")";
+        }
+
+        abbr[title]:after {
+          content: " (" attr(title) ")";
+        }
 
         // Don't show links for images, or javascript/internal links
         .ir a:after,
         a[href^="javascript:"]:after,
-        a[href^="#"]:after { content: ""; }
+        a[href^="#"]:after {
+          content: "";
+        }
 
         pre,
         blockquote {
@@ -495,14 +620,23 @@ $align-class-breakpoints:
           page-break-inside: avoid;
         }
 
-        thead { display: table-header-group; /* h5bp.com/t */ }
+        thead {
+          display: table-header-group;
+          /* h5bp.com/t */
+        }
 
         tr,
-        img { page-break-inside: avoid; }
+        img {
+          page-break-inside: avoid;
+        }
 
-        img { max-width: 100% !important; }
+        img {
+          max-width: 100% !important;
+        }
 
-        @page { margin: 0.5cm; }
+        @page {
+          margin: 0.5cm;
+        }
 
         p,
         h2,
@@ -512,12 +646,25 @@ $align-class-breakpoints:
         }
 
         h2,
-        h3 { page-break-after: avoid; }
+        h3 {
+          page-break-after: avoid;
+        }
 
-        .hide-on-print { display: none !important; }
-        .print-only { display: block !important; }
-        .hide-for-print { display: none !important; }
-        .show-for-print { display: inherit !important; }
+        .hide-on-print {
+          display: none !important;
+        }
+
+        .print-only {
+          display: block !important;
+        }
+
+        .hide-for-print {
+          display: none !important;
+        }
+
+        .show-for-print {
+          display: inherit !important;
+        }
       }
     }
 
