@@ -101,8 +101,8 @@ To solve this problem requires a combination of pen and paper work and simulatio
 3. Create a project in Julia named `Ergodicity.jl` and the companion repo using **[this manual page]({{site.baseurl}}/coding/julia/julia_setup/#starting-a-new-project)**.
 
 4. Simulating the average behavior of our particle in a box motivates us to [sample trajectories]({{site.baseurl}}/theory/sm/sm_monte_carlo/markov_chain_montecarlo) uniformly in phase space.
-    1. The position coordinates can be handled by drawing three uniform random numbers in an interval defined by our characteristic length.
-    2. The momenta must lie on the surface of a sphere. Justify why. We recommend for this problem that you draw three uniform random numbers on a different interval, check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
+    - The position coordinates can be handled by drawing three uniform random numbers in an interval defined by our characteristic length.
+    - The momenta must lie on the surface of a sphere. Justify why. We recommend for this problem that you draw three uniform random numbers on a different interval, check if this point lies inside the sphere, and then scale it to the appropriate radius. There will be some attempts that you throw away outright (about half), but the cost incurred by this inefficiency is manageable.
 
 
 5. With a microstate selected, calculate when the trajectory crosses the opening.
@@ -115,16 +115,15 @@ The rest of these questions before syncing the Julia package are optional. But t
 sampling scheme and recalculate the escape rate. Now what do you observe on a log-log plot? As
 a hint, the rate will have a noticeably different time dependence.
 
-8. What has changed between our two examples which causes the escape rate to vary so signif-
-icantly? As a final task, we should model the numerical results analytically.
-    1. In our ideal gas (constant total energy), the number of particles impacting the punch-out
+8. What has changed between our two examples which causes the escape rate to vary so significantly? As a final task, we should model the numerical results analytically.
+    - In our ideal gas (constant total energy), the number of particles impacting the punch-out
     should be proportional to the number of particles impacting the unit area on any of the walls. Do
     you know why? Estimate how many collisions occur with one side of the cube in a short time
-    interval ∆t and use this expression to predict the escape rate. How does this depend on average
+    interval $$\Delta t$$ and use this expression to predict the escape rate. How does this depend on average
     speed? This is exactly the same derivation that is used to predict the effusion of a gas with kinetic
     theory. One of the assumptions of the effusion derivation is that the escape rate result only holds
     for short times, whereas in our case, it holds for all times. Explain this.
-    2. The Maxwell-Boltzmann estimate of particle motion will not hold for the all-equal-energy case (or for finding the escape rate of a single particle). Return to the single particle way of thinking. If the average momentum orthogonal to the punch-out  results in an exponential escape rate, how does the orientational distribution of momenta influence the total escape rate? Write the corresponding integral and analyze the behavior of the escape rate in the long time limit.
+    - The Maxwell-Boltzmann estimate of particle motion will not hold for the all-equal-energy case (or for finding the escape rate of a single particle). Return to the single particle way of thinking. If the average momentum orthogonal to the punch-out results in an exponential escape rate, how does the orientational distribution of momenta influence the total escape rate? Write the corresponding integral and analyze the behavior of the escape rate in the long time limit.
 
 
 8. Sync your local Julia package to your remote repository.
