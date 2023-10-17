@@ -441,7 +441,7 @@ $align-class-breakpoints: $small-only,
         ul,
         ol {
           margin-#{$default-float}: $list-nested-margin;
-          margin-bottom: 0;
+          margin-bottom: 1rem;
         }
       }
     }
