@@ -27,14 +27,14 @@ $$ p_{NVE}(\Gamma) = \frac{\delta(H(\Gamma) - E)}{\int \delta(H(\Gamma) - E)\ d\
 
 where the denominator is often called $$\Omega$$. Whether or not this postulate is appropriate in our classical system is discussed in the [classical mechanics pages]({{site.url}}{{site.baseurl}}/theory/cm/cm_misc/dynamical_billiards.md) and in [the onboarding example]({{site.url}}{{site.baseurl}}/sop/new-students.md#all-together-now). The NVE label on the distribution is a reminder that the phase space surface we are constrained to actually also depends on the number of particles $$N$$ and the volume $$V$$ being held constant. This specific distribution accounts for all realizations of the system consistent with the $$(N,V,E)$$ macrostate, and the collection of all of these realizations is called the microcanonical ensemble.
 
-In Bayesian statistics, we would say this postulate corresponds to the construction of a flat prior distribution, and the specific phrase "a priori" typically means deducible without experience, often from system symmetries. For one possible justification of this prior: the time needed to conduct a macroscopic measurement on an observable, $$f(\cdot)$$, of a system is far longer than typical microscopic timescales. If long-time averages on a specific orbit of the ensemble, $$\gamma(t)$$, is equal to an ensemble average, 
+In Bayesian statistics, we would say this postulate corresponds to the construction of a flat prior distribution, and the specific phrase "a priori" typically means deducible without experience, often from system symmetries. For one possible justification of this prior: the time needed to conduct a macroscopic measurement on an observable, $$f(\cdot)$$, of a system is far longer than typical microscopic timescales. If long-time averages on a specific orbit of the ensemble (parameterized by the initial condition $$\Gamma_0 = \gamma(0)$$), $$\gamma(t; \Gamma_0)$$, is equal to an ensemble average, 
 
 $$ \lim_{T\rightarrow\infty} 
-\frac{1}{T}\int_0^T f(\gamma(t)) dt = \int f(\Gamma) p_{NVE}(\Gamma)d\Gamma $$
+\frac{1}{T}\int_0^T f(\gamma(t; \Gamma_0)) dt = \int_{\Gamma_0 \in \Gamma} f(\Gamma_0) p_{NVE}(\Gamma_0)d\Gamma_0 $$
 
 we can take $$f$$ to be an indicator, or step, function which turns on in a region of interest $$R$$ and off everywhere else. Then the equality becomes
 
-$$ \tau_R = \int_R p_{NVE}(\Gamma)d\Gamma $$
+$$ \tau_R = \int_R p_{NVE}(\Gamma_0)d\Gamma_0 $$
 
 for $$\tau_R$$ the proportion of time our propagating orbit spent in $$R$$. The microcanonical ensemble is valid when the time a system spends in a region of phase space scales with the volume of that region.
 
@@ -52,9 +52,9 @@ $$ \Omega = \int \delta(H(\Gamma) - E) d\Gamma = 8\pi ml^3E. $$
 
 Then, our survival probability can be written as
 
-$$ S(t) = 1 - \int \int_0^t \delta(\gamma(t') - B) p_{NVE}(\gamma(t')) dt' d\Gamma $$
+$$ S(t) = 1 - \int \int_0^t \delta(\gamma(t'; \Gamma_0) - B) p_{NVE}(\Gamma_0) dt' d\Gamma_0 $$
 
-for $$B$$ the opening in the container in phase space coordinates. As you would find on the dynamical billiards page, $$\Gamma(t')$$ is the pair $$(\vec r(t'),\vec p(t'))$$ where the trajectories are periodic and piecewise functions while the boundary $$B$$ can be written as
+for $$B$$ the opening in the container in phase space coordinates. As used earlier on this page, $$\gamma(t'; \Gamma_0)$$ is the pair $$(\vec r(t'),\vec p(t'))$$ plus the initial condition where the trajectories are periodic and piecewise functions while the boundary $$B$$ can be written as
 
 $$ B(x,y,z) = \theta\left(R^2 - \left(y-\frac{l}{2}\right)^2 - \left(z-\frac{l}{2}\right)^2 \right)\delta(x-l)$$
 
