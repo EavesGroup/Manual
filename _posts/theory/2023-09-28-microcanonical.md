@@ -52,7 +52,7 @@ $$ \Omega = \int \delta(H(\Gamma) - E) d\Gamma = 8\pi ml^3E. $$
 
 Then, our survival probability can be written as
 
-$$ S(t) = 1 - \int \int_0^t \delta(\Gamma(t') - B) p_{NVE}(\Gamma(t')) dt' d\Gamma $$
+$$ S(t) = 1 - \int \int_0^t \delta(\gamma(t') - B) p_{NVE}(\Gamma(t')) dt' d\Gamma $$
 
 for $$B$$ the opening in the container in phase space coordinates. As you would find on the dynamical billiards page, $$\Gamma(t')$$ is the pair $$(\vec r(t'),\vec p(t'))$$ where the trajectories are periodic and piecewise functions while the boundary $$B$$ can be written as
 
@@ -66,7 +66,7 @@ requires choosing points uniformly on a sphere. These questions will explain how
 
 (1) For this new system of N particles, what object’s surface do we need to uniformly sample? If we attempt to use the same method as before, what happens to the efficiency? Give an estimate for the probability of accepting a trial when there are just 4 particles in the container.
 
-(2) We can investigate the momentum distribution for the ith particle by writing $$ E' =  E - p_i^2/2m $$ which equals the sum of kinetic energies for all other particles. If the momenta are random variables (no matter what kind), then what is the distribution for $$E'$$? And consequently what is the distribution for $$p_i$$?
+(2) We can investigate the momentum distribution for the ith particle by writing $$ E' =  E - p_i^2/2m $$ which equals the sum of kinetic energies for all other particles. Note that by studying one particle out of many, you are analyzing a subsystem that no longer has constant energy, but is connected to a thermal reservoir (all the other particles). In other words, you have made a choice to move from the microcanonical ensemble to the canonical ensemble. If the momenta are random variables (no matter what kind), then what is the distribution for $$E'$$? This important result shows why for our system in the thermodynamic limit, the microcanonical and canonical ensembles are equivalent. You can read more about the canonical ensemble in your favorite stat mech book, but if you want to know the distribution of momenta for this single particle, one way that Maxwell originally thought about it is by noting that the distribution must be rotationally symmetric and isotropic, so $$f(p^2) = f(p_x^2)f(p_y^2)f(p_z^2)$$. Solving this functional equation will give you the appropriate distribution up to normalization.
 
 (3) As a quick example, return to the single particle. By drawing random numbers from the distribution determined in the previous question for each momentum component $$p_x,p_y,p_z$$, create a figure to show that the final distribution of points satisfies the energy constraint. We call this a rejection-free sampling technique as we no longer need to discard points outside of the sphere.
 
