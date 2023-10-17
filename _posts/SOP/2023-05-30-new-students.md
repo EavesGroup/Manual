@@ -109,11 +109,7 @@ To solve this problem requires a combination of pen and paper work and simulatio
 
 6. Repeat this sampling $$10^6$$ times, and make a histogram of the first-passage-time distribution and survival probability. Plot the survival probability on a log-log scale. What do you observe?
 
-The rest of these questions before syncing the Julia package are optional. But there is a lot of good insight here about why the exercise you just completed has the behavior it does.
-
-7. Read and complete the example on the microcanonical ensemble page. Implement the new
-sampling scheme and recalculate the escape rate. Now what do you observe on a log-log plot? As
-a hint, the rate will have a noticeably different time dependence.
+7. This question and the next are optional, but there is a lot of good insight here about why the exercise you just completed has the behavior it does. Read and complete the example on the microcanonical ensemble page. Implement the new sampling scheme and recalculate the escape rate. Now what do you observe on a log-log plot? As a hint, the rate will have a noticeably different time dependence.
 
 8. What has changed between our two examples which causes the escape rate to vary so significantly? As a final task, we should model the numerical results analytically.
     - In our ideal gas (constant total energy), the number of particles impacting the punch-out
