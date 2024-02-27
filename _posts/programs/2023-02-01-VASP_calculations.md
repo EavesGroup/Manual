@@ -10,6 +10,7 @@ tags:
     - bandstructure
     - density-of-states
     - surfaces
+    - charge-density
 header: no
 breadcrumb: true
 authors:
@@ -60,6 +61,13 @@ Sometimes optimizing a molecule on a surface can be tricky, especially if it is 
 
 ### Density of States
 
+**Useful Tags**
+
+- ISTART = 1 (read from existing WAVECAR)
+- ICHARG = 1 (read from existing CHGCAR)
+- LWAVE = F (don't waste time writing an unchanged WAVECAR)
+- LCHARG = F (don't waste time writing an unchanged CHGCAR)
+
 In Peyton's experience, it is best to use ISMEAR equal to `-5`, the tetrahedron method with Blöchl corrections, for calculating the charge density for density of state calculations. This value of ISMEAR is better for catching fine details in the spectrum. It is important to note that `ISMEAR = -5` can only be used if you have four or more k-points and should never be used to relax the structure of a metal.
 
 #### Checklist
@@ -68,11 +76,9 @@ In Peyton's experience, it is best to use ISMEAR equal to `-5`, the tetrahedron 
 
 ### Bandstructure
 
-Unlike the density of states, calculating the charge density for a bandstructure calculation should be done with `ISMEAR = 0`, which is Gaussian smearing. It is highly likely that you used this setting for your convergence so you can pull the necessary files from there instead of repeating a calculation.
+**Useful Tags**
+- 
 
-For this setting make sure that `LWAVE = .FALSE.` so that the WAVECAR is not written. Because of the settings we use, the printed WAVECAR will be junk anyways so we can save time and space by not printing the large WAVECAR.
-
-To create the bandstructure you need to know the high-symmetry points of your system's Brillouin zone. First, identify the space group of system (point group given by VASP plus the Bravais lattice). [This link](https://www.staff.ncl.ac.uk/j.p.goss/symmetry/index.html) provides one way of helping identify the space group once you have those two pieces. \href{https://www.cryst.ehu.es}{This site} can then help identify the fractional coordinates of the k-points of high symmetry points ($\Gamma$, M, K, $\Lambda$, etc.). Alternatively, you may find the paper by Setyawan and Curtarolo helpful.\cite{Setyawan.Curtarolo.2010.10.1016/j.commatsci.2010.05.010} After you decide the path you want to take, enter the fractional coordinates into the KPOINTS file.
 
 #### Checklist
 
@@ -84,3 +90,53 @@ To create the bandstructure you need to know the high-symmetry points of your sy
     - 4th line $\rightarrow$ fractional or cartesian coordinates
     - remaining lines $\rightarrow$ path through the Brillouin zone
 - 
+
+Unlike the density of states, calculating the charge density for a bandstructure calculation should be done with `ISMEAR = 0`, which is Gaussian smearing. It is highly likely that you used this setting for your convergence so you can pull the necessary files from there instead of repeating a calculation.
+
+For this setting make sure that `LWAVE = .FALSE.` so that the WAVECAR is not written. Because of the settings we use, the printed WAVECAR will be junk anyways so we can save time and space by not printing the large WAVECAR.
+
+To create the bandstructure you need to know the high-symmetry points of your system's Brillouin zone. First, identify the space group of system (point group given by VASP plus the Bravais lattice). [This link](https://www.staff.ncl.ac.uk/j.p.goss/symmetry/index.html) provides one way of helping identify the space group once you have the point group and Bravais lattice. [This site](https://www.cryst.ehu.es) can then help identify the fractional coordinates of the k-points of high symmetry points ($\Gamma$, M, K, $\Lambda$, etc.). Alternatively, you may find the [paper](https://doi.org/10.1016/j.commatsci.2010.05.010) by Setyawan and Curtarolo helpful or you may want to use [this tool](https://www.materialscloud.org/work/tools/seekpath).[^1] After you decide the path you want to take, enter the fractional coordinates into the KPOINTS file.
+
+[^1]: Setyawan, W. and Curtarolo S. *High-throughput electronic band structure calculations: Challenges and tools*, [Computational Materials Science (49)2 299-312 **2010**](https://doi.org/10.1016/j.commatsci.2010.05.010)
+
+### Partial Charge Density
+
+**Useful Tags**
+- LPARD = T (tell VASP you want to calculate the partial charge density)
+
+- ISTART = 1 (read from existing WAVECAR)
+- ICHARG = 1 (read from existing CHGCAR)
+- LWAVE = F (don't waste time writing an unchanged WAVECAR)
+- LCHARG = F (don't waste time writing an unchanged CHGCAR)
+
+- NBMOD = -3 (energy range is relative to the Fermi energy)
+- EINT = minE, maxE (narrow range around HOMO/LUMO or entire conduction band or valence band for example)
+
+- LSEPB (boolean, write each band contribution to its own file)
+- IBAND (specify which bands you are interested in, leave out if all)
+- LSEPK (boolean, write each k-point contribution to its own file)
+- KPUSE (specify which k-points you are interested in, leave out if all)
+
+
+#### Checklist
+
+- Copy CHGCAR and WAVECAR from converged run
+- Set `ISTART=1; ICHARG = 1` in the INCAR
+- Set `LPARD = .TRUE.` in the INCAR
+- Specify some combination of `EINT`, `IBAND`, and `KPUSE`
+
+The partial charge density can be useful to see a visualization of where the charge is localized over a given energy range, band, and/or k-points. The resulting primary file from this calculation, the PARCHG, can be dropped into VESTA where you can specify an 'isosurface', which the wiki defines as a constant current image. The units of this isosurface can be tricky to define. The units of the PARCHG are electron density * unit cell volume, i.e. number of electrons.
+
+Digging through the VASP code, a comment defines the partial charge as
+
+$$ \rho(r) = \sum_{nk} \phi_{nk}(r)\phi_{nk}^*(r) f_{nk} $$
+
+where $\phi_{nk}(r)$ is the psuedo-wavefunction of band $n$ and k-point $k$ at position $r$ and $f_{nk}$ is the Fermi occupation of band $n$ and k-point $k$. In a partial charge calculation, these Fermi occupations are used primarily as a step function to focus the sum on the requested energy interval, bands, or k-points. When requesting a specific energy interval, the VASP code does a loop over every band and k-point and checks if the eigenvalue of the psuedo-wavefunction at that point is within the range of interest. If this check statement returns true, the eigenvalue of $\phi_{nk}$ is within the range, it sets the corrersponding Fermi occupation $f_{nk}$ to one and sets it to zero otherwise. More mathematically, it obtains $E_{nk}$ as defined by the Schrödinger equation
+
+$$ \mathcal{H}\phi_{nk}(r) = E_{nk}\phi_{nk}(r) $$
+
+and asks `minE `$< E_{nk} <$` maxE ?` $f_{nk} = 1$ `:` $f_{nk}=0$.
+
+An integral over the entire unit cell $\int \rho(r)dr$ should return the number of electrons, but because of missing weight factors across k-points and energy bands this is not quite the case. Along an isosurface $\Omega$ of 0.1 for example, we are saying $\rho(r\in\Omega) = 0.1$.
+
+

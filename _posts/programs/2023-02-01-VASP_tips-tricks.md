@@ -64,7 +64,7 @@ IBRION = 2 ; ISIF = 3
 NSW = 1000
 ```
 
-I have put a few commands on the same line-separated by a semicolon-to shorten the file length a bit. This also works in an actual input file but I don't recommend it. The most important parameter here is EDIFFG, which-when negative-defines the force cutoff for the calculation to stop (see [Inputs]({{ site.baseurl }}/programs/2023-02-01-VASP_inputs.md)]). In this example INCAR, EDIFFG is quite large because we want to slowly step down to the desired EDIFFG. Also note the `ISTART = 0` that is important for not reading in a previous WAVECAR. Because these calculations change the cell volume, reading in a previously calculated WAVECAR would be really bad.
+I have put a few commands on the same line-separated by a semicolon-to shorten the file length a bit. This also works in an actual input file, but I don't recommend it. The most important parameter here is EDIFFG, which-when negative-defines the force cutoff for the calculation to stop (see [Inputs]({{ site.baseurl }}/programs/2023-02-01-VASP_inputs.md)]). In this example INCAR, EDIFFG is quite large because we want to slowly step down to the desired EDIFFG. Also note the `ISTART = 0` that is important for not reading in a previous WAVECAR. Because these calculations change the cell volume, reading in a previously calculated WAVECAR would be really bad.
 
 For our first calculation we want to change the starting volume of the cell in the POSCAR to be away from equilibirum. By kicking the system out of equilibrium the calculation should be better able to find the actual minimum. Be careful while changing the volume to not effect the symmetry of the system. Run this system multiple times until the calculation only takes one step, i.e. the command `tail screen*`  returns a line that looks like `   1 F= XXX E0= XXX  d E =XXX` where the `XXX` are unspecified values. More explicitly, each time the run finishes, check the screen file and, if it took more than one step, copy the CONTCAR into the POSCAR and submit the job again. Peyton's script for submitting the jobs does this copying automatically.
 
@@ -142,3 +142,15 @@ Peyton brought up an excellent paper for finding paths to use to plot bandstruct
 #### killed by signal: 9
 
 This error message means that your calculation requires more memory than is available on the number of nodes you are using.
+
+#### Out of memory (oom) killed
+
+Aside from just chucking more cores at the problem, the VASP wiki offers the following advice (here)[https://www.vasp.at/wiki/index.php/Not_enough_memory] to reduce memory requirements. Note that these options typically result in the calculation taking longer as the tradeoff and therefore aren't ideal if you are already up against walltime limits.
+
+- Increase NCORE (reduce NPAR) to treat fewer bands in parallel and reduce storage requirements per core for the storage of non-local projectors.
+- Set `LREAL = Auto` to evaluate the projection operators in real-space instead of reciprocal space
+- Decrease KPAR to treat fewer k-points in parallel. `KPAR = 1` will result in the smallest memory footprint per core, but will reduce parallelization efficiency.
+- Switch the symmetrization scheme to `ISYM = 2`
+- Ensure you're using scaLAPACK that allows for the `NBANDS x NBANDS` matrix to be distributed over all cores handling one k-point. Note that this won't be useful if you have reduced `KPAR` down to 1.
+- Finally, note the reported memory per core reported in the OUTCAR. You can search for the phrase "VASP MPI-rank" to find the correct line. This reports how the memory demand is distributed and how memory storage could perhaps be reduced more.
+
