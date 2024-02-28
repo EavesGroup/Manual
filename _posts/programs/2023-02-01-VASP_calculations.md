@@ -96,7 +96,7 @@ Unlike the density of states, calculating the charge density for a bandstructure
 
 For this setting make sure that `LWAVE = .FALSE.` so that the WAVECAR is not written. Because of the settings we use, the printed WAVECAR will be junk anyways so we can save time and space by not printing the large WAVECAR.
 
-To create the bandstructure you need to know the high-symmetry points of your system's Brillouin zone. First, identify the space group of system (point group given by VASP plus the Bravais lattice). [This link](https://www.staff.ncl.ac.uk/j.p.goss/symmetry/index.html) provides one way of helping identify the space group once you have the point group and Bravais lattice. [This site](https://www.cryst.ehu.es) can then help identify the fractional coordinates of the k-points of high symmetry points ($\Gamma$, M, K, $\Lambda$, etc.). Alternatively, you may find the [paper](https://doi.org/10.1016/j.commatsci.2010.05.010) by Setyawan and Curtarolo helpful or you may want to use [this tool](https://www.materialscloud.org/work/tools/seekpath).[^1] After you decide the path you want to take, enter the fractional coordinates into the KPOINTS file.
+To create the bandstructure you need to know the high-symmetry points of your system's Brillouin zone. First, identify the space group of system (point group given by VASP plus the Bravais lattice). [This link](https://www.staff.ncl.ac.uk/j.p.goss/symmetry/index.html) provides one way of helping identify the space group once you have the point group and Bravais lattice. [This site](https://www.cryst.ehu.es) can then help identify the fractional coordinates of the k-points of high symmetry points ($\Gamma$, M, K, $\Lambda$, etc.). Alternatively, you may find the [paper](https://doi.org/10.1016/j.commatsci.2010.05.010) by Setyawan and Curtarolo helpful or you may want to use [this tool](https://www.materialscloud.org/work/tools/seekpath), but doublecheck the results.[^1] After you decide the path you want to take, enter the fractional coordinates into the KPOINTS file.
 
 [^1]: Setyawan, W. and Curtarolo S. *High-throughput electronic band structure calculations: Challenges and tools*, [Computational Materials Science (49)2 299-312 **2010**](https://doi.org/10.1016/j.commatsci.2010.05.010)
 
@@ -122,6 +122,7 @@ To create the bandstructure you need to know the high-symmetry points of your sy
 #### Checklist
 
 - Copy CHGCAR and WAVECAR from converged run
+- Set `KPAR = 1` or the calculation will crash due to `KPAR > 1` not being implemented
 - Set `ISTART=1; ICHARG = 1` in the INCAR
 - Set `LPARD = .TRUE.` in the INCAR
 - Specify some combination of `EINT`, `IBAND`, and `KPUSE`
