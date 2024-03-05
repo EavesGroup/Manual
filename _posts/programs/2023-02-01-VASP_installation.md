@@ -32,7 +32,7 @@ authors:
 
 Regardless of the computer architecture, the first step of installing VASP is to retrieve the necessary files. VASP is not a free program and, therefore, requires a license to download and operate. We obtained our license through [Materials Design, Inc.](https://my.materialsdesign.com) and need to download it from there, not the VASP portal. As of October 13, 2022, [Sina G. Lewis](mailto:sina.lewis@colorado.edu) is the contact for the login details.
 
-After you have downloaded the files from the portal, do NOT unzip them yet. [Peyton](/chapter/appendix/appendix_people#R.PeytonCline) has experienced issues in the past when he unzips the files on his local machine. Instead, upload them to your project directory on the system where you intend to install VASP. I recommend having a folder in this directory called `programs` where you keep VASP and other programs. The command to upload the files to this location on Summit or Alpine would then look like
+After you have downloaded the files from the portal, do NOT unzip them yet. [Peyton]({{ site.url }}/appendix/appendix_people#R.PeytonCline) has experienced issues in the past when he unzips the files on his local machine. Instead, upload them to your project directory on the system where you intend to install VASP. I recommend having a folder in this directory called `programs` where you keep VASP and other programs like [LAMMPS]({{site.url}}/programs/lammps). The command to upload the files to this location on Summit or Alpine would then look like
 ```bash
     scp filename identikey@login.rc.colorado.edu:/projects/identikey/programs
 ```
@@ -62,13 +62,13 @@ Alpine currently has limited version choices for these modules. Nevertheless, it
     module load intel/2022.1.2 impi/2021.5.0 mkl/2022.0.2
 ```
 
-After loading these modules, we want to grab the correct makefile for our computer architecture from the `arch` folder that should have been unpacked from the VASP zip file. Because we are using intel, we will grab the makefile titled `makefile.include.intel`. Copy this file to the above directory, where the rest of your VASP files should be, and rename it
+After loading these modules, we want to grab the correct makefile for our computer architecture from the `arch` folder that should have been unpacked from the VASP zip file. Because we are using intel, we will grab the makefile titled `makefile.include.intel`. Copy this file to the parent directory, where the rest of your VASP files should be, and rename it. This command would be
 ```bash
     cp makefile.include.intel ../makefile.include
 ```
 As a final step, we need to edit a few lines in our new file `makefile.include`. If we are using Intel Parallel Studio's MKL, which we most likely are, we want to find the line `FCL += -qmkl=sequential` and remove the `q` so that it reads `FCL += -mkl=sequential`. While we are here, we can go ahead and comment out the next line that starts `MKLROOT`. Finally, in the line `#LLIBS += -L$(WANNIER90_ROOT)/lib -lwannier`, we want to remove the `/lib` part. These last two steps are only important for a Wannier installation, but are fine to do in a general installation.
 
-Most importantly, because Alpine has AMD CPUs and not Intel CPUs we need to tell the compile to use a different instruction set. This is done by finding the line that reads
+Most importantly, because Alpine has AMD CPUs and not Intel CPUs we need to tell the compiler to use a different instruction set. This is done by finding the line that reads
 ```bash
     VASP_TARGET_CPU ?= -xHOST
 ```
@@ -76,6 +76,8 @@ and changing it to read
 ```bash
     VASP_TARGET_CPU ?= -march=core-avx2
 ```
+
+As a final step, it is recommended to compile VASP 6.2 and up with the flag `-DVASP_HDF5` in the `CPP_OPTIONS`, includes `INCS`, and linking `LLIBS` instructions. There is a section near the bottom of the `makefile.include` that you can simply uncomment for this.
 
 We are now good to install VASP. We want to run the command
 ```bash
