@@ -49,7 +49,7 @@ Alpine is the most recent (Fall 2022) supercomputer. It is an institutionally fu
 ```bash
     ssh -X identikey@login.rc.colorado.edu
 ```
-and then load Slurm for Alpine
+and then load Slurm for Alpine (no longer required as of mid-2023)
 ```bash
     module load slurm/alpine
 ```
