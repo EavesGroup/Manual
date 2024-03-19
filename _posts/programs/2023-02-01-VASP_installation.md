@@ -68,7 +68,7 @@ After loading these modules, we want to grab the correct makefile for our comput
 ```
 As a final step, we need to edit a few lines in our new file `makefile.include`. If we are using Intel Parallel Studio's MKL, which we most likely are, we want to find the line `FCL += -qmkl=sequential` and remove the `q` so that it reads `FCL += -mkl=sequential`. While we are here, we can go ahead and comment out the next line that starts `MKLROOT`. Finally, in the line `#LLIBS += -L$(WANNIER90_ROOT)/lib -lwannier`, we want to remove the `/lib` part. These last two steps are only important for a Wannier installation, but are fine to do in a general installation.
 
-Most importantly, because Alpine has AMD CPUs and not Intel CPUs we need to tell the compiler to use a different instruction set. This is done by finding the line that reads
+**Most importantly**, because Alpine has AMD CPUs and not Intel CPUs we need to tell the compiler to use a different instruction set. This is done by finding the line that reads
 ```bash
     VASP_TARGET_CPU ?= -xHOST
 ```
@@ -77,7 +77,10 @@ and changing it to read
     VASP_TARGET_CPU ?= -march=core-avx2
 ```
 
-As a final step, it is recommended to compile VASP 6.2 and up with the flag `-DVASP_HDF5` in the `CPP_OPTIONS`, includes `INCS`, and linking `LLIBS` instructions. There is a section near the bottom of the `makefile.include` that you can simply uncomment for this.
+As a final step, it is recommended to compile VASP 6.2 and up with the flag `-DVASP_HDF5` in the `CPP_OPTIONS`, includes `INCS`, and linking `LLIBS` instructions. There is a section near the bottom of the `makefile.include` that you can simply uncomment for this. Sina found that to make this work it was required to `module load hdf5/1.12.1` and directly supply the path to the HDF_ROOT in the makefile. The appropriate line looks like
+```bash
+    HDF5_ROOT ?= /curc/sw/install/hdf5/1.12.1/impi/2021.5.0/intel/2022.1.2
+```
 
 We are now good to install VASP. We want to run the command
 ```bash
