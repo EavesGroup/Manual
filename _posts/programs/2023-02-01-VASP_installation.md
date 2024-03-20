@@ -33,7 +33,7 @@ authors:
 
 Regardless of the computer architecture, the first step of installing VASP is to retrieve the necessary files. VASP is not a free program and, therefore, requires a license to download and operate. We obtained our license through [Materials Design, Inc.](https://my.materialsdesign.com) and need to download it from there, not the VASP portal. As of October 13, 2022, [Sina G. Lewis](mailto:sina.lewis@colorado.edu) is the contact for the login details.
 
-After you have downloaded the files from the portal, do NOT unzip them yet. [Peyton]({{ site.url }}/appendix/appendix_people#R.PeytonCline) has experienced issues in the past when he unzips the files on his local machine. Instead, upload them to your project directory on the system where you intend to install VASP. I recommend having a folder in this directory called `programs` where you keep VASP and other programs like [LAMMPS]({{site.url}}/programs/lammps). The command to upload the files to this location on Summit or Alpine would then look like
+After you have downloaded the files from the portal, do NOT unzip them yet. [Peyton]({{ site.url }}/appendix/appendix_people#R.PeytonCline) has experienced issues in the past when he unzips the files on his local machine. Instead, upload them to your project directory on the system where you intend to install VASP. I recommend having a folder in this directory called `programs` where you keep VASP and other programs like [LAMMPS]({{site.url}}{{site.baseurl}}/programs/lammps). The command to upload the files to this location on Summit or Alpine would then look like
 ```bash
     scp filename identikey@login.rc.colorado.edu:/projects/identikey/programs
 ```
