@@ -28,19 +28,43 @@ breadcrumb: true
 
 ---
 
-#### [Si:1Anth]({{ site.urlfile }}structure_library/silicon_1Anth)
-Silicon slab with (111) faces and anthracene covalently attachedalong its long edge. The <a class="" href="{{ site.urlfile }}structure_library/silicon_1Anth_initial">starting structure</a>.
+#### [Si:9Anth]({{ site.urlfile }}structure_library/silicon_1Anth)
+Silicon slab with (111) faces and anthracene covalently attached in the 9 position (in the middle of its long edge). The <a class="" href="{{ site.urlfile }}structure_library/silicon_1Anth_initial">starting structure</a>.
 {% include accordian-no-hlines.html title="Details" contents="VASP Parameters: plane wave energy cutoff 540 eV, energy convergence 1e-5, force convergence 10 meV. The anthracene can be placed along the symmetry axis of the silicon slab so that it dodges the surface psuedo-hydrogens and does not develop a bend, however, this structure with a bend is 0.25 eV (9.67 kT or 5.76 kcal/mol) lower in energy than the stiff molecule."%}
 
 ---
 
-#### [Si:1Tet]({{ site.urlfile }}structure_library/silicon_1Tet)
+#### [Si:Tet]({{ site.urlfile }}structure_library/silicon_1Tet)
 Silicon slab with (111) faces and tetracene covalently attached along its long edge. The <a class="" href="{{ site.urlfile }}structure_library/silicon_1Tet_initial">starting structure</a>.
 {% include accordian-no-hlines.html title="Details" contents="VASP Parameters: plane wave energy cutoff 540 eV, energy convergence 1e-5, force convergence 10 meV."%}
 
 ---
 
+#### [Si:9EA - singlet]({{site.urlfile}}structure_library/silicon_9EA_singlet)
+Silicon slab with (111) faces and 9-ethylanthracene attached to the center silicon on one side of the slab. 
+{% include accordian-no-hlines.html title="Details" contents="VASP Parameters: plane wave energy cutoff 540 eV, energy convergence 1e-5, force convergence 10 meV."%}
+---
+
+#### [Si:9EA - triplet]({{site.urlfile}}structure_library/silicon_9EA_triplet)
+Silicon slab with (111) faces and 9-ethylanthracene attached to the center silicon on one side of the slab. Started with the unconstrained structure above and continued with a spin constrained optimization (`ISPIN = 2, NUPDOWN = 2`).
+{% include accordian-no-hlines.html title="Details" contents="VASP Parameters: plane wave energy cutoff 540 eV, energy convergence 1e-5, force convergence 10 meV."%}
+
+---
+
+#### [Si:9VA - singlet]({{site.urlfile}}structure_library/silicon_9VA_singlet)
+Silicon slab with (111) faces and 9-vinylanthracene attached to the center silicon on one side of the slab. 
+{% include accordian-no-hlines.html title="Details" contents="VASP Parameters: plane wave energy cutoff 540 eV, energy convergence 1e-5, force convergence 10 meV."%}
+
+---
+
+#### [Si:9VA - triplet]({{site.urlfile}}structure_library/silicon_9VA_triplet)
+Silicon slab with (111) faces and 9-vinylanthracene attached to the center silicon on one side of the slab. Started with the unconstrained structure above and continued with a spin constrained optimization (`ISPIN = 2, NUPDOWN = 2`).
+{% include accordian-no-hlines.html title="Details" contents="VASP Parameters: plane wave energy cutoff 540 eV, energy convergence 1e-5, force convergence 10 meV."%}
+
+---
+
 #### []
+
 
 
 ### Silicon Quantum Dot Systems
