@@ -22,6 +22,9 @@ breadcrumb: true
 
 {% include mathjax.html %}
 
+### Bulk
+#### [Silicon Bulk with 111 orientation]({{ site.urlfile }}structure_library/bulk_silicon_POSCAR)
+
 ### Silicon Slab Systems
 #### [Silicon Slab]({{ site.urlfile }}structure_library/silicon_slab)
 {% include accordian-no-hlines.html title="Details" contents="VASP Parameters: plane wave energy cutoff 540 eV, energy convergence 1e-8, force convergence 10 meV."%}
