@@ -16,7 +16,7 @@ breadcrumb: true
 <div class="panel radius" markdown="1">
 **Table of Contents**
 {: #toc }
-*  TOC
+* TOC
 {:toc}
 </div>
 </div><!-- /.medium-4.columns -->
@@ -25,6 +25,6 @@ breadcrumb: true
 
 ### OUTCAR
 
-### CHRGCAR
+### CHGCAR
 
 ### WAVECAR

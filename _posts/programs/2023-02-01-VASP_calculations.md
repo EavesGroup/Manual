@@ -23,7 +23,7 @@ authors:
 <div class="panel radius" markdown="1">
 **Table of Contents**
 {: #toc }
-*  TOC
+* TOC
 {:toc}
 </div>
 </div><!-- /.medium-4.columns -->
@@ -35,6 +35,7 @@ authors:
 #### Surfaces
 
 **Useful Tags**
+
 - selective dynamics (in the POSCAR)
 - IDIPOL
 
@@ -46,10 +47,10 @@ The testing procedure for this cell volume and vacuum size is similar to when te
 
 [See for reference]({{site.urlfile}}examplesVASP/POSCAR_Si_surface.vasp) the Si(111) surface where the inner 2 layers have been frozen at bulk geometry.
 
-
 #### Molecules on Surfaces
 
 **Useful Tags**
+
 - selective dynamics (in the POSCAR)
 - NSW
 - IDIPOL
@@ -58,7 +59,6 @@ The testing procedure for this cell volume and vacuum size is similar to when te
 If you want a molecule on a surface, it is best to start as advised in the [last section](#surfaces) unless you are lucky and someone hands you a slab that they have already tested. In either case, once you have a good slab you need to add your molecule and then optimize the geometry.
 
 Sometimes optimizing a molecule on a surface can be tricky, especially if it is in a very bad starting configuration. To speed up this optimization, start with a low force convergence and only allow the molecule atoms to move and only in the z-direction. After this step is complete, allow the molecule to move in all directions with a higher force cutoff. Finally, allow the molecule and surface atoms to move in all directions, potentially with the LDIPOL tag turned on. In all of these steps, be sure to have NSW set to some non-zero value, otherwise, nothing will happen.
-
 
 ### Density of States
 
@@ -73,27 +73,27 @@ In Peyton's experience, it is best to use ISMEAR equal to `-5`, the tetrahedron 
 
 #### Checklist
 
-- 
+-
 
 ### Bandstructure
 
 **Useful Tags**
+
 - ISTART = 1
 - ICHARG = 11
 - LWAVE = .FALSE.
 - LCHARG = .FALSE.
-
 
 #### Checklist
 
 - Copy CHGCAR from converged run with `ISMEAR=0`
 - Set `ICHARG = 11` in the INCAR
 - Change KPOINTS file
-    - 2nd line $\rightarrow$ number of points per line
-    - 3rd line $\rightarrow$ line mode
-    - 4th line $\rightarrow$ fractional or cartesian coordinates
-    - remaining lines $\rightarrow$ path through the Brillouin zone
-- 
+  - 2nd line $\rightarrow$ number of points per line
+  - 3rd line $\rightarrow$ line mode
+  - 4th line $\rightarrow$ fractional or cartesian coordinates
+  - remaining lines $\rightarrow$ path through the Brillouin zone
+-
 
 Unlike the density of states, calculating the charge density for a bandstructure calculation should be done with `ISMEAR = 0`, which is Gaussian smearing. It is highly likely that you used this setting for your convergence so you can pull the necessary files from there instead of repeating a calculation.
 
@@ -103,10 +103,10 @@ To create the bandstructure you need to know the high-symmetry points of your sy
 
 [^1]: Setyawan, W. and Curtarolo S. *High-throughput electronic band structure calculations: Challenges and tools*, [Computational Materials Science (49)2 299-312 **2010**](https://doi.org/10.1016/j.commatsci.2010.05.010)
 
-
 ### Partial Charge Density
 
 **Useful Tags**
+
 - LPARD = T (tell VASP you want to calculate the partial charge density)
 
 - ISTART = 1 (read from existing WAVECAR)
@@ -121,7 +121,6 @@ To create the bandstructure you need to know the high-symmetry points of your sy
 - IBAND (specify which bands you are interested in, leave out if all)
 - LSEPK (boolean, write each k-point contribution to its own file)
 - KPUSE (specify which k-points you are interested in, leave out if all)
-
 
 #### Checklist
 
@@ -141,8 +140,6 @@ where $\phi_{nk}(r)$ is the psuedo-wavefunction of band $n$ and k-point $k$ at p
 
 $$ \mathcal{H}\phi_{nk}(r) = E_{nk}\phi_{nk}(r) $$
 
-and asks `minE `$< E_{nk} <$` maxE ?` $f_{nk} = 1$ `:` $f_{nk}=0$.
+and asks `minE`$< E_{nk} <$`maxE ?` $f_{nk} = 1$ `:` $f_{nk}=0$.
 
 An integral over the entire unit cell $\int \rho(r)dr$ should return the number of electrons, but because of missing weight factors across k-points and energy bands this is not quite the case. Along an isosurface $\Omega$ of 0.1 for example, we are saying $\rho(r\in\Omega) = 0.1$.
-
-
