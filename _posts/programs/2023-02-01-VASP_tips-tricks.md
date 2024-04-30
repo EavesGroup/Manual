@@ -21,7 +21,7 @@ authors:
 <div class="panel radius" markdown="1">
 **Table of Contents**
 {: #toc }
-*  TOC
+* TOC
 {:toc}
 </div>
 </div><!-- /.medium-4.columns -->
@@ -31,6 +31,7 @@ authors:
 This chapter will collect various tips and tricks about VASP that don't fit neatly into any of the other chapters. If a particular section becomes long enough it may become it's own chapter.
 
 ### Psuedopotentials
+
 While perusing the PBE psuedopotential folder you may notice that there are GW versions of some psuedopotentials. Peyton has found that the PBE and PBE_GW potentials are the same if you don't do a GW step. However, one might provide better/faster convergence than the other. If you are having trouble with one potential it can be valuable to test the other.
 
 ### Convergence
@@ -42,6 +43,7 @@ If you want to do a calculation for a system that is relatively stiff (i.e. Si) 
 ##### Iterative ISIF=3
 
 The best way to relax the cell volume is to use ISIF equals 3, which allows all degrees of freedom to relax, with increasingly stricter force cutoffs (see [Inputs]({{ site.baseurl }}/programs/2023-02-01-VASP_inputs.md)). This iterative process can help us identify and avoid Pulay stress. A basic cell volume relaxation calculation might have the following INCAR
+
 ```bash
 ##
 System = diamond Si
@@ -66,7 +68,7 @@ NSW = 1000
 
 I have put a few commands on the same line-separated by a semicolon-to shorten the file length a bit. This also works in an actual input file, but I don't recommend it. The most important parameter here is EDIFFG, which-when negative-defines the force cutoff for the calculation to stop (see [Inputs]({{ site.baseurl }}/programs/2023-02-01-VASP_inputs.md)]). In this example INCAR, EDIFFG is quite large because we want to slowly step down to the desired EDIFFG. Also note the `ISTART = 0` that is important for not reading in a previous WAVECAR. Because these calculations change the cell volume, reading in a previously calculated WAVECAR would be really bad.
 
-For our first calculation we want to change the starting volume of the cell in the POSCAR to be away from equilibirum. By kicking the system out of equilibrium the calculation should be better able to find the actual minimum. Be careful while changing the volume to not effect the symmetry of the system. Run this system multiple times until the calculation only takes one step, i.e. the command `tail screen*`  returns a line that looks like `   1 F= XXX E0= XXX  d E =XXX` where the `XXX` are unspecified values. More explicitly, each time the run finishes, check the screen file and, if it took more than one step, copy the CONTCAR into the POSCAR and submit the job again. Peyton's script for submitting the jobs does this copying automatically.
+For our first calculation we want to change the starting volume of the cell in the POSCAR to be away from equilibirum. By kicking the system out of equilibrium the calculation should be better able to find the actual minimum. Be careful while changing the volume to not effect the symmetry of the system. Run this system multiple times until the calculation only takes one step, i.e. the command `tail screen*`  returns a line that looks like `1 F= XXX E0= XXX  d E =XXX` where the `XXX` are unspecified values. More explicitly, each time the run finishes, check the screen file and, if it took more than one step, copy the CONTCAR into the POSCAR and submit the job again. Peyton's script for submitting the jobs does this copying automatically.
 
 After the calculation takes only one step we want to restric the forces more by updating EDIFFG from `-1e-1` to `-1e-2`. We then repeat the above steps, running the system mulitple times until the calculation takes only one step. Rinse and repeat until the system takes only one step with the desired EDIFFG.
 
@@ -76,7 +78,7 @@ Another way to use ISIF=3 to find the converged volume is to keep increasing ENC
 
 The ISIF equals 4 option allows most degrees of freedom to relax, but restricts the volume of the cell. We can use this option to find the ground state of the cell by running calculations at numerous volumes of the cell-using a negative value in the 2nd line of the POSCAR to specify the value-and then fitting to an equation of state. This method is the only sure way to remove all Pulay stress. The VASP manual recommends that the volumes don't differ more than 5--10\% to avoid errors introduced by basis set incompleteness. After we have a pair of volumes and their energies we can fit to an equation of state. A common choice is the Birch-Murnaghan equation of state
 $$
-\begin{equation}\label{eq:Birch-Murnaghan}	E(V) = E_0 + \frac{9V_0B_0}{16}\left\{ \left[\left(\frac{V_0}{V}\right)^{2/3} - 1\right]^3B_0' + \left[\left(\frac{V_0}{V}\right)^{2/3}-1\right]\left[6-4\left(\frac{V_0}{V}\right)^{2/3}\right] \right\}
+\begin{equation}\label{eq:Birch-Murnaghan} E(V) = E_0 + \frac{9V_0B_0}{16}\left\{ \left[\left(\frac{V_0}{V}\right)^{2/3} - 1\right]^3B_0' + \left[\left(\frac{V_0}{V}\right)^{2/3}-1\right]\left[6-4\left(\frac{V_0}{V}\right)^{2/3}\right] \right\}
 \end{equation}
 $$
 where $$E_0$$ is the ground state energy, $$V_0$$ is the ground state volume, $$B_0$$ is the bulk modulus, and $$B_0'$$ is the derivative of the bulk modulus with respect to pressure.
@@ -92,13 +94,14 @@ The use of ISIF=4 is sensitive to the step sizes you take in sampling the volume
 VASP takes ENCUT as one of its parameters. This is the energy cutoff for the planewave basis set used. The default is 1.3 times the largest ENMAX used in the POTCAR. Typically however a larger ENMAX needs to be used. To test convergence, start with a value for ENCUT near the default and increment in steps of ~20 eV to a very large number such as 1000. In Si, 1000 was a high enough value to converge out Pulay stress. You want to test this range for a very small kpoint grid, such as 5x5x5 and a very large kpoint grid such as 21x21x21.
 
 Note that if you use too large of an energy cutoff you will receive an error
+
 ```
     PSMAXN for non-local potential too small
 ```
+
 Although the error suggests that you should change PSMAXN this is incorrect. In fact, you never want to change PSMAXN. Instead you should take this as a sign to decrease ENCUT. If you search this error you will also see suggestions to reorder the POTCAR files-and thus also the POSCAR-so that the atom with the highest ENMAX-also called the hardest atom-is first in the concatenated POTCAR.
 
 Once the calculations have finished you can use Peyton's `checkE.sh` script to pull the energies from all of the different files into a nice list. Plot the energy vs ENCUT value. At one point you might start to see oscillations in the energy as ENCUT increases. These oscillations are due to corrections in the potentials. The converged ENCUT value is where the energy difference between the converged value and the next is less than your desired accuracy. For paper quality work this is something like 0.01--1 meV/atom.
-
 
 ##### K-points
 
@@ -108,7 +111,7 @@ The k-point grid tells VASP how densely you want to sample reciprocal space. Lik
 
 In the above sections, the other value was kept fixed and we aren't guaranteed to have found the best convergence for each parameter. To fix this, you want to go back and forth a bit on these calculations. Find the converged ENCUT value and then test the k-point grid again. Find the converged k-point grid and test ENCUT again.
 
-If you plan to upscale to a surface structure, it is fine to be on the upper end of the 0.01--1 meV/atom energy range. It is better to start with somewhat `medium` aggressive convergence and see how things go when you upscale to a surface slab. You may find that you can increase the aggressiveness, but you'll save time and energy starting in about the middle. 
+If you plan to upscale to a surface structure, it is fine to be on the upper end of the 0.01--1 meV/atom energy range. It is better to start with somewhat `medium` aggressive convergence and see how things go when you upscale to a surface slab. You may find that you can increase the aggressiveness, but you'll save time and energy starting in about the middle.
 
 #### Efficiency
 
@@ -118,10 +121,9 @@ The NCORE setting tells the calculation how many compute cores should work on an
 
 The KPAR setting determines how many k-points should be treated in parallel. Because the k-points are assigned to the compute cores in a round-robin fashion, you want the number of irreducible k-points to be divisible by KPAR. Otherwise you will have some compute cores working on more k-points than the other compute cores, reducing the overall efficiency. For large calculations that have fewer k-points, the best setting is typically KPAR equal to the number irreducible of k-points so that each node is working on one k-point. For smaller calculations where you have many k-points, however, you may be forced to use the default value of KPAR, which is 1. For both situations, ensure that KPAR is a factor of the total number of the cores.
 
-NCORE and KPAR work in slightly contradictory ways. NCORE helps with memory requirements while KPAR increases the memory requirements. Peyton's rule of thumb for these settings is to use `KPAR = # of k-points` and `# of nodes ≈ KPAR`. 
+NCORE and KPAR work in slightly contradictory ways. NCORE helps with memory requirements while KPAR increases the memory requirements. Peyton's rule of thumb for these settings is to use `KPAR = # of k-points` and `# of nodes ≈ KPAR`.
 
 The general scheme for testing the efficiency of different settings is to start with the default KPAR and the minimum number of nodes allowed by your memory requirements. This run will give you a good general baseline 100% efficient run and will also let you find the number of irreducible k-points in your system. You can then start increasing NCORE and KPAR. Adding tags like NELMIN and NELM will ensure that your calculations are more consistent and provide a better baseline. In general, KPAR will be important for surface and defect calculations and less important for systems with less than 100+ atoms or bulk calculations. [Julia code used to compare the efficiency of NCORE and KPAR settings](https://github.com/SinaLewis/VASP_postprocessing.jl). A lot of the information provided in this section is also provided on [this](https://www.nsc.liu.se/~pla/blog/2015/01/12/vasp-how-many-cores/) web page.
-
 
 ### Bandstructures
 
@@ -145,7 +147,7 @@ This error message means that your calculation requires more memory than is avai
 
 #### Out of memory (oom) killed
 
-Aside from just chucking more cores at the problem, the VASP wiki offers the following advice (here)[https://www.vasp.at/wiki/index.php/Not_enough_memory] to reduce memory requirements. Note that these options typically result in the calculation taking longer as the tradeoff and therefore aren't ideal if you are already up against walltime limits.
+Aside from just chucking more cores at the problem, the VASP wiki offers the following advice [here](https://www.vasp.at/wiki/index.php/Not_enough_memory) to reduce memory requirements. Note that these options typically result in the calculation taking longer as the tradeoff and therefore aren't ideal if you are already up against walltime limits.
 
 - Increase NCORE (reduce NPAR) to treat fewer bands in parallel and reduce storage requirements per core for the storage of non-local projectors.
 - Set `LREAL = Auto` to evaluate the projection operators in real-space instead of reciprocal space
@@ -153,4 +155,3 @@ Aside from just chucking more cores at the problem, the VASP wiki offers the fol
 - Switch the symmetrization scheme to `ISYM = 2`
 - Ensure you're using scaLAPACK that allows for the `NBANDS x NBANDS` matrix to be distributed over all cores handling one k-point. Note that this won't be useful if you have reduced `KPAR` down to 1.
 - Finally, note the reported memory per core reported in the OUTCAR. You can search for the phrase "VASP MPI-rank" to find the correct line. This reports how the memory demand is distributed and how memory storage could perhaps be reduced more.
-
