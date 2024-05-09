@@ -1,14 +1,14 @@
 #!/bin/bash
 
 ## Account_info
-#SBATCH --account=ucb-summit-eav
+#SBATCH --account=ucb-general
 
 ## QoS_type
-#SBATCH --qos=condo
+#SBATCH --qos=normal
 
 ## note: this one will be empty for shas nodes
 ## Partition_name
-#SBATCH --partition=shas-testing
+#SBATCH --partition=amilan
 
 ## Job_name
 #SBATCH --job-name=vasp
@@ -21,20 +21,22 @@
 
 ## Number_of_processors
 #SBATCH --ntasks-per-node=12
-#SBATCH --ntasks-per-socket=12
+###SBATCH --ntasks-per-socket=12
 
 ## Job_Wall_Time
 #SBATCH --time=0:30:00
 
-#SBATCH --mail-user=sile6618@colorado.edu
+#SBATCH --mail-user=YOUR EMAIL HERE
 ###SBATCH --mail-type=BEGIN     # email me when the job starts, commented out
 ###SBATCH --mail-type=END       # email me when the job finishes, commented out
 #SBATCH --mail-type=FAIL        # email me if the job fails
 
 #SBATCH --export=NONE                   # for modules on new nodes
 
+## CHECK THAT THESE MODULES MATCH YOUR INSTALLATION
+
 # load modules required for MPI and VASP
-module purge; module load intel/20.2  mkl/20.2  impi/19.8
+module purge; module load intel/20.2  mkl/20.2  impi/19.8 hdf5/1.10.5
 
 # Create ECHO option if not already present
 if test "`echo -e`" = "-e" ; then ECHO=echo ; else ECHO="echo -e" ; fi
@@ -76,7 +78,7 @@ clean_up () {
     mv OUTCAR OUTCAR.${SLURM_JOB_ID}
     cp POSCAR POSCAR.${SLURM_JOB_ID}
     cp INCAR INCAR.${SLURM_JOB_ID}
-    cp vasprun.xml vasprun.xml.${SLURM_JOB_ID}
+    mv vasprun.xml vasprun.xml.${SLURM_JOB_ID}
     mv CONTCAR POSCAR
 
     if [ -f PROCAR ]; then
